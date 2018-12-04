@@ -33,9 +33,12 @@ class Transformations extends Component {
     return (
       <div>
         <HeroImage source={hero} overlay="Client Transformations" gender="woman"/>
-        <div style={{maxWidth: "80%", margin: "auto", paddingTop: "50px"}}> 
+        <div style={{margin: "5%", paddingTop: "50px"}}> 
           <Typography variant="display2" style={{color: redColor}}>
             Men
+          </Typography>
+          <Typography variant="h6" style={{color: redColor}}>
+            Click for more info!
           </Typography>
           <Grid container >
             <Grid item md={4} sm={12}>
@@ -50,6 +53,9 @@ class Transformations extends Component {
           </Grid>
           <Typography variant="display2" style={{marginTop: "25px", color: redColor}}>
             Women
+          </Typography>
+          <Typography variant="h6" style={{color: redColor}}>
+            Click for more info!
           </Typography>
           <Grid container>
             <Grid item md={4} sm={12}>
