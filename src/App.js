@@ -13,6 +13,8 @@ import About from './views/About/About.js';
 import Team from './views/Team/Team.js';
 import Pricing from './views/Pricing/Pricing.js';
 import ScrollToTop from './Components/ScrollToTop.js';
+import Training from './views/Training/Training.js';
+import Washington from './views/Training/Washington.js';
 
 // see docs: https://material-ui.com/style/css-baseline/
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -45,6 +47,8 @@ function App() {
             <Route exact path="/team/:member" component={Team}/>
             <Route exact path="/team" component={Team}/>
             <Route path="/pricing" component={Pricing}/>
+            <Route exact path="/training" component={Training}/>
+            <Route exact path="/training/washington" component={Washington}/>
           <Footer />
         </div>
       </ScrollToTop>
