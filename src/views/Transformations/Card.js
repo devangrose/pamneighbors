@@ -53,29 +53,13 @@ class CardLink extends Component {
 
   render(){
     return (
-      <Link to={this.props.link} style={{maxWidth: "80%", height: "100%", textDecoration: "none"}}>
-        <Card style={styles.card} onMouseEnter={this.mouseOver} onMouseLeave={this.mouseLeave}>
+      <Link to={this.props.link} style={{margin: '5%',height: "100%", textDecoration: "none"}}>
+        <Card elevation={0} style={styles.card} onMouseEnter={this.mouseOver} onMouseLeave={this.mouseLeave}>
           <CardMedia 
               component="img"
               src={this.props.image}
               style={styles.image}
             />
-           <div style={{
-            position: 'absolute',
-            top: '0px',
-            left: '0px',
-            color: 'white',
-            textAlign: 'center', 
-            backgroundColor: 'rgba(0,0,0,.4)',
-            height: "100%",
-            width: "100%",
-            display: this.state.show,
-            padding: "50% 0",
-            }}>
-                <Typography variant="h4" style={{color: 'white', fontWeight: "bold"}}>
-                  {this.props.name}
-                </Typography>
-           </div>
            <CardContent>
               <Typography variant="body1" style={{fontWeight: "bold"}}>
                 {this.props.name}

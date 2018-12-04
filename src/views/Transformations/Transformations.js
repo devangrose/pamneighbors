@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core';
-
+import Panel from './Panel.js';
 
 import HeroImage from '../../Components/HeroImage.js';
 import CardLink from './Card.js';
 import redColor from '../../color.js';
 
-import menHairLoss from '../../assets/mens-hair-loss3.jpg';
-import menAlopecia from '../../assets/mens-alopcia2.jpg';
-import menTransplant from '../../assets/men-transplant1.jpg';
+import menHairLoss from '../../assets/mens-hairloss.js';
+import menAlopecia from '../../assets/mens-alopecia.js';
+import menTransplant from '../../assets/mens-transplant.js';
 
-import womenHairLoss from '../../assets/women-hair-loss1.jpg';
-import womenAlopecia from '../../assets/women-alopecia1.jpg';
-import eyebrows from '../../assets/eyebrows1.jpg';
-import eyebrows3d from '../../assets/3d-eyebrows2.jpeg';
-import eyeliner from '../../assets/eyeliner1.jpg';
-import lips from '../../assets/lips1.jpg';
+import womenHairLoss from '../../assets/women-hairloss.js';
+import womenAlopecia from '../../assets/women-alopecia.js';
+import eyebrows from '../../assets/eyebrows.js';
+import eyebrows3d from '../../assets/3deyebrows.js';
+import eyeliner from '../../assets/eyeliner.js';
+import lips from '../../assets/lips.js';
 
 import hero from '../../assets/slider-item-2-1.jpg';
 
@@ -27,7 +27,7 @@ const styles = {
   },
   grid: {
     margin: 'auto'
-  }
+  },
 };
 
 class Transformations extends Component {
@@ -43,43 +43,21 @@ class Transformations extends Component {
           <Typography variant="h6" style={{color: redColor}}>
             Click for more info!
           </Typography>
-          <Grid container spacing={24} >
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={menHairLoss} name="Men's Hair Loss" link="/service/men/hair-loss-treatment"/>
-            </Grid>
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={menAlopecia} name="Men's Alopecia" link="/service/men/alopecia"/>
-            </Grid>
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={menTransplant} name="Transplant Scars" link="/service/men/transplant-scars"/>
-            </Grid>
-          </Grid>
+          <Panel images={menHairLoss} title="Hair Loss" link="/service/men/hair-loss-treatment"/>
+          <Panel images={menAlopecia} title="Alopecia" link="/service/men/hair-loss-treatment"/>
+          <Panel images={menTransplant} title="Transplant Scars" link="/service/men/transplant-scars"/>
           <Typography variant="display2" style={{marginTop: "25px", color: redColor}}>
             Women
           </Typography>
           <Typography variant="h6" style={{color: redColor}}>
             Click for more info!
           </Typography>
-          <Grid container spacing={24}>
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={womenHairLoss} name="Women's Hair Loss" link="/service/women/hair-loss-treatment"/>
-            </Grid>
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={womenAlopecia} name="Women's Alopecia" link="/service/women/alopecia"/>
-            </Grid>
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={eyebrows} name="Eyebrows" link="/service/women/eyebrows"/>
-            </Grid>
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={eyebrows3d} name="3d-Eyebrows" link="/service/women/3d-eyebrows"/>
-            </Grid>
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={eyeliner} name="Eyeliner" link="/service/women/eyeliner"/>
-            </Grid>
-            <Grid item md={4} sm={12} style={styles.grid}>
-              <CardLink image={lips} name="Lips" link="/service/women/lips"/>
-            </Grid>
-          </Grid>
+          <Panel images={womenHairLoss} title="Hair Loss" link="/service/women/hair-loss-treatment"/>
+          <Panel images={womenAlopecia} title="Alopecia" link="/service/women/alopecia"/>
+          <Panel images={eyebrows} title="Eyebrows" link="/service/women/eyebrows"/>
+          <Panel images={eyebrows3d} title="3d-Eyebrows" link="/service/women/3d-eyebrows"/>
+          <Panel images={eyeliner} title="Eyeliner" link="/service/women/eyeliner"/>
+          <Panel images={lips} title="Lips" link="/service/women/lips"/>
         </div>
       </div>
     )
