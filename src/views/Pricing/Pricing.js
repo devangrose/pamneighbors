@@ -7,14 +7,20 @@ import { Paper } from '@material-ui/core';
 
 import headerPhoto from "../../assets/slider-item-2-1.jpg"
 import HeroImage from '../../Components/HeroImage';
+import redColor from 'color.js';
 
 const styles = theme => ({
   root: {
     width: '100%',
   },
+  a : {
+    color: redColor,
+    textTransform: 'uppercase',
+  },
 });
 
 function Pricing(props) {
+    const { classes } = props;
     return (
       <div>
         <HeroImage source={ headerPhoto } overlay="Pricing" gender="woman"/>
@@ -26,7 +32,7 @@ function Pricing(props) {
             Scalp micropigmentation procedures are not all the same.  Each client will require a different amount of coverage and density. We do not have a set price list for these procedures.  
           </Typography>
           <Typography variant="h5" paragraph="true">
-Most providers use the <a href="http://www.americanhairloss.org/men_hair_loss/the_norwood_scale.asp">Norwood balding chart</a> as a guide for pricing men’s treatments and the <a href="http://www.americanhairloss.org/women_hair_loss/degree_of_hair_loss.asp">Ludwig chart</a> for pricing women’s treatments. We welcome you to come in for complimentary consultation.  If distance is a hindrance, send us pictures of your head front, side and back.  We can consult with you on the phone and start a quote for you.
+Most providers use the <a className={classes.a} href="http://www.americanhairloss.org/men_hair_loss/the_norwood_scale.asp">Norwood balding chart</a> as a guide for pricing men’s treatments and the <a className={classes.a} href="http://www.americanhairloss.org/women_hair_loss/degree_of_hair_loss.asp">Ludwig chart</a> for pricing women’s treatments. We welcome you to come in for complimentary consultation.  If distance is a hindrance, send us pictures of your head front, side and back.  We can consult with you on the phone and start a quote for you.
           </Typography>
           <Typography variant="h5" paragraph="true">
 Scalp micropigmentation procedures average between $2000 and $4000.  
@@ -38,7 +44,7 @@ Scalp scars, transplant donor scars, and special cases such as traction alopecia
 Trillium Ink Studios have tiered pricing.  We base these prices on years of experience.  Regardless of the technician you choose, we deliver the best possible results for each and every client.
           </Typography>
           <Typography variant="h5" paragraph="true">
-Call today for your consultation!   <a href="tel:425-238-1222">425-238-1222</a>
+Call today for your consultation!   <a className={classes.a} href="tel:425-238-1222">425-238-1222</a>
           </Typography>
         
         </Paper>
