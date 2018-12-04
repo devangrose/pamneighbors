@@ -74,10 +74,10 @@ function Footer(props) {
 
   return (
     <div className={classes.root} >
-      <Grid container sTypography acing={24}>
+      <Grid container spacing={24}>
         <Grid item xs={12} sm={12} md={6}>
-          <Grid container sTypography acing={24}>
-            <Grid item xs={5} s={6} className={classes.logoWrapper}>
+          <Grid container spacing={24}>
+            <Grid item xs={6} s={6} className={classes.logoWrapper}>
               <img className={classes.logo} src={Logo}/>
             </Grid>
             <Grid item xs={3} s={3}>
@@ -88,23 +88,23 @@ function Footer(props) {
             </Grid>
             <Grid item xs={4} s={3}>
               <Typography  className={classes.footerTitle}><strong>PHONE</strong></Typography>
-              <Typography  className={classes.footerItem}>Office <a href="tel:425-258-6256" style={{color: 'black'}}>425.258.6245</a></Typography>
-              <Typography  className={classes.footerItem}>Mobile <a href="tel:425-238-1222" style={{color: 'black'}}>425.238.1222</a></Typography>
+              <Typography  className={classes.footerItem}>Office <a href="tel:425-258-6256">425.258.6245</a></Typography>
+              <Typography  className={classes.footerItem}>Mobile <a href="tel:425-238-1222">425.238.1222</a></Typography>
               <Typography  className={classes.footerTitle}><strong>EMAIL</strong></Typography>
               <Typography  className={classes.footerItem}><a href="mailto:pam@trilliumink.net" style={{color: "blue", textDecoration: "none"}}>pam@trilliumink.net</a></Typography>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
-          <Grid container sTypography acing={24}>
-            <Grid item xs={5} className={classes.businessHoursContainer}>
+          <Grid container spacing={24}>
+            <Grid item xs={6} className={classes.businessHoursContainer}>
               <Typography  className={classes.footerTitle}><strong>BUSINESS HOURS</strong></Typography>
-              <Grid container sTypography acing={24}>
+              <Grid container spacing={24}>
                 <Grid item xs={4}>
-                  <Typography  className={classes.weekday}>Tuesday</Typography>
-                  <Typography  className={classes.weekday}>Wednesday</Typography>
-                  <Typography  className={classes.weekday}>Thursday</Typography>
-                  <Typography  className={classes.weekday}>Friday</Typography>
+                  <Typography  className={classes.weekday}>Tues</Typography>
+                  <Typography  className={classes.weekday}>Wed</Typography>
+                  <Typography  className={classes.weekday}>Thur</Typography>
+                  <Typography  className={classes.weekday}>Fri</Typography>
                 </Grid>
                 <Grid item xs={8}>
                   <Typography  className={classes.footerItem}>9:30AM-5:30PM</Typography>
@@ -114,7 +114,7 @@ function Footer(props) {
                 </Grid>
               </Grid>
             </Grid> 
-            <Grid item xs={5} className={classes.socialsContainer}>
+            <Grid item xs={6} className={classes.socialsContainer}>
               <a href="#"><img className={classes.socials} src={Facebook} /></a>
               <a href="#"><img className={classes.socials} src={Insta} /></a>
               <a href="#"><img className={classes.socials} src={Youtube} /></a>
