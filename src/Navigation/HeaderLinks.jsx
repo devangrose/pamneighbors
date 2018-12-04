@@ -90,12 +90,6 @@ function HeaderLinks({ ...props }) {
             <Link to="/team" className={classes.dropdownLink}>
               Our Team
             </Link>,
-            <Link to="/about/scalp-micropigmentation" className={classes.dropdownLink}>
-              Scalp Micropigmentation
-            </Link>,
-            <Link to="/about/permanent-makeup" className={classes.dropdownLink}>
-              Permanent Makeup
-            </Link>,
             <Link to="/pricing" className={classes.dropdownLink}>
               Pricing
             </Link>,
