@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, withWidth } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
+import Carousel from 'Components/Carousel.js';
+
+import ProcessCard from './ProcessCard.js';
 
 const styles = theme => ({
   root: {
@@ -26,19 +29,21 @@ function Process(props) {
       <Typography className={classes.text} component="h2" variant="display1" gutterBottom>
         The Scalp Micropigmentation Process
       </Typography>
+      { ['lg','xl'].includes(props.width) ?
       <Grid container spacing={40}>
         {props.steps.map((step, index) => {
           return (
             <Grid item xs={12} sm={12} md={Math.floor(12 / (props.steps.length))}>
-              <Paper style={{padding: "10px"}}>
-                <Icon style={{ fontSize: 30 }}>content_cut</Icon>
-                <p>Step {index + 1}:</p>
-                <p>{step}</p>
-              </Paper>
+              <ProcessCard index={index} step={step}/>
             </Grid>
           )
         })}
       </Grid>
+        :
+          <div style={{paddingBottom: '25px'}}>
+            <Carousel slides={props.steps.map((step, index) => <ProcessCard index={index} step={step}/>)}/>
+          </div>
+      }
     </div>
   );
 }

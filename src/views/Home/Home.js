@@ -8,6 +8,7 @@ import Process from './Process.js';
 import Technicians from './Technicians.js';
 import Carousel from "../../Components/Carousel.js";
 import HomeServiceCard from 'views/Home/HomeServiceCard';
+import { withWidth } from '@material-ui/core';
 
 import services from 'assets/serviceCarousel.js';
 
@@ -24,7 +25,7 @@ class Home extends Component {
       <div> 
         <HeroImage source={hero}/>
         <Carousel header="Our Services" slides={services.map(service => {return (<HomeServiceCard service={service}/>)})}/>
-        <Process steps={steps} />
+        <Process steps={steps} width={this.props.width}/>
         <MidBanner />
         <Technicians backgroundColor='#e0e0e0' header='Meet Our Certified Technicians'/>
       </div>
@@ -32,7 +33,7 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withWidth()(Home);
 
 const steps = [
   'Consultation',
