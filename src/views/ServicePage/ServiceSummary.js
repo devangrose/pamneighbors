@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing.unit * 10,
+    margin: '5%',
   },
   paper: {
     overflow: 'hidden',
