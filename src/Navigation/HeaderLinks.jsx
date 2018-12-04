@@ -87,17 +87,8 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link to="/about/trillium" className={classes.dropdownLink}>
-              About Trillium Ink
-            </Link>,
             <Link to="/team" className={classes.dropdownLink}>
               Our Team
-            </Link>,
-            <Link to="/about/scalp-micropigmentation" className={classes.dropdownLink}>
-              Scalp Micropigmentation
-            </Link>,
-            <Link to="/about/permanent-makeup" className={classes.dropdownLink}>
-              Permanent Makeup
             </Link>,
             <Link to="/about/pricing" className={classes.dropdownLink}>
               Pricing
