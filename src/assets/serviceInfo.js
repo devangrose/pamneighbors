@@ -58,6 +58,7 @@ import lips6 from '../assets/lips6.jpg';
 import lips7 from '../assets/lips7.jpg';
 import lips8 from '../assets/lips8.png';
 
+import rejuvapen from '../assets/rejuvapen.jpg';
 const services = [ 
 
   {
@@ -589,9 +590,11 @@ const services = [
   {
     'url': 'women/microneedling',
     'banner':womanBanner,
+    'img': ( <img src={rejuvapen} style={{width: "100%", height: "auto"}}/>),
     'gender':'woman',
     'category': 'Microneedling',
     'name': 'Introduction to Microneedling',
+    'images':[],
     'firstParagraph': () => {
       return (
         <div>

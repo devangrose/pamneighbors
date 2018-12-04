@@ -112,7 +112,7 @@ class ContactUs extends Component {
             <br/>
             <Typography variant="h4">Send us a message and we’ll get back to you with the information you’re looking for.</Typography>
             <br/>
-            <Typography variant="h4">... or check out our <Link to="/faq">FAQ page</Link> to find out more about our services.</Typography>
+            <Typography variant="h4">... or check out our <Link to="/faq" style={{color: redColor, textDecoration: "underline"}}>FAQ page</Link> to find out more about our services.</Typography>
           </Grid>
         </Grid>
       </div>
