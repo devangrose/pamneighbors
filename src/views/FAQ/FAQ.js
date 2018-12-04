@@ -46,7 +46,7 @@ function FAQ(props) {
             <QA question="Does it look real?" answer="Expertly applied impressions give the look of real hair stubble. Even up close and personal quality scalp micropigmentation is undetectable."/>
           </Grid>
           <Grid item xs={12} sm={12} md={6}>
-            <QA question="How much does it cost?" answer="Price varies based on the amount of coverage needed. We refer to the Norwood balding chart to ... average client will spend between $2000 and $4000."/>
+            <QA question="How much does it cost?" answer="Price varies based on the amount of coverage needed. We refer to the Norwood balding chart to price out treatments. The average client will spend between $2000 and $4000."/>
           </Grid>
         </Grid>
       </Paper>

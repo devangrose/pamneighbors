@@ -25,7 +25,7 @@ function QA(props) {
   const { classes } = props;
 
   return (
-    <ExpansionPanel defaultExpanded="true" style={{ margin: "10px"}}>
+    <ExpansionPanel style={{ margin: "10px"}}>
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon style={{ color: redColor }}/>}>
         <Typography className={classes.cardTitle} variant="h5" component="h2">
           {props.question}
