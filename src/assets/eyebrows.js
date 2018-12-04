@@ -6,10 +6,22 @@ import image5 from './eyebrows5.jpg';
 import image6 from './eyebrows6.jpg';
 
 export default [
-  { 'img': image1 },
-  { 'img': image2 },
-  { 'img': image3 },
-  { 'img': image4 },
-  { 'img': image5 },
-  { 'img': image6 },
+  { 'img': image1,
+    'label': 'Eyebrows',
+    'link' : '/service/women/eyebrows'},
+  { 'img': image2,
+    'label': 'Eyebrows',
+    'link' : '/service/women/eyebrows' },
+  { 'img': image3,
+    'label': 'Eyebrows',
+    'link' : '/service/women/eyebrows' },
+  { 'img': image4,
+    'label': 'Eyebrows',
+    'link' : '/service/women/eyebrows' },
+  { 'img': image5,
+    'label': 'Eyebrows',
+    'link' : '/service/women/eyebrows' },
+  { 'img': image6,
+    'label': 'Eyebrows',
+    'link' : '/service/women/eyebrows' },
 ];

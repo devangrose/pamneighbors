@@ -10,7 +10,7 @@ import Carousel from "../../Components/Carousel.js";
 import HomeServiceCard from 'views/Home/HomeServiceCard';
 import { withWidth } from '@material-ui/core';
 
-import services from 'assets/serviceCarousel.js';
+import services from 'assets/AllImages.js';
 
 import hero from '../../assets/banner-lips.jpg';
 

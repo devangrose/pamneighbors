@@ -3,7 +3,13 @@ import image2 from './3d-eyebrows2.jpeg';
 import image3 from './3d-eyebrows3.jpg';
 
 export default [
-  { 'img': image1 },
-  { 'img': image2 },
-  { 'img': image3 },
+  { 'img': image1,
+    'label': '3d-Eyebrows',
+    'link': '/service/women/3d-eyebrows' },
+  { 'img': image2,
+    'label': '3d-Eyebrows',
+    'link': '/service/women/3d-eyebrows'  },
+  { 'img': image3,
+    'label': '3d-Eyebrows',
+    'link': '/service/women/3d-eyebrows'  },
 ];
