@@ -11,6 +11,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import {withRouter} from 'react-router-dom';
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
@@ -26,8 +27,18 @@ class Header extends React.Component {
     this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
     this.headerColorChange = this.headerColorChange.bind(this);
   }
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.closeDrawer();
+    }
+  }
   handleDrawerToggle() {
     this.setState({ mobileOpen: !this.state.mobileOpen });
+  }
+  closeDrawer() {
+    if(this.state.mobileOpen){
+      this.setState({ mobileOpen: false});
+    }
   }
   componentDidMount() {
     if (this.props.changeColorOnScroll) {
@@ -166,4 +177,7 @@ Header.propTypes = {
   })
 };
 
-export default withStyles(headerStyle)(Header);
+Header.propTypes = {
+  location: PropTypes.object.isRequired
+}
+export default withStyles(headerStyle)(withRouter(Header));
