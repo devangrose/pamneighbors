@@ -95,11 +95,11 @@ const services = [
     'secondParagraph':() => {
       return (
         <div style={{paddingTop: "50px"}}>
-          <Typography variant="h4" style={{maxWidth: "80%", textAlign: "center", margin: "auto", marginBottom:"30px"}}>
+          <Typography variant="h4" style={{margin: '5%', textAlign: "center", margin: "auto", marginBottom:"30px"}}>
             SMP offers an advanced, cutting edge solution for people who struggle with Alopecia!
           </Typography>
           <hr style={{width: "60%", marginBottom: "40px", marginTop: "40px"}}/>
-          <Typography variant="h5" style={{maxWidth: "70%", textAlign: "center", margin: "auto", marginBottom:"30px"}}>
+          <Typography variant="h5" style={{textAlign: "center", margin: "5%", marginBottom:"30px"}}>
             For women and women who suffer hair loss from Alopecia, Traction Alopecia, chemotherapy, or radiation, SMP offers a cutting edge, natural looking alternative. For men, SMP can produce a natural buzz cut or edged up look. For women, SMP can simulate hair follicles beneath thinning hair, resulting in fuller looking hair with a far less patchy appearance. SMP can also be used as to bridge the time period of regrowth for chemotherapy or radiation patients.
           </Typography>
         </div>
@@ -150,7 +150,7 @@ const services = [
     'secondParagraph': () => {
       return (
         <div style={{marginBottom: "50px", paddingTop: "50px"}}>
-          <div style={{maxWidth: "80%", margin: "auto", marginBottom: "20px"}}>
+          <div style={{margin: "5%", marginBottom: "20px"}}>
             <Typography variant="h4" style={{color: redColor}}>
               Scalp Micropigmentation For Women
             </Typography>
@@ -256,7 +256,7 @@ const services = [
     'secondParagraph': () => {
       return (
         <div style={{marginBottom: "50px", paddingTop: "50px"}}>
-          <div style={{maxWidth: "80%", margin: "auto"}}>
+          <div style={{margin: "5%"}}>
             <Typography variant="h4" style={{color: redColor}}>
               What Are Permanent Cosmetics?
             </Typography>
@@ -332,7 +332,7 @@ const services = [
     'secondParagraph': () => {
       return (
         <div style={{marginBottom: "50px", paddingTop: "50px"}}>
-          <div style={{maxWidth: "80%", margin: "auto"}}>
+          <div style={{margin: "5%"}}>
             <Typography variant="h4" style={{color: redColor}}>
               How Long Will it Last?
             </Typography>
@@ -376,7 +376,7 @@ const services = [
           <hr style={{width: "70%"}}/>
           <br />
           <br />
-          <div style={{maxWidth: "80%", margin: "auto"}}>
+          <div style={{margin: "5%"}}>
             <Typography variant="h5">
               The preferred eyebrow permanent cosmetic alternative is “3D Hair Stroke”.
             </Typography>
@@ -466,7 +466,7 @@ const services = [
     'secondParagraph': () => {
       return (
         <div style={{marginBottom: "50px", paddingTop: "50px"}}>
-          <div style={{maxWidth: "80%", margin: "auto"}}>
+          <div style={{margin: "5%"}}>
             <Typography variant="h4" style={{color: redColor}}>
               What are permanent cosmetics?
             </Typography>
@@ -551,7 +551,7 @@ const services = [
     'secondParagraph': () => {
       return (
         <div style={{marginBottom: "50px", paddingTop: "50px"}}>
-          <div style={{maxWidth: "80%", margin: "auto"}}>
+          <div style={{margin: "5%"}}>
             <Typography variant="h4" style={{color: redColor}}>
               What are permanent cosmetics?
             </Typography>
@@ -614,7 +614,7 @@ const services = [
     'secondParagraph': () => {
       return (
         <div style={{marginBottom: "50px", paddingTop: "50px"}}>
-          <div style={{maxWidth: "80%", margin: "auto"}}>
+          <div style={{margin: "5%"}}>
             <Typography variant="h4" style={{color: redColor}}>
               How Does Microneedling Work?
             </Typography>
@@ -632,7 +632,7 @@ const services = [
             <br />
           </div>
           <div style={{backgroundColor: "#e0e0e0"}}>
-            <div style={{maxWidth: "80%", margin: "auto", paddingTop: "50px"}}>
+            <div style={{margin: "5%", paddingTop: "50px"}}>
               <Typography variant="h4" style={{color: redColor}}>
                 Why Skin Needling?
               </Typography>
@@ -660,7 +660,7 @@ const services = [
              </Typography>
             </div>
           </div>
-          <div style={{maxWidth: "80%", margin: "auto", paddingTop: "50px"}}>
+          <div style={{margin: "5%", paddingTop: "50px"}}>
               <Typography variant="h4" style={{color: redColor}}>
                 What Are the Benefits of Skin Needling?
               </Typography>
@@ -720,11 +720,11 @@ const services = [
     'secondParagraph':() => {
       return (
         <div>
-          <Typography variant="h4" style={{maxWidth: "80%", textAlign: "center", margin: "auto", marginBottom:"30px", color: redColor}}>
+          <Typography variant="h4" style={{textAlign: "center", margin: "5%", marginBottom:"30px", color: redColor}}>
             SMP offers an advanced, cutting edge solution for people who struggle with Alopecia!
           </Typography>
           <hr style={{width: "60%", marginBottom: "40px", marginTop: "40px"}}/>
-          <Typography variant="h5" style={{maxWidth: "70%", textAlign: "center", margin: "auto", marginBottom:"30px"}}>
+          <Typography variant="h5" style={{textAlign: "center", margin: "5%", marginBottom:"30px"}}>
             For men and women who suffer hair loss from Alopecia, Traction Alopecia, chemotherapy, or radiation, SMP offers a cutting edge, natural looking alternative. For men, SMP can produce a natural buzz cut or edged up look. For women, SMP can simulate hair follicles beneath thinning hair, resulting in fuller looking hair with a far less patchy appearance. SMP can also be used as to bridge the time period of regrowth for chemotherapy or radiation patients.
           </Typography>
         </div>
@@ -804,7 +804,7 @@ For sufferers of regular hair loss or alopecia, SMP offers an effective cosmetic
     'secondParagraph': () => {
       return (
         <div style={{backgroundColor:'#e0e0e0', paddingTop: "50px", padingBottom: "50px"}}>
-          <div style={{maxWidth: "80%", margin: "auto", padingBottom: "50px"}}>
+          <div style={{margin: "5%", padingBottom: "50px"}}>
             <Typography variant="display2" style={{textAlign: "center", marginBottom: "50px"}}>
               Get Your Confidence Back!
             </Typography>
