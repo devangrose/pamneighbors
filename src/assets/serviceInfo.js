@@ -8,54 +8,15 @@ import womanBanner from './banner-lips.jpg';
 
 import redColor from '../color.js';
 
-import menAlopecia1 from '../assets/alopecia-men.jpg';
-import menAlopecia2 from '../assets/mens-alopcia2.jpg';
-
-import menHairLoss2 from '../assets/mens-hair-loss2.jpg';
-import menHairLoss3 from '../assets/mens-hair-loss3.jpg';
-import menHairLoss4 from '../assets/mens-hair-loss4.jpg';
-
-import menTransplant1 from '../assets/mens-transplant1.jpg';
-import menTransplant2 from '../assets/mens-transplant2.jpg';
-import menTransplant3 from '../assets/mens-transplant3.jpg';
-
-import womenHairLoss1 from '../assets/women-hair-loss1.jpg';
-import womenHairLoss2 from '../assets/women-hair-loss2.jpg';
-import womenHairLoss3 from '../assets/women-hair-loss3.jpg';
-import womenHairLoss4 from '../assets/women-hair-loss4.jpg';
-
-import womenAlopecia1 from '../assets/women-alopecia1.jpg';
-import womenAlopecia2 from '../assets/women-alopecia2.jpg';
-import womenAlopecia3 from '../assets/women-alopecia3.jpg';
-
-import eyebrows1 from '../assets/eyebrows1.jpg';
-import eyebrows2 from '../assets/eyebrows2.jpg';
-import eyebrows3 from '../assets/eyebrows3.jpg';
-import eyebrows4 from '../assets/eyebrows4.jpg';
-import eyebrows5 from '../assets/eyebrows5.jpg';
-import eyebrows6 from '../assets/eyebrows6.jpg';
-
-import dEyebrows1 from '../assets/3d-eyebrows1.jpg';
-import dEyebrows2 from '../assets/3d-eyebrows2.jpeg';
-import dEyebrows3 from '../assets/3d-eyebrows3.jpg';
-
-import eyeliner1 from '../assets/eyeliner1.jpg';
-import eyeliner2 from '../assets/eyeliner2.jpg';
-import eyeliner3 from '../assets/eyeliner3.jpg';
-import eyeliner4 from '../assets/eyeliner4.jpg';
-import eyeliner5 from '../assets/eyeliner5.jpg';
-import eyeliner6 from '../assets/eyeliner6.jpg';
-import eyeliner7 from '../assets/eyeliner7.png';
-import eyeliner8 from '../assets/eyeliner8.jpg';
-
-import lips1 from '../assets/lips1.jpg';
-import lips2 from '../assets/lips2.jpg';
-import lips3 from '../assets/lips3.jpg';
-import lips4 from '../assets/lips4.jpg';
-import lips5 from '../assets/lips5.jpg';
-import lips6 from '../assets/lips6.jpg';
-import lips7 from '../assets/lips7.jpg';
-import lips8 from '../assets/lips8.png';
+import menAlopeciaImages from '../assets/mens-alopecia.js';
+import menHairLossImages from '../assets/mens-hairloss.js';
+import menTransplantImages from '../assets/mens-transplant.js';
+import womenHairLossImages from '../assets/women-hairloss.js';
+import womenAlopeciaImages from '../assets/women-alopecia.js';
+import eyebrowImages from '../assets/eyebrows.js';
+import threeDEyebrowsImages from '../assets/3deyebrows.js';
+import eyelinerImages from '../assets/eyeliner.js';
+import lipsImages from '../assets/lips.js';
 
 import rejuvapen from '../assets/rejuvapen.jpg';
 const services = [ 
@@ -66,15 +27,8 @@ const services = [
     'gender':'woman',
     'category': 'Alopecia',
     'name': 'Scalp Micropigmentation',
-    'images': [
-      { 'img': womenAlopecia1,
-      },
-      { 'img': womenAlopecia3,
-      },
-      { 'img': womenAlopecia2,
-      },
-    ],
-    'img':( <img src={womenAlopecia1} style={{width: "100%", height: "auto"}}/>),
+    'images': womenAlopeciaImages,
+    'img':( <img src={womenAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return(
         <div>
@@ -111,17 +65,8 @@ const services = [
     'banner':womanBanner,
     'gender':'woman',
     'category': 'Women\'s Hair Loss Treatment',
-    'images': [
-      { 'img': womenHairLoss1,
-      },
-      { 'img': womenHairLoss2,
-      },
-      { 'img': womenHairLoss3,
-      },
-      { 'img': womenHairLoss4,
-      },
-    ],
-    'img':( <img src={womenHairLoss1} style={{width: "100%", height: "auto"}}/>),
+    'images': womenHairLossImages,
+    'img':( <img src={womenHairLossImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'name': 'Scalp Micropigmentation',
     'firstParagraph': () => {
       return (
@@ -217,27 +162,8 @@ const services = [
     'gender':'woman',
     'category': 'Gorgeous Eyebrows',
     'name': 'Scalp Micropigmentation',
-    'images': [
-      { 
-        'img': eyebrows1,
-      },
-      { 
-        'img': eyebrows2,
-      },
-      { 
-        'img': eyebrows3,
-      },
-      { 
-        'img': eyebrows4,
-      },
-      { 
-        'img': eyebrows5,
-      },
-      { 
-        'img': eyebrows6,
-      },
-    ],
-    'img':( <img src={eyebrows1} style={{width: "100%", height: "auto"}}/>),
+    'images': eyebrowImages,
+    'img':( <img src={eyebrowImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
@@ -294,15 +220,8 @@ const services = [
     'gender':'woman',
     'category': '3D Hair Stroke Eyebrows',
     'name': 'Scalp Micropigmentation',
-    'images': [
-      { 'img': dEyebrows1,
-      },
-      { 'img': dEyebrows2,
-      },
-      { 'img': dEyebrows3,
-      },
-    ],
-    'img':( <img src={dEyebrows1} style={{width: "100%", height: "auto"}}/>),
+    'images': threeDEyebrowsImages,
+    'img':( <img src={threeDEyebrowsImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
@@ -422,25 +341,8 @@ const services = [
     'gender':'woman',
     'category': 'Exquisite Eyeliner',
     'name': 'Permanent Cosmetics',
-    'images': [
-      { 'img': eyeliner1,
-      },
-      { 'img': eyeliner2,
-      },
-      { 'img': eyeliner3,
-      },
-      { 'img': eyeliner4,
-      },
-      { 'img': eyeliner5,
-      },
-      { 'img': eyeliner6,
-      },
-      { 'img': eyeliner7,
-      },
-      { 'img': eyeliner8,
-      },
-    ],
-    'img':( <img src={eyeliner1} style={{width: "100%", height: "auto"}}/>),
+    'images': eyelinerImages,
+    'img':( <img src={eyelinerImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
@@ -507,25 +409,8 @@ const services = [
     'gender':'woman',
     'category': 'Luscious Lips',
     'name': 'Permanent Cosmetics',
-    'images': [
-      { 'img': lips1,
-      },
-      { 'img': lips2,
-      },
-      { 'img': lips3,
-      },
-      { 'img': lips4,
-      },
-      { 'img': lips5,
-      },
-      { 'img': lips6,
-      },
-      { 'img': lips7,
-      },
-      { 'img': lips8,
-      },
-    ],
-    'img':( <img src={lips1} style={{width: "100%", height: "auto"}}/>),
+    'images': lipsImages,
+    'img':( <img src={lipsImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
@@ -689,17 +574,8 @@ const services = [
     'gender': 'man',
     'category': 'Alopecia',
     'name': 'Scalp Micropigmentation',
-    'images': [
-      {
-        'img': menAlopecia1,
-        'label':'alopecia'
-      },
-      {
-        'img': menAlopecia2, 
-        'label':'alopecia'
-      }
-    ],
-    'img':( <img src={menAlopecia1} style={{width: "100%", height: "auto"}}/>),
+    'images': menAlopeciaImages,
+    'img':( <img src={menAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return(
         <div>
@@ -734,11 +610,7 @@ const services = [
     'url': 'men/hair-loss-treatment',
     'banner':manBanner,
     'gender':'man',
-    'images': [ 
-      { 'img':menHairLoss2,},
-      { 'img':menHairLoss3,},
-      { 'img':menHairLoss4 },
-    ],
+    'images': menHairLossImages,
     'img':(
           <iframe style={{height: "50vh", width: "100%"}}src="https://www.youtube.com/embed/kUd2FFMTcds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     ),
@@ -773,15 +645,8 @@ For sufferers of regular hair loss or alopecia, SMP offers an effective cosmetic
     'gender':'man',
     'category': 'Transplant Scars',
     'name': 'Scalp Micropigmentation',
-    'images': [
-      {'img': menTransplant1,
-      },
-      {'img': menTransplant2,
-      },
-      {'img': menTransplant3,
-      },
-    ],
-    'img':( <img src={menTransplant1} style={{width: "100%", height: "auto"}}/>),
+    'images': menTransplantImages,
+    'img':( <img src={menTransplantImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
