@@ -1,0 +1,84 @@
+import React from "react";
+// react component for creating beautiful carousel
+import Slider from "react-slick";
+// @material-ui/core components
+import withStyles from "@material-ui/core/styles/withStyles";
+// @material-ui/icons
+import LocationOn from "@material-ui/icons/LocationOn";
+// core components
+import GridContainer from "components/Grid/GridContainer.jsx";
+import GridItem from "components/Grid/GridItem.jsx";
+import Card from "components/Card/Card.jsx";
+import Icon from '@material-ui/core/Icon';
+import Typography from '@material-ui/core/Typography';
+
+import redColor from 'color.js';
+
+import carouselStyle from "assets/jss/material-kit-pro-react/views/componentsSections/carouselStyle.jsx";
+
+const styles = {
+  
+  leftArrow: {
+    position: 'absolute',
+    fontSize: '5em',
+    color: redColor,
+    left: '-5%',
+    top: "50%",
+    zIndex: 100,
+  },
+  rightArrow: {
+    position: 'absolute',
+    fontSize: '5em',
+    color: redColor,
+    right: '-5%',
+    top: "50%",
+    zIndex: 100,
+  }
+};
+
+class SectionCarousel extends React.Component {
+
+  slidePrev = (e) => {
+    this.refs.carousel.slickPrev();
+  }
+  slideNext = (e) => {
+    this.refs.carousel.slickNext();
+  }
+  render() {
+    const { classes } = this.props;
+    var settings = {
+      infinite: true,
+      dots: false,
+      arrows: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      swipeToSlide: true,
+      autoplay: true,
+      autoplayspeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+      ]
+    };
+    return (
+      <div className={classes.container} style={{position: 'relative'}} id="carousel">
+        {this.props.header ? <Typography style={{color: redColor, textAlign: 'center', paddingTop: "50px"}} variant="h3">{this.props.header}</Typography> : ''}
+          <Icon onClick={this.slidePrev} style={styles.leftArrow}>keyboard_arrow_left</Icon>
+          <Slider {...settings} ref="carousel" style={{display: "inline"}}>
+            {this.props.slides}
+          </Slider>
+          <Icon onClick={this.slideNext} style={styles.rightArrow}>keyboard_arrow_right</Icon>
+      </div>
+    );
+  }
+}
+
+export default withStyles(carouselStyle)(SectionCarousel);
