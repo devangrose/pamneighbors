@@ -10,7 +10,7 @@ import ContactCard from './ContactCard.js';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    padding: theme.spacing.unit * 10,
+    padding: '10%',
   },
   text: {
     marginBottom: '4rem'
