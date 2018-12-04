@@ -11,7 +11,6 @@ import redColor from '../color.js';
 import menAlopecia1 from '../assets/alopecia-men.jpg';
 import menAlopecia2 from '../assets/mens-alopcia2.jpg';
 
-import menHairLoss1 from '../assets/mens-hair-loss1.jpg';
 import menHairLoss2 from '../assets/mens-hair-loss2.jpg';
 import menHairLoss3 from '../assets/mens-hair-loss3.jpg';
 import menHairLoss4 from '../assets/mens-hair-loss4.jpg';
@@ -736,8 +735,6 @@ const services = [
     'banner':manBanner,
     'gender':'man',
     'images': [ 
-      { 'img':menHairLoss1, 
-      },
       { 'img':menHairLoss2,},
       { 'img':menHairLoss3,},
       { 'img':menHairLoss4 },
