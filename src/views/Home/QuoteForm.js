@@ -68,7 +68,7 @@ class ComposedTextField extends React.Component {
           <FilledInput id="component-filled3" value={this.state.email} onChange={this.handleChange} />
         </FormControl>
         <Button variant="contained" href="#contained-buttons" className={classes.button}>
-          Yes, I'd like to learn more!
+          Submit
         </Button>
         <Typography className={classes.text} variant="caption" align="center" gutterBottom>
           *A representative of Trillium Ink will contact you shortly.
