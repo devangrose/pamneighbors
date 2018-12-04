@@ -24,6 +24,9 @@ import hero from '../../assets/slider-item-2-1.jpg';
 const styles = {
   img: {
     width: '80vw'
+  },
+  grid: {
+    margin: 'auto'
   }
 };
 
@@ -41,13 +44,13 @@ class Transformations extends Component {
             Click for more info!
           </Typography>
           <Grid container spacing={24} >
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={menHairLoss} name="Men's Hair Loss" link="/service/men/hair-loss-treatment"/>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={menAlopecia} name="Men's Alopecia" link="/service/men/alopecia"/>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={menTransplant} name="Transplant Scars" link="/service/men/transplant-scars"/>
             </Grid>
           </Grid>
@@ -58,22 +61,22 @@ class Transformations extends Component {
             Click for more info!
           </Typography>
           <Grid container spacing={24}>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={womenHairLoss} name="Women's Hair Loss" link="/service/women/hair-loss-treatment"/>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={womenAlopecia} name="Women's Alopecia" link="/service/women/alopecia"/>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={eyebrows} name="Eyebrows" link="/service/women/eyebrows"/>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={eyebrows3d} name="3d-Eyebrows" link="/service/women/3d-eyebrows"/>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={eyeliner} name="Eyeliner" link="/service/women/eyeliner"/>
             </Grid>
-            <Grid item md={4} sm={12}>
+            <Grid item md={4} sm={12} style={styles.grid}>
               <CardLink image={lips} name="Lips" link="/service/women/lips"/>
             </Grid>
           </Grid>
