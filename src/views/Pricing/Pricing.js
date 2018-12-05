@@ -25,7 +25,7 @@ function Pricing(props) {
       <div>
         <HeroImage source={ headerPhoto } overlay="Pricing" gender="woman"/>
         <Paper style={{ margin: "0px",  padding: "5%", paddingTop: "3%", background: "linear-gradient(#e0e0e0, #CECECE)" }} >
-          <Typography variant="h4" align="center" paragraph="true">
+          <Typography variant="h4" align="center" paragraph="true" style={{color: redColor}}>
             Trillium Ink Pricing
           </Typography>
           <Typography variant="h5" paragraph="true">
