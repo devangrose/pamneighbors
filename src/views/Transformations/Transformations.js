@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Grid } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core';
 import Panel from './Panel.js';
 
 import HeroImage from '../../Components/HeroImage.js';
-import CardLink from './Card.js';
 import redColor from '../../color.js';
 
 import menHairLoss from '../../assets/mens-hairloss.js';

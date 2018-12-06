@@ -10,9 +10,6 @@ import Icon from '@material-ui/core/Icon';
 import redColor from '../../color.js';
 
 class Transformations extends Component {
-  constructor(props){
-    super(props);
-  }
   render(){
     const slides = ['lg','xl'].includes(this.props.width) ? 3 : 1;
     return (

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { Paper } from '@material-ui/core';
 import Expansion from '../Components/Expansion.js';
@@ -28,7 +28,7 @@ const services = [
     'category': 'Alopecia',
     'name': 'Scalp Micropigmentation',
     'images': womenAlopeciaImages,
-    'img':( <img src={womenAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt="women alopecia" src={womenAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return(
         <div>
@@ -48,7 +48,7 @@ const services = [
     'secondParagraph':() => {
       return (
         <div style={{paddingTop: "50px"}}>
-          <Typography variant="h4" style={{margin: '5%', textAlign: "center", margin: "auto", marginBottom:"30px"}}>
+          <Typography variant="h4" style={{margin: '5%', marginBottom:"30px"}}>
             SMP offers an advanced, cutting edge solution for people who struggle with Alopecia!
           </Typography>
           <hr style={{width: "60%", marginBottom: "40px", marginTop: "40px"}}/>
@@ -66,7 +66,7 @@ const services = [
     'gender':'woman',
     'category': 'Women\'s Hair Loss Treatment',
     'images': womenHairLossImages,
-    'img':( <img src={womenHairLossImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt="Womens hair loss" src={womenHairLossImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'name': 'Scalp Micropigmentation',
     'firstParagraph': () => {
       return (
@@ -146,7 +146,7 @@ const services = [
                       We have consulted with her over the phone. This is our first face to face meeting, and first treatment day.
                     </Typography>
                     <div style={{textAlign: "center", margin: "50px"}}>
-                      <iframe width="930" height="522" src="https://www.youtube.com/embed/82PE7EbC8bY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe width="930" height="522" title="women hair loss video" src="https://www.youtube.com/embed/82PE7EbC8bY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                   </div>
                 }/>
@@ -163,7 +163,7 @@ const services = [
     'category': 'Gorgeous Eyebrows',
     'name': 'Scalp Micropigmentation',
     'images': eyebrowImages,
-    'img':( <img src={eyebrowImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt="scalp micropigmentation" src={eyebrowImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
@@ -219,9 +219,9 @@ const services = [
     'banner':womanBanner,
     'gender':'woman',
     'category': '3D Hair Stroke Eyebrows',
-    'name': 'Scalp Micropigmentation',
+    'name': '3d Eyebrows',
     'images': threeDEyebrowsImages,
-    'img':( <img src={threeDEyebrowsImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt="three d eyebrows" src={threeDEyebrowsImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
@@ -342,7 +342,7 @@ const services = [
     'category': 'Exquisite Eyeliner',
     'name': 'Permanent Cosmetics',
     'images': eyelinerImages,
-    'img':( <img src={eyelinerImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt="eyeliner" src={eyelinerImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
@@ -408,9 +408,9 @@ const services = [
     'banner':womanBanner,
     'gender':'woman',
     'category': 'Luscious Lips',
-    'name': 'Permanent Cosmetics',
+    'name': 'Lips',
     'images': lipsImages,
-    'img':( <img src={lipsImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt='lips' src={lipsImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>
@@ -474,7 +474,7 @@ const services = [
   {
     'url': 'women/microneedling',
     'banner':womanBanner,
-    'img': ( <img src={rejuvapen} style={{width: "100%", height: "auto"}}/>),
+    'img': ( <img alt='microneedling' src={rejuvapen} style={{width: "100%", height: "auto"}}/>),
     'gender':'woman',
     'category': 'Microneedling',
     'name': 'Introduction to Microneedling',
@@ -575,7 +575,7 @@ const services = [
     'category': 'Alopecia',
     'name': 'Scalp Micropigmentation',
     'images': menAlopeciaImages,
-    'img':( <img src={menAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt="alopecia" src={menAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return(
         <div>
@@ -612,7 +612,7 @@ const services = [
     'gender':'man',
     'images': menHairLossImages,
     'img':(
-          <iframe style={{height: "50vh", width: "100%"}}src="https://www.youtube.com/embed/kUd2FFMTcds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe style={{height: "50vh", width: "100%"}} title="mens hair loss video" src="https://www.youtube.com/embed/kUd2FFMTcds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     ),
     'category': 'Men\'s Hair Loss Treatment',
     'name': 'Scalp Micropigmentation',
@@ -646,7 +646,7 @@ For sufferers of regular hair loss or alopecia, SMP offers an effective cosmetic
     'category': 'Transplant Scars',
     'name': 'Scalp Micropigmentation',
     'images': menTransplantImages,
-    'img':( <img src={menTransplantImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt="transplant scars" src={menTransplantImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'firstParagraph': () => {
       return (
         <div>

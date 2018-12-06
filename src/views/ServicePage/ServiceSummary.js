@@ -25,7 +25,7 @@ function Transformations(props) {
     <div className={classes.root}>
       <Grid container spacing={40}>
         <Grid item xs={12} md={12} style={{textAlign: "center"}}>
-            <Typography variant="display2"  gutterBottom>
+          <Typography variant="h3"  gutterBottom>
               {props.name}
             </Typography>
         </Grid>

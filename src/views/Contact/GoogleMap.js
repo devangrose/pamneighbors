@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withStyles, Icon } from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 import GoogleMapReact from 'google-map-react';
 
 const styles = {
@@ -28,10 +28,11 @@ class GoogleMap extends Component {
     return (
       <div  className={classes.root}>
       <GoogleMapReact
-        bootstrapURLKeys={{key: 'AIzaSyCWtNL43rZAsC2bRkR5ryzOs005edUug6o'}}
+        bootstrapURLKeys={{key: process.env.REACT_APP_GOOGLE_BOOKS_API_KEY}}
         defaultCenter={position}
         defaultZoom={16}
         onGoogleApiLoaded={({map, maps}) => this.renderMarkers(map, maps)}
+        yesIWantToUseGoogleMapApiInternals={true}
       >
       </GoogleMapReact>
       </div>

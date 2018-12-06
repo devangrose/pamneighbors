@@ -71,13 +71,13 @@ class Training extends Component {
           <br/>
           <Grid container spacing={24}>
             <Grid item lg={4} md={12}>
-              <img className={classes.img} src={school1}/>
+              <img alt="school" className={classes.img} src={school1}/>
             </Grid>
             <Grid item lg={4} md={12}>
-              <img className={classes.img} src={school2}/>
+              <img alt="school" className={classes.img} src={school2}/>
             </Grid>
             <Grid item lg={4} md={12}>
-              <img className={classes.img} src={school3}/>
+              <img alt="school" className={classes.img} src={school3}/>
             </Grid>
           </Grid>
           <br/>
@@ -139,13 +139,13 @@ class Training extends Component {
           <br/>
           <Grid container spacing={24}>
             <Grid item lg={4} md={12}>
-              <img className={classes.img} src={school4}/>
+              <img alt="school" className={classes.img} src={school4}/>
             </Grid>
             <Grid item lg={4} md={12}>
-              <img className={classes.img} src={school5}/>
+              <img alt="school" className={classes.img} src={school5}/>
             </Grid>
             <Grid item lg={4} md={12}>
-              <img className={classes.img} src={school6}/>
+              <img alt="school" className={classes.img} src={school6}/>
             </Grid>
           </Grid>
           <br/>

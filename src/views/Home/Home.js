@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 //import Video from './Video.js';
 import HeroImage from '../../Components/HeroImage.js';
-import ServicesStepper from './ServicesStepper.js';
-import FeaturedRow from '../../Components/FeaturedRow.js';
 import MidBanner from './MidBanner.js';
 import Process from './Process.js';
 import Technicians from './Technicians.js';
@@ -14,9 +12,6 @@ import services from 'assets/AllImages.js';
 
 import hero from '../../assets/banner-lips.jpg';
 
-const DEV_MODE = true;
-
-
 class Home extends Component {
 
 
@@ -24,7 +19,7 @@ class Home extends Component {
     return (
       <div> 
         <HeroImage source={hero}/>
-        <Carousel header="Our Services" slides={services.map(service => {return (<HomeServiceCard service={service}/>)})}/>
+        <Carousel header="Our Services" slides={services.map((service, index) => {return (<HomeServiceCard key={index} service={service}/>)})}/>
         <Process steps={steps} width={this.props.width}/>
         <MidBanner />
         <Technicians backgroundColor='#e0e0e0' header='Meet Our Certified Technicians'/>

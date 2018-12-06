@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Typography } from '@material-ui/core';
-import { Paper } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { CardContent, Card, CardMedia } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import HomeServiceCard from 'views/Home/HomeServiceCard.js';
 
 const styles = {
    media: {

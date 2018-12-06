@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-
-import FeaturedCard from '../../Components/FeaturedCard.js';
 
 const styles = theme => ({
   root: {
@@ -38,13 +35,13 @@ function Testimonial(props) {
           <Typography variant="caption" align="center" gutterBottom style={{fontSize: "2em"}}>
             Before
           </Typography> 
-          <img className={classes.img} src="http://pamneighbors.com/wp-content/uploads/2016/07/W_SMP_before.png" />
+          <img alt="before" className={classes.img} src="http://pamneighbors.com/wp-content/uploads/2016/07/W_SMP_before.png" />
         </Grid>
         <Grid item xs={12} sm={6} className={classes.imgFrame}>
           <Typography variant="caption" align="center" gutterBottom style={{fontSize: "2em"}}>
             After
           </Typography>
-          <img className={classes.img} src="http://pamneighbors.com/wp-content/uploads/2016/07/FullSizeRender-6-300x300.jpg" /> 
+          <img alt="after" className={classes.img} src="http://pamneighbors.com/wp-content/uploads/2016/07/FullSizeRender-6-300x300.jpg" /> 
         </Grid>
       </Grid>
     </div>

@@ -27,17 +27,12 @@ const styles = {
   }
 };
 class HeroImage extends Component {
-  constructor(props){
-    super(props);
-  }
 	render(props) {
     let innerWidth = 0;
-    let isMobile = false;
     let divStyle= {};
     const url = 'url(' + this.props.source + ')';
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       const is_iPad = navigator.userAgent.match(/iPad/i) != null;
-      isMobile = true;
       innerWidth = is_iPad ? document.documentElement.clientWidth : window.innerWidth;
       divStyle= {backgroundImage: url, display: 'table', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', height: innerWidth / 2};
     }
@@ -48,7 +43,7 @@ class HeroImage extends Component {
     return (
       <div>
         <div className={this.props.classes.thumbnail} style={divStyle}>
-          { this.props.gender == 'woman' ? 
+          { this.props.gender === 'woman' ? 
             <Typography variant="h4" className={this.props.classes.captionWomen}>
               {this.props.overlay}
             </Typography>

@@ -87,15 +87,15 @@ const teamInfo = [
 class Team extends Component {
 
   componentDidMount(){
-    if(this.props.match.params.member == 'pam'){
+    if(this.props.match.params.member === 'pam'){
       console.log(this.refs['member0']);
       scrollToComponent(this.refs['member0'], {align: 'top'});
     }
-    if(this.props.match.params.member == 'ran'){
+    if(this.props.match.params.member === 'ran'){
       console.log(this.refs['member1']);
       scrollToComponent(this.refs['member1'], {align: 'top'});
     }
-    if(this.props.match.params.member == 'colleen'){
+    if(this.props.match.params.member === 'colleen'){
       console.log(this.refs['member0']);
       scrollToComponent(this.refs['member2'], {align: 'top'});
     }

@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, withWidth } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Icon from '@material-ui/core/Icon';
 import Carousel from 'Components/Carousel.js';
 
 import ProcessCard from './ProcessCard.js';
@@ -33,8 +31,8 @@ function Process(props) {
       <Grid container spacing={40}>
         {props.steps.map((step, index) => {
           return (
-            <Grid item xs={12} sm={12} md={Math.floor(12 / (props.steps.length))}>
-              <ProcessCard index={index} step={step}/>
+            <Grid item key={index} xs={12} sm={12} md={Math.floor(12 / (props.steps.length))}>
+              <ProcessCard key={index} index={index} step={step}/>
             </Grid>
           )
         })}

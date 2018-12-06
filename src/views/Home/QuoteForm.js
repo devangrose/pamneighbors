@@ -1,13 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import FilledInput from '@material-ui/core/FilledInput';
 import FormControl from '@material-ui/core/FormControl';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
@@ -43,6 +39,15 @@ class ComposedTextField extends React.Component {
   handleChange = event => {
     this.setState({ name: event.target.value });
   };
+  handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+
+    fetch('/api/form-submit-url', {
+      method: 'POST',
+      body: data,
+    });
+  }
 
   render() {
     const { classes } = this.props;
@@ -67,7 +72,7 @@ class ComposedTextField extends React.Component {
           <InputLabel htmlFor="component-filled3">Email</InputLabel>
           <FilledInput id="component-filled3" value={this.state.email} onChange={this.handleChange} />
         </FormControl>
-        <Button variant="contained" href="#contained-buttons" className={classes.button}>
+        <Button variant="contained" onClick={this.handleSubmit} className={classes.button}>
           Submit
         </Button>
         <Typography className={classes.text} variant="caption" align="center" gutterBottom>

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Typography, withStyles, Grid } from '@material-ui/core';
+import { Typography, withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import HeroImage from 'Components/HeroImage.js';
-import { Link } from 'react-router-dom';
 
 import hero from '../../assets/banner-smp.jpg';
 import redColor from 'color.js';

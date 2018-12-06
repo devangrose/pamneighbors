@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { Paper, Typography, Icon } from '@material-ui/core';
+import { Paper, Icon } from '@material-ui/core';
 
 
 class ProcessCard extends Component {
   
-  constructor(props){
-    super(props);
-  }
   render(){
     return (
       <Paper style={{padding: "10px"}}>
