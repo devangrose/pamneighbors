@@ -10,7 +10,9 @@ import CardBody from "components/Card/CardBody.jsx";
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.jsx";
 
 const styles = {
-  ...imagesStyles
+  root: {
+    margin: 'auto',
+  }
 };
 
 
@@ -18,8 +20,8 @@ function HomeServiceCard(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <Link to={props.service.link} style={{cursor: 'pointer'}}>
-        <Card style={{ width: "20rem" }}>
+      <Link to={props.service.link} style={{cursor: 'pointer', margin: 'auto', textAlign: 'center'}}>
+        <Card style={{ width: "20rem", margin: 'auto' }}>
           <img
           style={{ width: "100%", display: "block" }}
           className={classes.imgCardTop}

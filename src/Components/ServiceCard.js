@@ -13,13 +13,14 @@ const styles = {
   card: {
     // maxWidth: 214,
     // maxHeight: 214,
-    display: 'inline-block',
+    margin: 'auto',
   },
   media: {
     // ⚠️ object-fit is not supported by IE11.
     objectFit: 'cover',
     height: '260px',
-    width: '260px'
+    width: '260px',
+    margin: 'auto',
   },
 };
 

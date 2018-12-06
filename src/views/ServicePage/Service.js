@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from 'Components/Carousel.js';
 import HeroImage from '../../Components/HeroImage.js';
+import HomeServiceCard from '../Home/HomeServiceCard.js';
 import ServiceSummary from './ServiceSummary.js';
 import FeaturedRow from '../../Components/FeaturedRow.js';
 import Transformations from './Transformations.js';
@@ -27,7 +28,7 @@ class Service extends Component {
     return (
       <div>
         <HeroImage source={this.props.banner} overlay={this.props.category} gender={this.props.gender}/>
-        {this.props.images.length > 0 ? <Carousel header="Client Transformations" slides={this.props.images.map(service => {return (<ServiceCard service={service}/>)})}/>: ''}
+        {this.props.images.length > 0 ? <Carousel header="Client Transformations" slides={this.props.images.map(service => {return (<HomeServiceCard service={service}/>)})}/>: ''}
         <ServiceSummary name={this.props.category} img={this.props.img} firstParagraph={this.props.firstParagraph}/>
         {this.props.secondParagraph}
       </div>

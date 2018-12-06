@@ -55,7 +55,6 @@ class SectionCarousel extends React.Component {
       slidesToScroll: 1,
       initialSlide: 0,
       swipeToSlide: true,
-      autoplay: true,
       autoplayspeed: 2000,
       responsive: [
         {
@@ -70,7 +69,7 @@ class SectionCarousel extends React.Component {
     };
     return (
       <div className={classes.container} style={{position: 'relative'}} id="carousel">
-        {this.props.header ? <Typography style={{color: redColor, textAlign: 'center', paddingTop: "50px"}} variant="h3">{this.props.header}</Typography> : ''}
+        {this.props.header ? <Typography style={{color: redColor, textAlign: 'center', paddingTop: "50px"}} variant="h3" paragraph >{this.props.header}</Typography> : ''}
           <Icon onClick={this.slidePrev} style={styles.leftArrow}>keyboard_arrow_left</Icon>
           <Slider {...settings} ref="carousel" style={{display: "inline"}}>
             {this.props.slides}
