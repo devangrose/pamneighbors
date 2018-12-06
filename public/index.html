@@ -52,31 +52,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <script>
-    var init = function() {
-        document.addEventListener('touchstart', handler, true);
-        document.addEventListener('touchmove', handler, true);
-        document.addEventListener('touchend', handler, true);
-        document.addEventListener('touchcancel', handler, true);        
-    };
-
-    var handler = function(event) {
-        var touch = event.changedTouches[0],
-            simulatedEvent = document.createEvent('MouseEvent');
-
-        simulatedEvent.initMouseEvent(
-             { touchstart: 'mousedown', touchmove: 'mousemove', touchend: 'mouseup' } [event.type],
-             true, true, window, 1, 
-             touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-             false, false, false, false, 0, null);
-
-        touch.target.dispatchEvent(simulatedEvent);
-    };
-		document.onreadystatechange = () => {
-        if (document.readyState === 'complete') {
-          // document ready
-          init();
-        }
-      };
-  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWtNL43rZAsC2bRkR5ryzOs005edUug6o&callback=initMap">
+    </script>
 </html>
