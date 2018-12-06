@@ -5,6 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import FeaturedCard from '../../Components/FeaturedCard.js';
+import pam from '../../assets/pam-headshot.jpg';
+import ran from '../../assets/ran.jpg';
+import colleen from '../../assets/colleen.jpg';
 
 const styles = theme => ({
   root: {
@@ -27,13 +30,13 @@ function Technicians(props) {
       {heading}
       <Grid container spacing={24}>
         <Grid item xs={12} sm={12} md={4}>
-          <FeaturedCard imageUrl="http://pamneighbors.com/wp-content/uploads/2016/10/9CBA01D2F6394C65BFD7BCBB9E1703B2.jpg" header="Colleen Schwartz-Hall" content="Master Esthetician"  url="/team/colleen"/>
+          <FeaturedCard imageUrl={colleen} header="Colleen Schwartz-Hall" content="Master Esthetician"  url="/team/colleen"/>
         </Grid>
         <Grid item xs={12} sm={12} md={4}>
-          <FeaturedCard imageUrl="http://pamneighbors.com/wp-content/uploads/2016/07/pam-working.jpg" header="Pam Neighbors" content="Certified Permanent Cosmetics / Scalp Artist and Educator" url="/team/pam"/>
+          <FeaturedCard imageUrl={pam} header="Pam Neighbors" content="Certified Permanent Cosmetics / Scalp Artist and Educator" url="/team/pam"/>
         </Grid>
         <Grid item xs={12} sm={12} md={4}>
-          <FeaturedCard imageUrl="http://pamneighbors.com/wp-content/uploads/2016/07/stylist.jpg" header="Ran Pfliger (Lon)" content="Certified Permanent Cosmetics Artist / Scalp Artist" url="/team/ran"/>
+          <FeaturedCard imageUrl={ran} header="Ran Pfliger (Lon)" content="Certified Permanent Cosmetics Artist / Scalp Artist" url="/team/ran"/>
         </Grid>
       </Grid>
     </div>

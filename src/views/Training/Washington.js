@@ -22,7 +22,7 @@ class Washington extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <HeroImage source={hero}/>
+        <HeroImage source={hero} overlay="Washington Residents"/>
         <div className={classes.root}>
           <br/>
           <br/>
