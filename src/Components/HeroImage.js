@@ -31,12 +31,23 @@ class HeroImage extends Component {
     super(props);
   }
 	render(props) {
-    const is_iPad = navigator.userAgent.match(/iPad/i) != null;
-    const innerWidth = is_iPad ? document.documentElement.clientWidth : window.innerWidth;
+    let innerWidth = 0;
+    let isMobile = false;
+    let divStyle= {};
     const url = 'url(' + this.props.source + ')';
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      const is_iPad = navigator.userAgent.match(/iPad/i) != null;
+      isMobile = true;
+      innerWidth = is_iPad ? document.documentElement.clientWidth : window.innerWidth;
+      divStyle= {backgroundImage: url, display: 'table', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', height: innerWidth / 2};
+    }
+    else {
+      innerWidth = window.innerHeight;
+      divStyle={backgroundImage: url, display: 'table',backgroundPosition: '0 50%',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: innerWidth / 2}
+    }
     return (
       <div>
-        <div className={this.props.classes.thumbnail} style={{backgroundImage: url, display: 'table', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', height: innerWidth / 2}}>
+        <div className={this.props.classes.thumbnail} style={divStyle}>
           { this.props.gender == 'woman' ? 
             <Typography variant="h4" className={this.props.classes.captionWomen}>
               {this.props.overlay}
