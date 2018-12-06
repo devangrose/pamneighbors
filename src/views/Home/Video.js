@@ -1,47 +1,39 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import { Player } from 'video-react';
-import "../../../node_modules/video-react/dist/video-react.css";
+import React, { Component } from 'react';
+import videojs from 'video.js';
+import 'video.js/dist/video-js.css';
+import poster from 'assets/poster.png';
 
+window.videojs = videojs;
+require('videojs-contrib-hls/dist/videojs-contrib-hls.js');
 
-
-
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    textAlign: 'center',
-    overflow: 'hidden',
-    position: "relative",
-    margin: "auto",
-    width: "70%",
-    height: "auto",
-  },
-  vid: {
-    width: "100%",
-    height: "100%",
-  }
-});
-
-
-
-function Video(props) {
-  const { classes } = props;
-
-  return (
-    <div className={classes.root}>
-      <Player
-        playsInline
-        poster="../../assets/3d-eyebrows2.jpeg"
-        src={video}
-        className={classes.vid}
-      />
-    </div>
-  );
-}
-
-Video.propTypes = {
-  classes: PropTypes.object.isRequired,
+const videoJsOptions = {
+  autoplay: true,
+  controls: true,
+  muted: false,
+  poster: poster,
 };
 
-export default withStyles(styles)(Video);
+class VideoPlayer extends Component {
+    constructor(props){
+      super(props);
+    }
+    componentDidMount(){
+
+      this.videoNode = videojs('videoplayer',videoJsOptions, () =>{
+      });
+
+    }
+
+    render() {
+        return (
+          <div>
+          <video id="videoplayer" autoplay="" muted="" width={document.documentElement.clientWidth} height={document.documentElement.clientHeight / 2} className="video-js vjs-default-skin" controls>
+              <source src="https://s3.amazonaws.com/pamneighbors.out.video/video720p.m3u8" type="application/x-mpegURL" />
+            </video>
+          </div>
+        );
+
+    }
+}
+
+export default VideoPlayer;
