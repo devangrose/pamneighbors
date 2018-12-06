@@ -3,36 +3,27 @@ import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core';
 
 const styles = {
-  img: {
-    display: 'block',
-    width: "100%",
-    margin: 'auto',
-  },
   thumbnail: {
       position: 'relative',
       display: 'inline-block',
-      height: "50vh",
       width: "100%",
       overflow: "hidden",
       margin: 'auto',
   },
   captionMen: {
-      position: 'absolute',
-      top: '40%',
-      left: '5%',
-      transform: 'translate(-5%, -50%)',
-      textAlign: 'center',
-      color: 'white',
-      fontWeight: 'bold',
+    margin: '50%', 
+    padding: '0% 10%', 
+    textAlign: 'left', 
+    display: 'table-cell', 
+    verticalAlign: 'middle',
+    color: 'white',
   },
   captionWomen: {
-      position: 'absolute',
-      top: '40%',
-      right: '5%',
-      transform: 'translate(-5%, -50%)',
-      textAlign: 'center',
-      color: 'black',
-      fontWeight: 'bold',
+    margin: '50%', 
+    padding: '0% 10%', 
+    textAlign: 'right', 
+    display: 'table-cell', 
+    verticalAlign: 'middle',
   }
 };
 class HeroImage extends Component {
@@ -40,21 +31,21 @@ class HeroImage extends Component {
     super(props);
   }
 	render(props) {
+    const is_iPad = navigator.userAgent.match(/iPad/i) != null;
+    const innerWidth = is_iPad ? document.documentElement.clientWidth : window.innerWidth;
+    const url = 'url(' + this.props.source + ')';
     return (
       <div>
-        <div className={this.props.classes.thumbnail}>
-          <img src={this.props.source} className={this.props.classes.img}/>
-          { this.props.gender == 'woman' ?
-          <div className={this.props.classes.captionWomen}>
-            <Typography variant="h4" style={{color:"black"}}>
+        <div className={this.props.classes.thumbnail} style={{backgroundImage: url, display: 'table', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', height: innerWidth / 2}}>
+          { this.props.gender == 'woman' ? 
+            <Typography variant="h4" className={this.props.classes.captionWomen}>
               {this.props.overlay}
             </Typography>
-          </div> : 
-          <div className={this.props.classes.captionMen}>
-            <Typography variant="h4" style={{color:"white"}}>
+            : 
+            <Typography variant="h4" className={this.props.classes.captionMen} >
               {this.props.overlay}
             </Typography>
-          </div> }
+          }
         </div>
       </div>
   )}
