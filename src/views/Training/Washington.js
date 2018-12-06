@@ -26,7 +26,7 @@ class Washington extends Component {
         <div className={classes.root}>
           <br/>
           <br/>
-          <Typography variant="h4" className={classes.header}>
+          <Typography variant="h4" className={classes.header} paragraph >
             If you are resident of Washington State, you will need to choose the course(s) you wish to take when you call us and we will let you know when those courses are being offered in WA.
           </Typography>
           <ul>
