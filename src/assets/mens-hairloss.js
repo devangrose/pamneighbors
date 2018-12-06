@@ -1,4 +1,3 @@
-import image1 from './mens-hair-loss1.jpg';
 import image2 from './mens-hair-loss2.jpg';
 import image3 from './mens-hair-loss3.jpg';
 import image4 from './mens-hair-loss4.jpg';
@@ -13,9 +12,6 @@ import image12 from './mens-hair-loss12.jpg';
 import image13 from './mens-hair-loss13.jpg';
 
 export default [
-  { 'img': image1,
-    'label': "Men's Hairloss",
-    'link': '/service/men/hair-loss-treatment'},
   { 'img': image2,
     'label': "Men's Hairloss",
     'link': '/service/men/hair-loss-treatment' },

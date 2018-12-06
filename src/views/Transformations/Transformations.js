@@ -38,17 +38,11 @@ class Transformations extends Component {
           <Typography variant="display2" style={{color: redColor}}>
             Men
           </Typography>
-          <Typography variant="h6" style={{color: redColor}}>
-            Click for more info!
-          </Typography>
           <Panel images={menHairLoss} title="Hair Loss" link="/service/men/hair-loss-treatment"/>
           <Panel images={menAlopecia} title="Alopecia" link="/service/men/hair-loss-treatment"/>
           <Panel images={menTransplant} title="Transplant Scars" link="/service/men/transplant-scars"/>
           <Typography variant="display2" style={{marginTop: "25px", color: redColor}}>
             Women
-          </Typography>
-          <Typography variant="h6" style={{color: redColor}}>
-            Click for more info!
           </Typography>
           <Panel images={womenHairLoss} title="Hair Loss" link="/service/women/hair-loss-treatment"/>
           <Panel images={womenAlopecia} title="Alopecia" link="/service/women/alopecia"/>
