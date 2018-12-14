@@ -570,7 +570,7 @@ const services = [
   },
   {
     'url':'men/alopecia',
-    'banner':manBanner,
+    'banner':require('../assets/mensalopeciahero.jpeg'),
     'gender': 'man',
     'category': 'Alopecia',
     'name': 'Scalp Micropigmentation',
@@ -641,7 +641,7 @@ For sufferers of regular hair loss or alopecia, SMP offers an effective cosmetic
   },
   {
     'url': 'men/transplant-scars',
-    'banner':manBanner,
+    'banner':require('../assets/transplanthero.jpeg'),
     'gender':'man',
     'category': 'Transplant Scars',
     'name': 'Scalp Micropigmentation',

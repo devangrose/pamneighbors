@@ -4,19 +4,26 @@ import HeroImage from '../../Components/HeroImage.js';
 import HomeServiceCard from '../Home/HomeServiceCard.js';
 import ServiceSummary from './ServiceSummary.js';
 
+import { withStyles } from '@material-ui/core';
+import shoppingCartStyle from "assets/jss/material-kit-pro-react/views/shoppingCartStyle.jsx";
+import classNames from "classnames";
+
 class Service extends Component {
 
   render(){
+    const { classes } = this.props;
     return (
-      <div>
+      <div >
         <HeroImage source={this.props.banner} overlay={this.props.category} gender={this.props.gender}/>
+        <div className={classNames(classes.main)}>
         {this.props.images.length > 0 ? <Carousel header="Client Transformations" slides={this.props.images.map((service, index) => {return (<HomeServiceCard key={index} service={service}/>)})}/>: ''}
         <ServiceSummary name={this.props.category} img={this.props.img} firstParagraph={this.props.firstParagraph}/>
         {this.props.secondParagraph}
+      </div>
       </div>
     )
   }
 
 }
 
-export default Service;
+export default withStyles(shoppingCartStyle)(Service);

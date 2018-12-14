@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
+import Parallax from "components/Parallax/Parallax.jsx";
+import classNames from "classnames";
+import GridContainer from "components/Grid/GridContainer.jsx";
+import GridItem from "components/Grid/GridItem.jsx";
 import { withStyles } from '@material-ui/core';
 
+
+import shoppingCartStyle from "assets/jss/material-kit-pro-react/views/shoppingCartStyle.jsx";
+
 const styles = {
+  ...shoppingCartStyle,
   thumbnail: {
       position: 'relative',
       display: 'inline-block',
@@ -28,32 +36,30 @@ const styles = {
 };
 class HeroImage extends Component {
 	render(props) {
-    let innerWidth = 0;
-    let divStyle= {};
-    const url = 'url(' + this.props.source + ')';
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      const is_iPad = navigator.userAgent.match(/iPad/i) != null;
-      innerWidth = is_iPad ? document.documentElement.clientWidth : window.innerWidth;
-      divStyle= {backgroundImage: url, display: 'table', backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat', height: innerWidth / 2};
-    }
-    else {
-      innerWidth = window.innerHeight;
-      divStyle={backgroundImage: url, display: 'table',backgroundPosition: '0 50%',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: innerWidth / 2}
-    }
+    const { classes } = this.props;
     return (
-      <div>
-        <div className={this.props.classes.thumbnail} style={divStyle}>
-          { this.props.gender === 'woman' ? 
-            <Typography variant="h4" className={this.props.classes.captionWomen}>
-              {this.props.overlay}
-            </Typography>
-            : 
-            <Typography variant="h4" className={this.props.classes.captionMen} >
-              {this.props.overlay}
-            </Typography>
-          }
-        </div>
-      </div>
+        <Parallax
+          image={this.props.source}
+          filter="dark"
+          small
+          style={{zIndex: -10}}
+        >
+          <div className={classes.container}>
+            <GridContainer>
+              <GridItem
+                md={8}
+                sm={8}
+                className={classNames(
+                  classes.mlAuto,
+                  classes.mrAuto,
+                  classes.textCenter
+                )}
+              >
+                <h2 className={classes.title}>{this.props.overlay}</h2>
+              </GridItem>
+            </GridContainer>
+          </div>
+        </Parallax>
   )}
 }
 

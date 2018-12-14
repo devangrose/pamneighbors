@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import AppBar from "@material-ui/core/AppBar";
+import {withRouter} from 'react-router-dom';
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
@@ -27,8 +28,18 @@ class Header extends React.Component {
     this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
     this.headerColorChange = this.headerColorChange.bind(this);
   }
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.closeDrawer();
+    }
+  }
   handleDrawerToggle() {
     this.setState({ mobileOpen: !this.state.mobileOpen });
+  }
+  closeDrawer() {
+    if(this.state.mobileOpen){
+      this.setState({ mobileOpen: false});
+    }
   }
   componentDidMount() {
     if (this.props.changeColorOnScroll) {
@@ -68,7 +79,7 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     });
     return (
-      <AppBar className={appBarClasses}>
+      <AppBar className={appBarClasses} style={{zIndex: 10,}}>
         <Toolbar className={classes.container}>
           <Button className={classes.title}>
             <Link to="/">{brand}</Link>
@@ -155,4 +166,8 @@ Header.propTypes = {
   })
 };
 
-export default withStyles(headerStyle)(Header);
+Header.propTypes = {
+  location: PropTypes.object.isRequired
+}
+
+export default withStyles(headerStyle)(withRouter(Header));

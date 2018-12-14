@@ -42,6 +42,7 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
 import headerLinksStyle from "assets/jss/material-kit-pro-react/components/headerLinksStyle.jsx";
+import { primaryColor } from "assets/jss/material-kit-pro-react.jsx";
 
 function HeaderLinks({ ...props }) {
   const easeInOutQuad = (t, b, c, d) => {
@@ -87,30 +88,40 @@ function HeaderLinks({ ...props }) {
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
+        <Link
+          to="/about"
+          className={classes.navButton}
+          style={{color: 'rgba(0,0,0,.87)'}}
+        >
+          <Button color="transparent" style={{color: 'rgba(0,0,0,.87)'}}>
+            About
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonText="Components"
+          hoverColor={primaryColor}
+          buttonText="Speaker"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
-              <LineStyle className={classes.dropdownIcons} /> Presentation Page
+            <Link to="/speaker" className={classes.dropdownLink}>
+              Corperate
             </Link>,
-            <Link to="/components" className={classes.dropdownLink}>
-              <Layers className={classes.dropdownIcons} />All components
+            <Link to="/speaker" className={classes.dropdownLink}>
+              Sales
             </Link>,
-            <a
-              href="https://demos.creative-tim.com/material-kit-pro-react/#/documentation/tutorial"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              <Icon className={classes.dropdownIcons}>content_paste</Icon>Documentation
-            </a>
+            <Link to="/speaker" className={classes.dropdownLink}>
+              Retreats
+            </Link>,
+            <Link to="/speaker" className={classes.dropdownLink}>
+              Inspirational
+            </Link>,
           ]}
         />
       </ListItem>
@@ -118,70 +129,26 @@ function HeaderLinks({ ...props }) {
         <CustomDropdown
           noLiPadding
           navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonText="Sections"
+          hoverColor={primaryColor}
+          buttonText="Coach"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
-          buttonIcon={ViewDay}
+          buttonIcon={Apps}
           dropdownList={[
-            <Link
-              to="/sections#headers"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "headers")}
-            >
-              <Dns className={classes.dropdownIcons} /> Headers
+            <Link to="/coach" className={classes.dropdownLink}>
+              One-on-One
             </Link>,
-            <Link
-              to="/sections#features"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "features")}
-            >
-              <Build className={classes.dropdownIcons} /> Features
+            <Link to="/coach" className={classes.dropdownLink}>
+              Group
             </Link>,
-            <Link
-              to="/sections#blogs"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "blogs")}
-            >
-              <ListIcon className={classes.dropdownIcons} /> Blogs
+            <Link to="/coach" className={classes.dropdownLink}>
+              Personal
             </Link>,
-            <Link
-              to="/sections#teams"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "teams")}
-            >
-              <People className={classes.dropdownIcons} /> Teams
+            <Link to="/coach" className={classes.dropdownLink}>
+              Professional
             </Link>,
-            <Link
-              to="/sections#projects"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "projects")}
-            >
-              <Assignment className={classes.dropdownIcons} /> Projects
-            </Link>,
-            <Link
-              to="/sections#pricing"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "pricing")}
-            >
-              <MonetizationOn className={classes.dropdownIcons} /> Pricing
-            </Link>,
-            <Link
-              to="/sections#testimonials"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "testimonials")}
-            >
-              <Chat className={classes.dropdownIcons} /> Testimonials
-            </Link>,
-            <Link
-              to="/sections#contacts"
-              className={classes.dropdownLink}
-              onClick={e => smoothScroll(e, "contacts")}
-            >
-              <Call className={classes.dropdownIcons} /> Contacts
-            </Link>
           ]}
         />
       </ListItem>
@@ -189,63 +156,65 @@ function HeaderLinks({ ...props }) {
         <CustomDropdown
           noLiPadding
           navDropdown
-          hoverColor={dropdownHoverColor}
-          buttonText="Examples"
+          hoverColor={primaryColor}
+          buttonText="Consultant"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
-          buttonIcon={ViewCarousel}
+          buttonIcon={Apps}
           dropdownList={[
-            <Link to="/about-us" className={classes.dropdownLink}>
-              <AccountBalance className={classes.dropdownIcons} /> About Us
+            <Link to="/consultant" className={classes.dropdownLink}>
+              Financial
             </Link>,
-            <Link to="/blog-post" className={classes.dropdownLink}>
-              <ArtTrack className={classes.dropdownIcons} /> Blog Post
+            <Link to="/consultant" className={classes.dropdownLink}>
+              Business Development
             </Link>,
-            <Link to="/blog-posts" className={classes.dropdownLink}>
-              <ViewQuilt className={classes.dropdownIcons} /> Blog Posts
-            </Link>,
-            <Link to="/contact-us" className={classes.dropdownLink}>
-              <LocationOn className={classes.dropdownIcons} /> Contact Us
-            </Link>,
-            <Link to="/landing-page" className={classes.dropdownLink}>
-              <ViewDay className={classes.dropdownIcons} /> Landing Page
-            </Link>,
-            <Link to="/login-page" className={classes.dropdownLink}>
-              <Fingerprint className={classes.dropdownIcons} /> Login Page
-            </Link>,
-            <Link to="/pricing" className={classes.dropdownLink}>
-              <AttachMoney className={classes.dropdownIcons} /> Pricing Page
-            </Link>,
-            <Link to="/shopping-cart-page" className={classes.dropdownLink}>
-              <ShoppingBasket className={classes.dropdownIcons} /> Shopping Cart
-            </Link>,
-            <Link to="/ecommerce-page" className={classes.dropdownLink}>
-              <Store className={classes.dropdownIcons} /> Ecommerce Page
-            </Link>,
-            <Link to="/product-page" className={classes.dropdownLink}>
-              <ShoppingCart className={classes.dropdownIcons} /> Product Page
-            </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              <AccountCircle className={classes.dropdownIcons} /> Profile Page
-            </Link>,
-            <Link to="/signup-page" className={classes.dropdownLink}>
-              <PersonAdd className={classes.dropdownIcons} /> Signup Page
-            </Link>
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-pro-react"
-          color={window.innerWidth < 960 ? "info" : "white"}
-          target="_blank"
+        <CustomDropdown
+          noLiPadding
+          navDropdown
+          hoverColor={primaryColor}
+          buttonText="Contact"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Apps}
+          dropdownList={[
+            <Link to="/contact" className={classes.dropdownLink}>
+              Contact Eric
+            </Link>,
+            <Link to="/meeting-planner" className={classes.dropdownLink}>
+              Meeting Planner
+            </Link>,
+          ]}
+        />
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link
+          to="/resources"
           className={classes.navButton}
-          round
+          style={{color: 'rgba(0,0,0,.87)'}}
         >
-          <ShoppingCart className={classes.icons} /> buy now
-        </Button>
+          <Button color="transparent" style={{color: 'rgba(0,0,0,.87)'}}>
+            Resources
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link
+          to="/booking"
+          className={classes.navButton}
+          style={{color: 'rgba(0,0,0,.87)'}}
+        >
+          <Button color="primary" style={{color: 'white'}}>
+            Book Eric
+          </Button>
+        </Link>
       </ListItem>
     </List>
   );
