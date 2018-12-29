@@ -42,7 +42,7 @@ class App extends Component {
             />
               <Route exact path="/" component={Home}/>
               { services.map((service, index) => (
-                <Route key={index} path={"/service/" + service.url} component={() => (<Service banner={service.banner} firstParagraph={service.firstParagraph()} secondParagraph={service.secondParagraph()} category={service.category} steps={service.steps} name={service.name} img={service.img} gender={service.gender} images={service.images}/>)}/>
+                <Route key={index} path={"/service/" + service.url} component={() => (<Service banner={service.banner} dark={service.dark} firstParagraph={service.firstParagraph()} secondParagraph={service.secondParagraph()} category={service.category} steps={service.steps} name={service.name} img={service.img} gender={service.gender} images={service.images}/>)}/>
               ))}
               <Route path="/contact" component={Contact}/>
               <Route path="/transformations" component={Transformations}/>

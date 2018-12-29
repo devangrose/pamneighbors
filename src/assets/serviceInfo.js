@@ -17,18 +17,21 @@ import eyebrowImages from '../assets/eyebrows.js';
 import threeDEyebrowsImages from '../assets/3deyebrows.js';
 import eyelinerImages from '../assets/eyeliner.js';
 import lipsImages from '../assets/lips.js';
+import womenalopeciabanner from '../assets/womens-alopecia-banner.jpeg';
+import womenHairLossHero from '../assets/womenshairlosshero.jpeg';
 
 import rejuvapen from '../assets/rejuvapen.jpg';
 const services = [ 
 
   {
     'url':'women/alopecia',
-    'banner':womanBanner,
+    'banner':womenalopeciabanner,
     'gender':'woman',
     'category': 'Women\'s Alopecia',
     'name': 'Scalp Micropigmentation',
     'images': womenAlopeciaImages,
     'img':( <img alt="women alopecia" src={womenAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'dark': true,
     'firstParagraph': () => {
       return(
         <div>
@@ -62,7 +65,8 @@ const services = [
 
   {
     'url': 'women/hair-loss-treatment',
-    'banner':womanBanner,
+    'dar': true,
+    'banner':womenHairLossHero,
     'gender':'woman',
     'category': 'Women\'s Hair Loss Treatment',
     'images': womenHairLossImages,
@@ -158,6 +162,7 @@ const services = [
   },
     {
     'url': 'women/eyebrows',
+    'dark': true,
     'banner':womanBanner,
     'gender':'woman',
     'category': 'Gorgeous Eyebrows',
@@ -216,6 +221,7 @@ const services = [
   },
   {
     'url': 'women/3d-eyebrows',
+    'dark': true,
     'banner':womanBanner,
     'gender':'woman',
     'category': '3D Hair Stroke Eyebrows',
@@ -337,6 +343,7 @@ const services = [
   },
   {
     'url': 'women/eyeliner',
+    'dark': true,
     'banner':womanBanner,
     'gender':'woman',
     'category': 'Exquisite Eyeliner',
@@ -405,6 +412,7 @@ const services = [
   },
   {
     'url': 'women/lips',
+    'dark': true,
     'banner':womanBanner,
     'gender':'woman',
     'category': 'Luscious Lips',
@@ -473,6 +481,7 @@ const services = [
   },
   {
     'url': 'women/microneedling',
+    'dark': true,
     'banner':womanBanner,
     'img': ( <img alt='microneedling' src={rejuvapen} style={{width: "100%", height: "auto"}}/>),
     'gender':'woman',
@@ -569,7 +578,7 @@ const services = [
     },
   },
   {
-    'url':'men/alopecia',
+    'url':'men/alopecia','dark': true,
     'banner':require('../assets/mensalopeciahero.jpeg'),
     'gender': 'man',
     'category': 'Men\'s Alopecia',
@@ -607,14 +616,14 @@ const services = [
     },
   },
   {
-    'url': 'men/hair-loss-treatment',
+    'url': 'men/hair-loss-treatment','dark': true,
     'banner':manBanner,
     'gender':'man',
     'images': menHairLossImages,
     'img':(
           <iframe style={{height: "50vh", width: "100%"}} title="mens hair loss video" src="https://www.youtube.com/embed/kUd2FFMTcds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     ),
-    'category': 'Men\'s Hair Loss Treatment',
+    'category': '   Men\'s Hair Loss Treatment',
     'name': 'Scalp Micropigmentation',
     'firstParagraph': () => {
       return (
@@ -640,7 +649,7 @@ For sufferers of regular hair loss or alopecia, SMP offers an effective cosmetic
     },
   },
   {
-    'url': 'men/transplant-scars',
+    'url': 'men/transplant-scars','dark': true,
     'banner':require('../assets/transplanthero.jpeg'),
     'gender':'man',
     'category': 'Transplant Scars',

@@ -6,7 +6,6 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import { withStyles } from '@material-ui/core';
 
-
 import shoppingCartStyle from "assets/jss/material-kit-pro-react/views/shoppingCartStyle.jsx";
 
 const styles = {
@@ -32,34 +31,35 @@ const styles = {
     textAlign: 'right', 
     display: 'table-cell', 
     verticalAlign: 'middle',
+  },
+  titleText: {
+    textTransform: 'uppercase',
+    paddingRight: '5%',
   }
 };
 class HeroImage extends Component {
 	render(props) {
     const { classes } = this.props;
     return (
-        <Parallax
-          image={this.props.source}
-          filter="dark"
-          small
-          style={{zIndex: -10}}
-        >
-          <div className={classes.container}>
+      <div style={{width: "100%", height: "33vw", backgroundImage:`url(${this.props.source})`, backgroundSize: 'cover', display: 'table'}}>
+        <div className={classes.container} style={{display: 'table-cell', verticalAlign: 'middle'}}>
             <GridContainer>
               <GridItem
-                md={8}
-                sm={8}
+                sm={12}
                 className={classNames(
                   classes.mlAuto,
                   classes.mrAuto,
-                  classes.textCenter
                 )}
               >
-                <h2 className={classes.title}>{this.props.overlay}</h2>
+                { this.props.dark ? 
+                <Typography className={classes.titleText} styles={{maxWidth: '80%', color: 'black'}} variant="h4" align="right">{this.props.overlay}</Typography>
+                  :
+                <Typography className={classes.titleText} styles={{maxWidth: '80%', color: 'white'}} color="white" variant="h4" align="right">{this.props.overlay}</Typography>
+                }
               </GridItem>
             </GridContainer>
           </div>
-        </Parallax>
+        </div>
   )}
 }
 

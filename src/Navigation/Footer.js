@@ -86,8 +86,8 @@ function Footer(props) {
             </Grid>
             <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
               <Typography  className={classes.footerTitle}><strong>PHONE</strong></Typography>
-              <Typography  className={classes.footerItem}>Office <a rel="noopener noreferrer" href="tel:425-258-6256">425.258.6245</a></Typography>
-              <Typography  className={classes.footerItem}>Mobile <a rel="noopener noreferrer" href="tel:425-238-1222">425.238.1222</a></Typography>
+              <Typography  className={classes.footerItem}>Office <a rel="noopener noreferrer" style={{color: "blue", textDecoration: "none", '&:visited':{color: 'blue'}}} href="tel:425-258-6256">425.258.6245</a></Typography>
+              <Typography  className={classes.footerItem}>Mobile <a rel="noopener noreferrer" style={{color: "blue", textDecoration: "none", '&:visited':{color: 'blue'}}} href="tel:425-238-1222">425.238.1222</a></Typography>
               <Typography  className={classes.footerTitle}><strong>EMAIL</strong></Typography>
               <Typography  className={classes.footerItem}><a href="mailto:pam@trilliumink.net" style={{color: "blue", textDecoration: "none"}}>pam@trilliumink.net</a></Typography>
             </Grid>

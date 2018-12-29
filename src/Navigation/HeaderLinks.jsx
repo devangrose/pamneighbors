@@ -46,7 +46,7 @@ function HeaderLinks({ ...props }) {
             <Link to="/service/men/alopecia" className={classes.dropdownLink}>
               Alopecia
             </Link>,
-            <Link to="/service/men/-scars" className={classes.dropdownLink}>
+            <Link to="/service/men/transplant-scars" className={classes.dropdownLink}>
               Scalp Scarring
             </Link>,
             <Typography variant="h6" style={{color: redColor}}>

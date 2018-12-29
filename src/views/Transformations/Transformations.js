@@ -40,7 +40,7 @@ class Transformations extends Component {
           </Typography>
           <Panel images={menHairLoss} title="Hair Loss" link="/service/men/hair-loss-treatment"/>
           <Panel images={menAlopecia} title="Alopecia" link="/service/men/hair-loss-treatment"/>
-          <Panel images={menTransplant} title="Transplant Scars" link="/service/men/transplant-scars"/>
+          <Panel images={menTransplant} title="Scalp Scars" link="/service/men/transplant-scars"/>
           <Typography variant="display2" style={{marginTop: "25px", color: redColor}}>
             Women
           </Typography>

@@ -23,8 +23,8 @@ function Process(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root} style={{padding: "0 30px"}}>
-      <Typography className={classes.text} component="h2" variant="display1" gutterBottom>
+    <div className={classes.root} style={{padding: "0 3%"}}>
+      <Typography className={classes.text} component="h2" variant="display1" align="center" gutterBottom>
         The Scalp Micropigmentation Process
       </Typography>
       { ['lg','xl'].includes(props.width) ?
@@ -32,14 +32,14 @@ function Process(props) {
         {props.steps.map((step, index) => {
           return (
             <Grid item key={index} xs={12} sm={12} md={Math.floor(12 / (props.steps.length))}>
-              <ProcessCard key={index} index={index} step={step}/>
+              <ProcessCard key={index} index={index} img={step.img} label={step.label}/>
             </Grid>
           )
         })}
       </Grid>
         :
           <div style={{paddingBottom: '25px'}}>
-            <Carousel slides={props.steps.map((step, index) => <ProcessCard index={index} step={step}/>)}/>
+            <Carousel slides={props.steps.map((step, index) => <ProcessCard index={index} img={step.img} label={step.label}/>)}/>
           </div>
       }
     </div>

@@ -10,6 +10,12 @@ import Video from './Video.js';
 
 import services from 'assets/AllImages.js';
 
+import step1 from '../../assets/steps/hairline design pic 2.jpg';
+import step2 from '../../assets/steps/Hairline design pic 6.JPG';
+import step3 from '../../assets/steps/create density pic.JPG';
+import step4 from '../../assets/steps/Pam - working pic.jpg';
+import step5 from '../../assets/steps/Pam - close up male.jpg';
+
 class Home extends Component {
 
 
@@ -29,10 +35,9 @@ class Home extends Component {
 export default withWidth()(Home);
 
 const steps = [
-  'Consultation',
-  'Drawing Hair Line',
-  'First Pass',
-  'Second Pass',
-  'Third Pass (if necessary)',
-  'Touch Ups (if necessary)',
+  { label: 'Consultation', img: step1 },
+  { label: 'First Pass', img: step2 },
+  { label: 'Second Pass', img: step3 },
+  { label: 'Third Pass (if necessary)', img: step4 },
+  { label: 'Touch Ups (if necessary)', img: step5 },
 ];

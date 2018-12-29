@@ -18,7 +18,7 @@ function HomeServiceCard(props) {
   return (
     <div className={classes.root}>
       <Link to={props.service.link} style={{cursor: 'pointer', margin: 'auto', textAlign: 'center'}}>
-        <Card style={{ width: "20rem", margin: 'auto' }}>
+        <Card style={{ width: "16rem", margin: 'auto' }}>
           <img
           style={{ width: "100%", display: "block" }}
           className={classes.imgCardTop}

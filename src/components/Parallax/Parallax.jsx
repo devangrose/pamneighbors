@@ -61,13 +61,10 @@ class Parallax extends React.Component {
     });
     return (
       <div
-        className={parallaxClasses}
         style={{
-          ...style,
           backgroundImage: "url(" + image + ")",
-          ...this.state
+          height: '50%'
         }}
-        ref="parallax"
       >
         {children}
       </div>
