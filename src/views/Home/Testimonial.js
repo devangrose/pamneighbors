@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Carousel from 'Components/Carousel.js';
+import Video from './Video.js';
+
+import testimonial1 from '../../assets/Testimonial.1.png';
+import testimonial2 from '../../assets/Testimonial.2.jpeg';
+import testimonial3 from '../../assets/Testimonial.3.jpeg';
 
 import before from '../../assets/beforepic.png';
 import after from '../../assets/afterpic.jpg';
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
     padding: theme.spacing.unit * 4,
   },
   text: {
@@ -27,26 +32,44 @@ const styles = theme => ({
 function Testimonial(props) {
   const { classes } = props;
 
-  return (
-    <div className={classes.root} style={{background: props.backgroundColor}}>
-      <Grid container spacing={24}>
+  const slides = [
+    <div>
+      <Grid container spacing={24} style={{margin: 0, width: '100%'}}>
         <Grid item xs={12}>
           <p><em>"I was sad to see the hair loss at my hairline in my fifties. Pam has created a natural and beautiful hairline for me through her scalp pigmentation process."</em></p>
           <p className={classes.p}><em>- Suzanne E.</em></p>
         </Grid>
-        <Grid item xs={12} sm={6} className={classes.imgFrame}>
+      </Grid>
+        <div style={{float: 'left', width: '45%'}}>
           <Typography variant="caption" align="center" gutterBottom style={{fontSize: "2em"}}>
             Before
           </Typography> 
           <img alt="before" className={classes.img} src={before} />
-        </Grid>
-        <Grid item xs={12} sm={6} className={classes.imgFrame}>
+        </div>
+        <div style={{float: 'right', width: '45%'}}>
           <Typography variant="caption" align="center" gutterBottom style={{fontSize: "2em"}}>
             After
           </Typography>
           <img alt="after" className={classes.img} src={after} /> 
-        </Grid>
-      </Grid>
+        </div>
+      </div>
+    ,
+    <Video  />
+    ,
+    <img src={testimonial2} className={classes.img}/>
+    ,
+    <Video  />
+    ,
+    <img src={testimonial1} className={classes.img}/>
+    ,
+    <Video  />
+    ,
+    <img src={testimonial3} className={classes.img}/>
+  ]
+
+  return (
+    <div className={classes.root} style={{background: props.backgroundColor}}>
+      <Carousel slides={slides} fullWidth/>
     </div>
   );
 }

@@ -27,21 +27,9 @@ function Process(props) {
       <Typography className={classes.text} component="h2" variant="display1" align="center" gutterBottom>
         The Scalp Micropigmentation Process
       </Typography>
-      { ['lg','xl'].includes(props.width) ?
-      <Grid container spacing={40}>
-        {props.steps.map((step, index) => {
-          return (
-            <Grid item key={index} xs={12} sm={12} md={Math.floor(12 / (props.steps.length))}>
-              <ProcessCard key={index} index={index} img={step.img} label={step.label}/>
-            </Grid>
-          )
-        })}
-      </Grid>
-        :
           <div style={{paddingBottom: '25px'}}>
             <Carousel slides={props.steps.map((step, index) => <ProcessCard index={index} img={step.img} label={step.label}/>)}/>
           </div>
-      }
     </div>
   );
 }
