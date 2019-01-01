@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import HeroImage from 'Components/HeroImage.js';
 import { Link } from 'react-router-dom';
 
-import hero from '../../assets/banner-smp.jpg';
+import hero from '../../assets/trainingbanner.JPG';
 import redColor from 'color.js';
 
 import school1 from 'assets/school1.jpg';

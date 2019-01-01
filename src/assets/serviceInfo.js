@@ -18,7 +18,11 @@ import threeDEyebrowsImages from '../assets/3deyebrows.js';
 import eyelinerImages from '../assets/eyeliner.js';
 import lipsImages from '../assets/lips.js';
 import womenalopeciabanner from '../assets/womens-alopecia-banner.jpeg';
+import threeDEyebrowsBanner from '../assets/3deyebrowbanner.jpg';
 import womenHairLossHero from '../assets/womenshairlosshero.jpeg';
+import eyelinerBanner from '../assets/eyelinerbanner.jpg';
+import lipsBanner from '../assets/lipsbanner.jpg';
+import microneedlingBanner from '../assets/microneedlingbanner.jpg';
 
 import rejuvapen from '../assets/rejuvapen.jpg';
 const services = [ 
@@ -222,7 +226,7 @@ const services = [
   {
     'url': 'women/3d-eyebrows',
     'dark': true,
-    'banner':womanBanner,
+    'banner':threeDEyebrowsBanner,
     'gender':'woman',
     'category': '3D Hair Stroke Eyebrows',
     'name': '3d Eyebrows',
@@ -344,7 +348,7 @@ const services = [
   {
     'url': 'women/eyeliner',
     'dark': true,
-    'banner':womanBanner,
+    'banner':eyelinerBanner,
     'gender':'woman',
     'category': 'Exquisite Eyeliner',
     'name': 'Permanent Cosmetics',
@@ -412,8 +416,7 @@ const services = [
   },
   {
     'url': 'women/lips',
-    'dark': true,
-    'banner':womanBanner,
+    'banner':lipsBanner,
     'gender':'woman',
     'category': 'Luscious Lips',
     'name': 'Lips',
@@ -482,7 +485,7 @@ const services = [
   {
     'url': 'women/microneedling',
     'dark': true,
-    'banner':womanBanner,
+    'banner':microneedlingBanner,
     'img': ( <img alt='microneedling' src={rejuvapen} style={{width: "100%", height: "auto"}}/>),
     'gender':'woman',
     'category': 'Microneedling',

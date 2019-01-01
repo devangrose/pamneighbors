@@ -17,7 +17,7 @@ import eyebrows3d from '../../assets/3deyebrows.js';
 import eyeliner from '../../assets/eyeliner.js';
 import lips from '../../assets/lips.js';
 
-import hero from '../../assets/slider-item-2-1.jpg';
+import hero from '../../assets/transformationsbanner.JPG';
 
 const styles = {
   img: {

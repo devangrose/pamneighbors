@@ -17,7 +17,9 @@ class VideoPlayer extends Component {
 
     render() {
         return (
-          <iframe width="100%" height="350vh" src="https://player.vimeo.com/video/308634287" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+          <div style={{backgroundColor: 'black'}}>
+            <iframe width="100%" height="350vh" src="https://player.vimeo.com/video/308634287" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+          </div>
         );
 
     }
