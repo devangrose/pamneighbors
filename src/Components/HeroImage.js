@@ -51,10 +51,10 @@ class HeroImage extends Component {
                   classes.mrAuto,
                 )}
               >
-                { this.props.dark ? 
-                <Typography className={classes.titleText} styles={{maxWidth: '80%', color: 'black'}} variant="h4" align="right">{this.props.overlay}</Typography>
+                { this.props.dark ==true ? 
+                <Typography className={classes.titleText} style={{color: 'black'}} variant="h4" align="right">{this.props.overlay}</Typography>
                   :
-                <Typography className={classes.titleText} styles={{maxWidth: '80%', color: 'white'}} color="white" variant="h4" align="right">{this.props.overlay}</Typography>
+                <Typography className={classes.titleText} style={{color: 'white'}} color="white" variant="h4" align="right">{this.props.overlay}</Typography>
                 }
               </GridItem>
             </GridContainer>

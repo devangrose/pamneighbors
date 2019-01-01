@@ -69,7 +69,7 @@ const services = [
 
   {
     'url': 'women/hair-loss-treatment',
-    'dar': true,
+    'dark': true,
     'banner':womenHairLossHero,
     'gender':'woman',
     'category': 'Women\'s Hair Loss Treatment',
@@ -623,6 +623,7 @@ const services = [
     'banner':manBanner,
     'gender':'man',
     'images': menHairLossImages,
+    'dark':false,
     'img':(
           <iframe style={{height: "50vh", width: "100%"}} title="mens hair loss video" src="https://www.youtube.com/embed/kUd2FFMTcds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     ),

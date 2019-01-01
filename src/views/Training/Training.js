@@ -37,7 +37,7 @@ class Training extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <HeroImage source={hero} overlay="Training Opportunities" gender="man"/>
+        <HeroImage source={hero} dark={true} overlay="Training Opportunities" gender="man"/>
         <div className={classes.root}>
           <Typography variant="h4" className={classes.header}>
             Scalp Academy Training Opportunities
