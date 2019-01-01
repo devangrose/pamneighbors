@@ -8,6 +8,8 @@ import Facebook from '../assets/facebook-logo.png';
 import Insta from '../assets/instagram-logo.png';
 import Youtube from '../assets/youtube-logo.png';
 
+import redColor from '../color.js';
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -27,6 +29,13 @@ const styles = theme => ({
     height: "2rem",
     width: "auto",
     margin: "1px",
+    color: redColor,
+    '&:hover': {
+      fontStyle: "italic",
+    },
+    '&:visited':{
+      color: redColor
+    } 
   },
   footerItem: {
     lineHeight: "1rem",
@@ -86,10 +95,10 @@ function Footer(props) {
             </Grid>
             <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
               <Typography  className={classes.footerTitle}><strong>PHONE</strong></Typography>
-              <Typography  className={classes.footerItem}>Office <a rel="noopener noreferrer" style={{color: "blue", textDecoration: "none", '&:visited':{color: 'blue'}}} href="tel:425-258-6256">425.258.6245</a></Typography>
-              <Typography  className={classes.footerItem}>Mobile <a rel="noopener noreferrer" style={{color: "blue", textDecoration: "none", '&:visited':{color: 'blue'}}} href="tel:425-238-1222">425.238.1222</a></Typography>
+              <Typography  className={classes.footerItem}>Office <a rel="noopener noreferrer" style={{color: redColor, textDecoration: "none", '&:visited':{color: redColor}}} href="tel:425-258-6256">425.258.6245</a></Typography>
+              <Typography  className={classes.footerItem}>Mobile <a rel="noopener noreferrer" style={{color: redColor, textDecoration: "none", '&:visited':{color: redColor}}} href="tel:425-238-1222">425.238.1222</a></Typography>
               <Typography  className={classes.footerTitle}><strong>EMAIL</strong></Typography>
-              <Typography  className={classes.footerItem}><a href="mailto:pam@trilliumink.net" style={{color: "blue", textDecoration: "none"}}>pam@trilliumink.net</a></Typography>
+              <Typography  className={classes.footerItem}><a href="mailto:pam@trilliumink.net" style={{color: redColor, textDecoration: "none"}}>pam@trilliumink.net</a></Typography>
             </Grid>
           </Grid>
         </Grid>
