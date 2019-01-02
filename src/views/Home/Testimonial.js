@@ -54,15 +54,15 @@ function Testimonial(props) {
         </div>
       </div>
     ,
-    <Video  />
+    <Video source="https://player.vimeo.com/video/309161946?title=0&byline=0&portrait=0"/>
     ,
     <img src={testimonial2} className={classes.img}/>
     ,
-    <Video  />
+    <Video source="https://player.vimeo.com/video/309161355?title=0&byline=0&portrait=0"/>
     ,
     <img src={testimonial1} className={classes.img}/>
     ,
-    <Video  />
+    <Video source="https://player.vimeo.com/video/309160464?title=0&byline=0&portrait=0"/>
     ,
     <img src={testimonial3} className={classes.img}/>
   ]
