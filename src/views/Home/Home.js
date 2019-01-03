@@ -16,6 +16,7 @@ import step3 from '../../assets/steps/create density pic.JPG';
 import step4 from '../../assets/steps/Pam - working pic.jpg';
 import step5 from '../../assets/steps/Pam - close up male.jpg';
 
+
 class Home extends Component {
 
 

@@ -63,7 +63,7 @@ class SectionCarousel extends React.Component {
       ]
     };
     return (
-      <div className={classes.container} style={{position: 'relative', paddingBottom: '3%'}} id="carousel">
+      <div className={classes.container} style={{position: 'relative', paddingBottom: '3%', marginBottom: '2%'}} id="carousel">
         {this.props.header ? <Typography style={{color: redColor, textAlign: 'center', paddingTop: "10%"}} variant="h3" paragraph >{this.props.header}</Typography> : ''}
           <Icon onClick={this.slidePrev} style={styles.leftArrow}>keyboard_arrow_left</Icon>
           <Slider {...settings} ref="carousel" style={{display: "inline"}}>

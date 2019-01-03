@@ -4,7 +4,7 @@ import Parallax from "components/Parallax/Parallax.jsx";
 import classNames from "classnames";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
-import { withStyles } from '@material-ui/core';
+import { withStyles, withWidth } from '@material-ui/core';
 
 import shoppingCartStyle from "assets/jss/material-kit-pro-react/views/shoppingCartStyle.jsx";
 
@@ -35,6 +35,7 @@ const styles = {
   titleText: {
     textTransform: 'uppercase',
     paddingRight: '5%',
+    width: '100%',
   }
 };
 class HeroImage extends Component {
@@ -51,10 +52,17 @@ class HeroImage extends Component {
                   classes.mrAuto,
                 )}
               >
-                { this.props.dark ==true ? 
-                <Typography className={classes.titleText} style={{color: 'black'}} variant="h4" align="right">{this.props.overlay}</Typography>
+                {
+                  ['lg','xl'].includes(this.props.width) ?
+                <Typography className={classes.titleText} style={{color: 'white'}} variant={['lg','xl'].includes(this.props.width) ? "h3" : 'h5'} align="right">{this.props.overlay.replace('-_','-').replace('_',' ')}</Typography>
                   :
-                <Typography className={classes.titleText} style={{color: 'white'}} color="white" variant="h4" align="right">{this.props.overlay}</Typography>
+                    this.props.overlay.split('_').map(text => {
+                      text = text.replace('-','');
+                      text = text.replace('_',' ');
+                      return (
+                        <Typography className={classes.titleText} style={{color: 'white'}} variant={['lg','xl'].includes(this.props.width) ? "h3" : 'h5'} align="right">{text}</Typography>
+                      )
+                    })
                 }
               </GridItem>
             </GridContainer>
@@ -63,4 +71,4 @@ class HeroImage extends Component {
   )}
 }
 
-export default withStyles(styles)(HeroImage);
+export default withStyles(styles)(withWidth()(HeroImage))

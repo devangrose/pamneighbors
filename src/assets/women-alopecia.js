@@ -4,12 +4,9 @@ import image3 from './women-alopecia3.jpg';
 
 export default [
   { 'img' : image1,
-    'label': "Women's Alopecia",
+    'label': "Traction Alopecia",
     'link': '/service/women/alopecia'},
   { 'img' : image2,
-    'label': "Women's Alopecia",
-    'link': '/service/women/alopecia' },
-  { 'img' : image3,
     'label': "Women's Alopecia",
     'link': '/service/women/alopecia' },
 ];

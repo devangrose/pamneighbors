@@ -18,7 +18,9 @@ import threeDEyebrowsImages from '../assets/3deyebrows.js';
 import eyelinerImages from '../assets/eyeliner.js';
 import lipsImages from '../assets/lips.js';
 import womenalopeciabanner from '../assets/womens-alopecia-banner.jpeg';
+import eyebrowbanner from '../assets/eyebrowsbanner1.jpg';
 import threeDEyebrowsBanner from '../assets/3deyebrowbanner.jpg';
+import threeDEyebrowsBanner2 from '../assets/3deyebrowbanner2.jpg';
 import womenHairLossHero from '../assets/womenshairlosshero.jpeg';
 import eyelinerBanner from '../assets/eyelinerbanner.jpg';
 import lipsBanner from '../assets/lipsbanner.jpg';
@@ -31,7 +33,7 @@ const services = [
     'url':'women/alopecia',
     'banner':womenalopeciabanner,
     'gender':'woman',
-    'category': 'Women\'s Alopecia',
+    'category': 'Women\'s_Alopecia',
     'name': 'Scalp Micropigmentation',
     'images': womenAlopeciaImages,
     'img':( <img alt="women alopecia" src={womenAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
@@ -72,7 +74,7 @@ const services = [
     'dark': true,
     'banner':womenHairLossHero,
     'gender':'woman',
-    'category': 'Women\'s Hair Loss Treatment',
+    'category': 'Women\'s Hair_Loss Treatment',
     'images': womenHairLossImages,
     'img':( <img alt="Womens hair loss" src={womenHairLossImages[0].img} style={{width: "100%", height: "auto"}}/>),
     'name': 'Scalp Micropigmentation',
@@ -167,9 +169,9 @@ const services = [
     {
     'url': 'women/eyebrows',
     'dark': true,
-    'banner':womanBanner,
+    'banner':eyebrowbanner,
     'gender':'woman',
-    'category': 'Gorgeous Eyebrows',
+    'category': 'Gorgeous_Eyebrows',
     'name': 'Scalp Micropigmentation',
     'images': eyebrowImages,
     'img':( <img alt="scalp micropigmentation" src={eyebrowImages[0].img} style={{width: "100%", height: "auto"}}/>),
@@ -226,7 +228,7 @@ const services = [
   {
     'url': 'women/3d-eyebrows',
     'dark': true,
-    'banner':threeDEyebrowsBanner,
+    'banner':threeDEyebrowsBanner2,
     'gender':'woman',
     'category': '3D Hair Stroke Eyebrows',
     'name': '3d Eyebrows',
@@ -350,7 +352,7 @@ const services = [
     'dark': true,
     'banner':eyelinerBanner,
     'gender':'woman',
-    'category': 'Exquisite Eyeliner',
+    'category': 'Exquisite_Eyeliner',
     'name': 'Permanent Cosmetics',
     'images': eyelinerImages,
     'img':( <img alt="eyeliner" src={eyelinerImages[0].img} style={{width: "100%", height: "auto"}}/>),
@@ -418,7 +420,7 @@ const services = [
     'url': 'women/lips',
     'banner':lipsBanner,
     'gender':'woman',
-    'category': 'Luscious Lips',
+    'category': 'Luscious_Lips',
     'name': 'Lips',
     'images': lipsImages,
     'img':( <img alt='lips' src={lipsImages[0].img} style={{width: "100%", height: "auto"}}/>),
@@ -488,7 +490,7 @@ const services = [
     'banner':microneedlingBanner,
     'img': ( <img alt='microneedling' src={rejuvapen} style={{width: "100%", height: "auto"}}/>),
     'gender':'woman',
-    'category': 'Microneedling',
+    'category': 'Micro-_Needling',
     'name': 'Introduction to Microneedling',
     'images':[],
     'firstParagraph': () => {
@@ -656,7 +658,7 @@ For sufferers of regular hair loss or alopecia, SMP offers an effective cosmetic
     'url': 'men/transplant-scars','dark': true,
     'banner':require('../assets/transplanthero.jpeg'),
     'gender':'man',
-    'category': 'Transplant Scars',
+    'category': 'Scalp Scars',
     'name': 'Scalp Micropigmentation',
     'images': menTransplantImages,
     'img':( <img alt="transplant scars" src={menTransplantImages[0].img} style={{width: "100%", height: "auto"}}/>),

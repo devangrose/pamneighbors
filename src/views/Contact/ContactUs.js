@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import { Link } from 'react-router-dom';
+import emailjs from 'emailjs-com';
 
 import redColor from 'color.js';
 
@@ -31,11 +32,28 @@ class ContactUs extends Component {
     };
   }
 
-  handleChange = name => event => {
+  handleChange = (event) => {
     this.setState({
-      [name]: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+     var service_id = "mailgun_test";
+    var template_id = "pam_images";
+
+
+    const data = new FormData(e.target);
+    window.emailjs.sendForm(service_id,template_id,document.getElementById('formId')
+    )
+      .then(response => {
+        console.log(response);
+      })
+      .catch(response => {
+        console.log(response);
+      })
+  }
   render(){
     return (
       <div style={{marginTop: "50px"}} >
@@ -46,12 +64,13 @@ class ContactUs extends Component {
             <Typography variant="h3">
               Send Us A Message!
             </Typography>
-            <form noValidate autoComplete="off" style={{width: "100%"}}>
+            <form id="formId"noValidate autoComplete="off" style={{width: "100%"}} onSubmit={this.handleSubmit}>
               <TextField
                 id="outlined-with-placeholder"
+                name="senderName"
                 label="Name"
                 placeholder="Your name"
-                onChange={this.handleChange('name')}
+                onChange={this.handleChange}
                 margin="normal"
                 variant="outlined"
                 style={{width:"100%"}}
@@ -60,8 +79,9 @@ class ContactUs extends Component {
               <TextField
                 id="outlined-with-placeholder"
                 label="Phone"
+                name="senderPhone"
                 placeholder="Your Phone Number"
-                onChange={this.handleChange('name')}
+                onChange={this.handleChange}
                 margin="normal"
                 variant="outlined"
                 style={{width:"100%"}}
@@ -70,8 +90,9 @@ class ContactUs extends Component {
               <TextField
                 id="outlined-with-placeholder"
                 label="Email"
+                name="senderEmail"
                 placeholder="Your email"
-                onChange={this.handleChange('name')}
+                onChange={this.handleChange}
                 margin="normal"
                 variant="outlined"
                 style={{width:"100%"}}
@@ -82,14 +103,15 @@ class ContactUs extends Component {
                 label="Message"
                 multiline
                 rows="4"
-                onChange={this.handleChange('multiline')}
+                name="senderMessage"
+                onChange={this.handleChange}
                 margin="normal"
                 variant="outlined"
                 style={{width:"100%"}}
               />
               <br/>
               <Button variant="outlined">
-                 <input type="file" style={{cursor: 'pointer',
+                 <input id="image1" type="file" name="image1" style={{cursor: 'pointer',
                     position: 'absolute',
                     top: '0',
                     bottom: '0',
@@ -97,7 +119,29 @@ class ContactUs extends Component {
                     left: '0',
                     width: '100%',
                     opacity: '0'}} />
-                  Upload Images
+                  Upload Image
+              </Button>
+              <Button variant="outlined">
+                 <input id="image2" type="file" name="image2" style={{cursor: 'pointer',
+                    position: 'absolute',
+                    top: '0',
+                    bottom: '0',
+                    right: '0',
+                    left: '0',
+                    width: '100%',
+                    opacity: '0'}} />
+                  Upload Image
+              </Button>
+              <Button variant="outlined">
+                 <input id="image3" type="file" name="image3" style={{cursor: 'pointer',
+                    position: 'absolute',
+                    top: '0',
+                    bottom: '0',
+                    right: '0',
+                    left: '0',
+                    width: '100%',
+                    opacity: '0'}} />
+                  Upload Image
               </Button>
               <br/>
               <br/>

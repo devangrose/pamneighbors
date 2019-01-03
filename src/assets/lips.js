@@ -8,15 +8,6 @@ import image7 from './lips7.jpg';
 import image8 from './lips8.png';
 
 export default [
-  { 'img': image1,
-    link: '/service/women/lips',
-    'label': 'Lips'},
-  { 'img': image2,
-    link: '/service/women/lips',
-    'label': 'Lips'},
-  { 'img': image3,
-    link: '/service/women/lips',
-    'label': 'Lips'},
   { 'img': image4,
     link: '/service/women/lips',
     'label': 'Lips'},

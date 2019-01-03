@@ -9,6 +9,7 @@ import CardBody from "components/Card/CardBody.jsx";
 const styles = {
   root: {
     margin: 'auto',
+    marginBottom: '3%',
   }
 };
 

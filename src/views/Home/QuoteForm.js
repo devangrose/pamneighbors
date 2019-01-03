@@ -6,6 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import emailjs from 'emailjs-com';
 
 const styles = theme => ({
   container: {
@@ -27,33 +28,35 @@ const styles = theme => ({
 
 class ComposedTextField extends React.Component {
   state = {
-    name: 'Jane Doe',
-    phone: '555-555-5555',
-    email: 'you@email.com',
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
   };
 
   componentDidMount() {
     this.forceUpdate();
   }
 
-  handleChange = event => {
-    this.setState({ name: event.target.value });
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
   };
-  handleSubmit(event) {
+  handleSubmit= (event)=> {
     event.preventDefault();
-    const data = new FormData(event.target);
-
-    fetch('/api/form-submit-url', {
-      method: 'POST',
-      body: data,
-    });
-  }
+    console.log(this.state.name, this.state.phone, this.state.email, this.state.message)
+    
+    window.emailjs.send("mailgun_test", "pam", {"senderEmail":this.state.email,"senderName":this.state.name,"senderPhone":this.state.phone,"senderMessage":this.state.message,"ejs_dashboard__test_template":true})
+      .then(response => {
+        console.log(response);
+      });
+  } 
 
   render() {
     const { classes } = this.props;
 
     return (
       <div className={classes.container}>
+        <form onSubmit={this.handleSubmit}>
         <Typography className={classes.text} component="h2" variant="display1" align="center" gutterBottom>
           GET A FREE QUOTE
         </Typography>
@@ -62,22 +65,27 @@ class ComposedTextField extends React.Component {
         </Typography>
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled1">Name</InputLabel>
-          <FilledInput id="component-filled1" value={this.state.name} onChange={this.handleChange} />
+          <FilledInput name="name" id="component-filled1" value={this.state.name} onChange={this.handleChange} />
         </FormControl>
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled2">Phone</InputLabel>
-          <FilledInput id="component-filled2" value={this.state.phone} onChange={this.handleChange} />
+          <FilledInput name="phone" id="component-filled2" value={this.state.phone} onChange={this.handleChange}/>
         </FormControl> 
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled3">Email</InputLabel>
-          <FilledInput id="component-filled3" value={this.state.email} onChange={this.handleChange} />
+          <FilledInput name="email" id="component-filled3" value={this.state.email} onChange={this.handleChange}/>
         </FormControl>
-        <Button variant="contained" onClick={this.handleSubmit} className={classes.button}>
+        <FormControl className={classes.formControl} variant="filled">
+          <InputLabel htmlFor="component-filled4">Message</InputLabel>
+          <FilledInput name="message" id="component-filled4" value={this.state.message} onChange={this.handleChange}/>
+        </FormControl>
+        <Button variant="contained" type="submit" className={classes.button}>
           Submit
         </Button>
         <Typography className={classes.text} variant="caption" align="center" gutterBottom>
           *A representative of Trillium Ink will contact you shortly.
         </Typography>
+      </form>
       </div>
     );
   }
