@@ -26,6 +26,11 @@ const styles = theme => ({
   },
   imgFrame: {
     paddingBottom: "50px"
+  },
+  img2: {
+    width: '75%',
+    height: 'auto',
+    margin: '10% auto',
   }
 });
 
@@ -34,37 +39,40 @@ function Testimonial(props) {
 
   const slides = [
     <div>
-      <Grid container spacing={24} style={{margin: 0, width: '100%'}}>
-        <Grid item xs={12}>
-          <p><em>"I was sad to see the hair loss at my hairline in my fifties. Pam has created a natural and beautiful hairline for me through her scalp pigmentation process."</em></p>
-          <p className={classes.p}><em>- Suzanne E.</em></p>
-        </Grid>
-      </Grid>
-        <div style={{float: 'left', width: '45%'}}>
-          <Typography variant="caption" align="center" gutterBottom style={{fontSize: "2em"}}>
-            Before
-          </Typography> 
-          <img alt="before" className={classes.img} src={before} />
-        </div>
-        <div style={{float: 'right', width: '45%'}}>
-          <Typography variant="caption" align="center" gutterBottom style={{fontSize: "2em"}}>
-            After
-          </Typography>
-          <img alt="after" className={classes.img} src={after} /> 
-        </div>
+      <div style={{margin: '30% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
+          <Video source="https://player.vimeo.com/video/309221450?title=0&byline=0&portrait=0"/>
       </div>
+    </div>
     ,
-    <Video source="https://player.vimeo.com/video/309161946?title=0&byline=0&portrait=0"/>
+    <div>
+      <img src={testimonial2} className={classes.img2} style={{position: 'relative'}}/>
+    </div>
     ,
-    <img src={testimonial2} className={classes.img}/>
+    <div>
+      <div style={{margin: '30% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
+          <Video source="https://player.vimeo.com/video/309161355?title=0&byline=0&portrait=0"/>
+      </div>
+    </div>
     ,
-    <Video source="https://player.vimeo.com/video/309161355?title=0&byline=0&portrait=0"/>
+    <div>
+    <img src={testimonial1} className={classes.img2}/>
+    </div>
     ,
-    <img src={testimonial1} className={classes.img}/>
+    <div>
+      <div style={{margin: '30% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
+        <Video source="https://player.vimeo.com/video/309160464?title=0&byline=0&portrait=0"/>
+      </div>
+    </div>
     ,
-    <Video source="https://player.vimeo.com/video/309160464?title=0&byline=0&portrait=0"/>
+    <div>
+      <img homeVideo src={testimonial3} className={classes.img2}/>
+    </div>
     ,
-    <img src={testimonial3} className={classes.img}/>
+    <div>
+      <div style={{margin: '30% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
+        <Video source="https://player.vimeo.com/video/309161946?title=0&byline=0&portrait=0"/>
+      </div>
+    </div>
   ]
 
   return (

@@ -3,6 +3,7 @@ import { Typography, withStyles, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import HeroImage from 'Components/HeroImage.js';
 import { Link } from 'react-router-dom';
+import Video from '../Home/Video.js';
 
 import hero from '../../assets/trainingbanner.JPG';
 import redColor from 'color.js';
@@ -28,6 +29,12 @@ const styles = {
   },
   bold: {
     fontWeight: 'bold',
+  },
+  link: {
+    color: redColor,
+    '&:visited':{
+      color: redColor,
+    }
   }
 }
 
@@ -166,7 +173,7 @@ class Training extends Component {
           <br/>
           <br/>
           <Typography variant="h5" className={classes.bold}>
-            Washington State residences  <Link to="/training/washington">click here!</Link>
+            Washington State residences  <Link to="/training/washington" className={classes.link}>click here!</Link>
           </Typography>
           <br/>
           <br/>

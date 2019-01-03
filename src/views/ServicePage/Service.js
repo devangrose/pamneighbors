@@ -15,7 +15,7 @@ class Service extends Component {
     return (
       <div >
         <HeroImage source={this.props.banner} overlay={this.props.category} gender={this.props.gender} dark={this.props.dark}/>
-        <div className={classNames(classes.main)}>
+        <div className={classNames(classes.main)} style={{paddingBottom: '3%'}}>
         {this.props.images.length > 0 ? <Carousel header="Client Transformations" slides={this.props.images.map((service, index) => {return (<HomeServiceCard key={index} service={service}/>)})}/>: ''}
         <ServiceSummary name={this.props.category.replace('_', ' ')} img={this.props.img} firstParagraph={this.props.firstParagraph}/>
         {this.props.secondParagraph}

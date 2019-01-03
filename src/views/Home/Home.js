@@ -23,7 +23,7 @@ class Home extends Component {
   render(){
     return (
       <div> 
-        <Video source="https://player.vimeo.com/video/308634287"/>        
+        <Video source="https://player.vimeo.com/video/308634287" homeVideo/>        
         <Carousel header="Our Services" slides={services.map((service, index) => {return (<HomeServiceCard key={index} service={service}/>)})}/>
         <Process steps={steps} width={this.props.width}/>
         <MidBanner />

@@ -1,13 +1,21 @@
-import image1 from './lips1.jpg';
-import image2 from './lips2.jpg';
-import image3 from './lips3.jpg';
-import image4 from './lips4.jpg';
-import image5 from './lips5.jpg';
-import image6 from './lips6.jpg';
-import image7 from './lips7.jpg';
-import image8 from './lips8.png';
+import image1 from './lips/lips1.JPG';
+import image2 from './lips/lips2.JPG';
+import image3 from './lips/lips3.JPG';
+import image4 from './lips/lips4.JPG';
+import image5 from './lips/lips5.JPG';
+import image6 from './lips/lips6.JPG';
+import image7 from './lips/lips7.JPG';
 
 export default [
+  { 'img': image1,
+    link: '/service/women/lips',
+    'label': 'Lips'},
+  { 'img': image2,
+    link: '/service/women/lips',
+    'label': 'Lips'},
+  { 'img': image3,
+    link: '/service/women/lips',
+    'label': 'Lips'},
   { 'img': image4,
     link: '/service/women/lips',
     'label': 'Lips'},
@@ -18,9 +26,6 @@ export default [
     link: '/service/women/lips',
     'label': 'Lips'},
   { 'img': image7,
-    link: '/service/women/lips',
-    'label': 'Lips'},
-  { 'img': image8,
     link: '/service/women/lips',
     'label': 'Lips'},
 ];

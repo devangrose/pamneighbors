@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { Paper } from '@material-ui/core';
 import Expansion from '../Components/Expansion.js';
+import Video from '../views/Home/Video.js';
 
 import manBanner from './banner-smp.jpg';
 import womanBanner from './banner-lips.jpg';
@@ -25,6 +26,7 @@ import womenHairLossHero from '../assets/womenshairlosshero.jpeg';
 import eyelinerBanner from '../assets/eyelinerbanner.jpg';
 import lipsBanner from '../assets/lipsbanner.jpg';
 import microneedlingBanner from '../assets/microneedlingbanner.jpg';
+import womenAlopciaPic from '../assets/womens-alopecia/big.JPG';
 
 import rejuvapen from '../assets/rejuvapen.jpg';
 const services = [ 
@@ -36,7 +38,7 @@ const services = [
     'category': 'Women\'s_Alopecia',
     'name': 'Scalp Micropigmentation',
     'images': womenAlopeciaImages,
-    'img':( <img alt="women alopecia" src={womenAlopeciaImages[0].img} style={{width: "100%", height: "auto"}}/>),
+    'img':( <img alt="women alopecia" src={womenAlopciaPic} style={{width: "100%", height: "auto"}}/>),
     'dark': true,
     'firstParagraph': () => {
       return(
@@ -56,11 +58,12 @@ const services = [
     },
     'secondParagraph':() => {
       return (
-        <div style={{paddingTop: "50px"}}>
-          <Typography variant="h4" style={{margin: '5%', marginBottom:"30px"}}>
-            SMP offers an advanced, cutting edge solution for people who struggle with Alopecia!
+        <div>
+          <Typography variant="h4" style={{margin: '5%', marginBottom:"30px"}} align="center">
+            SMP offers an advanced, cutting edge solution for people who struggle with alopecia!
           </Typography>
           <hr style={{width: "60%", marginBottom: "40px", marginTop: "40px"}}/>
+          <Video source="https://player.vimeo.com/video/309161739?title=0&byline=0&portrait=0" homeVideo/>
           <Typography variant="h5" style={{textAlign: "center", margin: "5%", marginBottom:"30px"}}>
             For women and women who suffer hair loss from Alopecia, Traction Alopecia, chemotherapy, or radiation, SMP offers a cutting edge, natural looking alternative. For men, SMP can produce a natural buzz cut or edged up look. For women, SMP can simulate hair follicles beneath thinning hair, resulting in fuller looking hair with a far less patchy appearance. SMP can also be used as to bridge the time period of regrowth for chemotherapy or radiation patients.
           </Typography>

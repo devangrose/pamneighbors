@@ -17,16 +17,17 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit,
-    width: '75%'
+    width: '100%',
   },
   button: {
     marginTop: theme.spacing.unit * 1,
     marginBottom: theme.spacing.unit * 1,
-    width: "75%"
+    marginLeft: '25%',
+    width: "50%",
   }
 });
 
-class ComposedTextField extends React.Component {
+class QuoteForm extends React.Component {
   state = {
     name: '',
     phone: '',
@@ -69,7 +70,7 @@ class ComposedTextField extends React.Component {
         </FormControl>
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled2">Phone</InputLabel>
-          <FilledInput name="phone" id="component-filled2" value={this.state.phone} onChange={this.handleChange}/>
+          <FilledInput name="phone" id="component-filled2" fullWidth value={this.state.phone} onChange={this.handleChange}/>
         </FormControl> 
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled3">Email</InputLabel>
@@ -79,11 +80,13 @@ class ComposedTextField extends React.Component {
           <InputLabel htmlFor="component-filled4">Message</InputLabel>
           <FilledInput name="message" id="component-filled4" value={this.state.message} onChange={this.handleChange}/>
         </FormControl>
-        <Button variant="contained" type="submit" className={classes.button}>
-          Submit
-        </Button>
+        <div>
+          <Button variant="contained" type="submit" className={classes.button}>
+            Submit
+          </Button>
+        </div>
         <Typography className={classes.text} variant="caption" align="center" gutterBottom>
-          *A representative of Trillium Ink will contact you shortly.
+          *A representative from Trillium Ink will contact you shortly.
         </Typography>
       </form>
       </div>
@@ -91,8 +94,8 @@ class ComposedTextField extends React.Component {
   }
 }
 
-ComposedTextField.propTypes = {
+QuoteForm.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ComposedTextField);
+export default withStyles(styles)(QuoteForm);
