@@ -62,9 +62,6 @@ function HeaderLinks({ ...props }) {
             <Link to="/service/women/eyebrows" className={classes.dropdownLink}>
               Eyebrows
             </Link>,
-            <Link to="/service/women/3d-eyebrows" className={classes.dropdownLink}>
-              3d Hair Stroke Eyebrows
-            </Link>,
             <Link to="/service/women/eyeliner" className={classes.dropdownLink}>
               Eyeliner
             </Link>,
