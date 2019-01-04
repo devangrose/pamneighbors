@@ -47,7 +47,7 @@ function HeaderLinks({ ...props }) {
               Alopecia
             </Link>,
             <Link to="/service/men/transplant-scars" className={classes.dropdownLink}>
-              Scalp Scarring
+              Scalp Scars
             </Link>,
             <Typography variant="h6" style={{color: redColor}}>
               Women
@@ -108,15 +108,33 @@ function HeaderLinks({ ...props }) {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link 
-          to = "/training"
-          className={classes.navLink}
-        >
-          Training Opportunities
-        </Link>
+        <CustomDropdown
+          noLiPadding
+          buttonText="Training"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Apps}
+          dropdownList={[
+            <Link 
+              to = "/training"
+              className={classes.navLink}
+            >
+              Scalp Training Opportunities
+            </Link>
+            ,
+            <a 
+              className={classes.navLink}
+              href="https://inkbypam.clickfunnels.com/student-training"
+            >
+              Scalp Academy Training Orientation
+            </a>
+          ]}
+        />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/contact">
+        <Link to="/contact" className={classes.navLink}>
           <Button2 variant="contained">
             Contact Us
           </Button2>
