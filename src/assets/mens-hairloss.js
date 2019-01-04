@@ -13,6 +13,7 @@ import image13 from './mens-hair-loss/mens-hair-loss13.jpg';
 import image14 from './mens-hair-loss/mens-hair-loss14.JPG';
 import image15 from './mens-hair-loss/mens-hair-loss15.JPG';
 import image16 from './mens-hair-loss/mens-hair-loss16.JPG';
+import image17 from './mens-hair-loss/mens-hair-loss17.JPG';
 
 export default [
   { 'img': image1,
@@ -50,5 +51,17 @@ export default [
     'link': '/service/men/hair-loss-treatment' },
   { 'img': image13,
     'label': "Men's Hairloss",
-    'link': '/service/men/hair-loss-treatment'}
+    'link': '/service/men/hair-loss-treatment'},
+  { 'img': image14,
+    'label': "Men's Hairloss",
+    'link': '/service/men/hair-loss-treatment'},
+  { 'img': image15,
+    'label': "Men's Hairloss",
+    'link': '/service/men/hair-loss-treatment'},
+  { 'img': image16,
+    'label': "Men's Hairloss",
+    'link': '/service/men/hair-loss-treatment'},
+  { 'img': image17,
+    'label': "Men's Hairloss",
+    'link': '/service/men/hair-loss-treatment'},
 ];
