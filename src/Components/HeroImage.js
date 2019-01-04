@@ -41,6 +41,7 @@ const styles = {
 class HeroImage extends Component {
 	render(props) {
     const { classes } = this.props;
+    const color = 'black';
     return (
       <div style={{width: "100%", height: "33vw", backgroundImage:`url(${this.props.source})`, backgroundSize: 'cover', display: 'table'}}>
         <div className={classes.container} style={{display: 'table-cell', verticalAlign: 'middle'}}>
@@ -54,13 +55,13 @@ class HeroImage extends Component {
               >
                 {
                   ['lg','xl'].includes(this.props.width) ?
-                <Typography className={classes.titleText} style={{color: 'white'}} variant={['lg','xl'].includes(this.props.width) ? "h3" : 'h5'} align="right">{this.props.overlay.replace('-_','-').replace('_',' ')}</Typography>
+                <Typography className={classes.titleText} style={{color: color}} variant={['lg','xl'].includes(this.props.width) ? "h3" : 'h5'} align="right">{this.props.overlay.replace('-_','-').replace('_',' ')}</Typography>
                   :
                     this.props.overlay.split('_').map(text => {
                       text = text.replace('-','');
                       text = text.replace('_',' ');
                       return (
-                        <Typography className={classes.titleText} style={{color: 'white'}} variant={['lg','xl'].includes(this.props.width) ? "h3" : 'h5'} align="right">{text}</Typography>
+                        <Typography className={classes.titleText} style={{color: color}} variant={['lg','xl'].includes(this.props.width) ? "h3" : 'h5'} align="right">{text}</Typography>
                       )
                     })
                 }

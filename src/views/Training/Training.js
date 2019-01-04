@@ -51,6 +51,9 @@ class Training extends Component {
           </Typography>
           <br/>
           <br/>
+          <Video homeVideo source="https://player.vimeo.com/video/252958607?title=0&byline=0&portrait=0"/>
+          <br/>
+          <br/>
           <Typography variant="h5">
             As the industry of scalp micropigmentation grows, the most qualified technicians will be in high demand.
           </Typography>
