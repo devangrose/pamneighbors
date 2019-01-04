@@ -25,7 +25,7 @@ const styles = {
     margin: '0 auto',
   },
   img: {
-    margin: '0 50%',
+    width: '100%',
   },
   bold: {
     fontWeight: 'bold',
@@ -147,7 +147,7 @@ class Training extends Component {
           </Typography>
           <br/>
           <br/>
-          <Grid container spacing={24}>
+          <Grid container spacing={24} >
             <Grid item lg={4} md={12}>
               <img alt="school" className={classes.img} src={school4}/>
             </Grid>
