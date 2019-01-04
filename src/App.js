@@ -14,6 +14,7 @@ import Pricing from './views/Pricing/Pricing.js';
 import ScrollToTop from './Components/ScrollToTop.js';
 import Training from './views/Training/Training.js';
 import Washington from './views/Training/Washington.js';
+import Blog from './views/Blog/Blog.js';
 
 import "assets/scss/material-kit-pro-react.css?v=1.2.0";
 import services from './assets/serviceInfo.js';
@@ -52,6 +53,7 @@ class App extends Component {
               <Route path="/pricing" component={Pricing}/>
               <Route exact path="/training" component={Training}/>
               <Route exact path="/training/washington" component={Washington}/>
+              <Route exact path="/blog" component={Blog}/>
             <Footer />
           </div>
         </ScrollToTop>
