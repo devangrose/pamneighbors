@@ -17,10 +17,12 @@ const styles = theme => ({
     overflow: "hidden",
     paddingBottom: "10px",
     paddingTop: "10px",
+    textAlign: 'center',
+    margin: '0 auto'
   },
   socialsContainer: {
     display: 'flex',
-    justifyContent: 'sTypography ace-around',
+    justifyContent: 'space-around',
     alignItems: 'center',
     paddingRight: "2rem!imimportant"
   },
@@ -43,7 +45,7 @@ const styles = theme => ({
     margin: "0",
   },
   weekday: {
-    textOverflow: "elliTypography sis",
+    textOverflow: "ellipsis",
     overflow: "hidden",
     lineHeight: "1rem",
     whiteSpace: "nowrap",
@@ -105,10 +107,10 @@ function Footer(props) {
         <Grid item xs={12} sm={12} md={6}>
           <Grid container spacing={24}>
             <Grid item xs={6} className={classes.businessHoursContainer}>
-              <Typography  className={classes.footerTitle}><strong>BUSINESS HOURS</strong></Typography>
+              <Typography  className={classes.footerTitle} align="left"><strong>BUSINESS HOURS</strong></Typography>
               <Grid container spacing={24}>
                 <Grid item xs={4}>
-                  <Typography  className={classes.weekday}>Tues - Friday</Typography>
+                  <Typography  className={classes.weekday}>Tues - Fri</Typography>
                 </Grid>
                 <Grid item xs={8}>
                   <Typography  className={classes.footerItem}>9:30AM-5:30PM</Typography>
@@ -121,9 +123,9 @@ function Footer(props) {
               </Grid>
             </Grid> 
             <Grid item xs={6} className={classes.socialsContainer}>
-              <a href="https://www.facebook.com/trilliumink/"><img alt="facebook" className={classes.socials} src={Facebook} /></a>
-              <a href="https://www.instagram.com/scalpmicropigmentationseattle/?hl=en"><img alt="instagram" className={classes.socials} src={Insta} /></a>
-              <a href="https://www.youtube.com/channel/UCQpWLBQbz3rbY1aQQbW_vMg"><img alt="youtube" className={classes.socials} src={Youtube} /></a>
+                <a href="https://www.facebook.com/trilliumink/"><img alt="facebook" className={classes.socials} src={Facebook} /></a>
+                <a href="https://www.instagram.com/scalpmicropigmentationseattle/?hl=en"><img alt="instagram" className={classes.socials} src={Insta} /></a>
+                <a href="https://www.youtube.com/channel/UCQpWLBQbz3rbY1aQQbW_vMg"><img alt="youtube" className={classes.socials} src={Youtube} /></a>
             </Grid>
           </Grid>
         </Grid>
