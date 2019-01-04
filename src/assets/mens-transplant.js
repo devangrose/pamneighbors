@@ -7,6 +7,7 @@ import image6 from './mens-transplant5.jpg';
 import image7 from './mens-transplant6.jpg';
 import image8 from './alopecia-men2.jpg';
 import image9 from './alopecia-men3.jpg';
+import image10 from './mens-transplant7.JPG';
 
 export default [
   { 'img': image1,
@@ -26,5 +27,8 @@ export default [
     'link': '/service/men/alopecia' },
   { 'img': image9,
     'label': "Scalp Scarring",
+    'link': '/service/men/alopecia' },
+  { 'img': image10,
+    'label': "Transplant Scars",
     'link': '/service/men/alopecia' },
 ];
