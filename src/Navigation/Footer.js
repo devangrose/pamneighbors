@@ -108,16 +108,15 @@ function Footer(props) {
               <Typography  className={classes.footerTitle}><strong>BUSINESS HOURS</strong></Typography>
               <Grid container spacing={24}>
                 <Grid item xs={4}>
-                  <Typography  className={classes.weekday}>Tues</Typography>
-                  <Typography  className={classes.weekday}>Wed</Typography>
-                  <Typography  className={classes.weekday}>Thur</Typography>
-                  <Typography  className={classes.weekday}>Fri</Typography>
+                  <Typography  className={classes.weekday}>Tues - Friday</Typography>
                 </Grid>
                 <Grid item xs={8}>
                   <Typography  className={classes.footerItem}>9:30AM-5:30PM</Typography>
-                  <Typography  className={classes.footerItem}>9:30AM-5:30PM</Typography>
-                  <Typography  className={classes.footerItem}>9:30AM-5:30PM</Typography>
-                  <Typography  className={classes.footerItem}>9:30AM-5:30PM</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography  >
+                    We give special consideration regarding appointments outside of these hours for our clients who are traveling.
+                  </Typography>
                 </Grid>
               </Grid>
             </Grid> 
