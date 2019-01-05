@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, Typography } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 
@@ -15,7 +16,7 @@ const styles = {
 };
 
 
-function HomeServiceCard(props) {
+function ProcessCard(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
@@ -39,8 +40,8 @@ function HomeServiceCard(props) {
 }
 
 
-HomeServiceCard.propTypes = {
+ProcessCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(HomeServiceCard);
+export default withStyles(styles)(ProcessCard);

@@ -4,15 +4,16 @@ import MidBanner from './MidBanner.js';
 import Process from './Process.js';
 import Technicians from './Technicians.js';
 import Carousel from "../../Components/Carousel.js";
-import HomeServiceCard from 'views/Home/HomeServiceCard';
 import { withWidth } from '@material-ui/core';
 import Video from './Video.js';
+import ProcessCard from './ProcessCard.js';
+import HomeServiceCard from './TestHomeServiceCard.js';
 
 import services from 'assets/AllImages.js';
 
-import step1 from '../../assets/steps/hairline design pic 2.jpg';
-import step2 from '../../assets/steps/Hairline design pic 6.JPG';
-import step3 from '../../assets/steps/create density pic.JPG';
+import step1 from '../../assets/steps/first_pass.JPG';
+import step2 from '../../assets/steps/second pass.JPG';
+import step3 from '../../assets/steps/third pass.jpg';
 import step4 from '../../assets/steps/Pam - working pic.jpg';
 import step5 from '../../assets/steps/Pam - close up male.jpg';
 
@@ -24,7 +25,7 @@ class Home extends Component {
     return (
       <div> 
         <Video source="https://player.vimeo.com/video/308634287" homeVideo/>        
-        <Carousel header="Our Services" slides={services.map((service, index) => {return (<HomeServiceCard key={index} service={service}/>)})}/>
+        <Carousel header="Our Services" slides={services.map((service, index) => {return (<HomeServiceCard key={index} label={service.label} img={service.img}/>)})}/>
         <Process steps={steps} width={this.props.width}/>
         <MidBanner />
         <Technicians backgroundColor='#e0e0e0' header='Meet Our Certified Technicians'/>

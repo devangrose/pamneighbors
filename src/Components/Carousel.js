@@ -69,6 +69,7 @@ class SectionCarousel extends React.Component {
           <Slider {...settings} ref="carousel" style={{display: "inline"}}>
             {this.props.slides}
           </Slider>
+
           <Icon onClick={this.slideNext} style={styles.rightArrow}>keyboard_arrow_right</Icon>
       </div>
     );

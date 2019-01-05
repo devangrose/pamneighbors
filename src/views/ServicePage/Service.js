@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from 'Components/Carousel.js';
 import HeroImage from '../../Components/HeroImage.js';
-import HomeServiceCard from '../Home/HomeServiceCard.js';
+import ProcessCard from '../Home/ProcessCard.js';
 import ServiceSummary from './ServiceSummary.js';
 
 import { withStyles } from '@material-ui/core';
@@ -16,7 +16,7 @@ class Service extends Component {
       <div >
         <HeroImage source={this.props.banner} overlay={this.props.category} gender={this.props.gender} dark={this.props.dark}/>
         <div className={classNames(classes.main)} style={{paddingBottom: '3%'}}>
-        {this.props.images.length > 0 ? <Carousel header="Client Transformations" slides={this.props.images.map((service, index) => {return (<HomeServiceCard key={index} service={service}/>)})}/>: ''}
+          {this.props.images.length > 0 ? <Carousel header="Client Transformations" slides={this.props.images.map((service, index) => {return (<div></div>)})}/>: ''}
         <ServiceSummary name={this.props.category.replace('_', ' ')} img={this.props.img} firstParagraph={this.props.firstParagraph}/>
         {this.props.secondParagraph}
       </div>
