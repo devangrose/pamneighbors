@@ -97,8 +97,7 @@ function Footer(props) {
             </Grid>
             <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
               <Typography  className={classes.footerTitle}><strong>PHONE</strong></Typography>
-              <Typography  className={classes.footerItem}>Office <a rel="noopener noreferrer" style={{color: redColor, textDecoration: "none", '&:visited':{color: redColor}}} href="tel:425-258-6256">425.258.6245</a></Typography>
-              <Typography  className={classes.footerItem}>Mobile <a rel="noopener noreferrer" style={{color: redColor, textDecoration: "none", '&:visited':{color: redColor}}} href="tel:425-238-1222">425.238.1222</a></Typography>
+              <Typography  className={classes.footerItem}><a rel="noopener noreferrer" style={{color: redColor, textDecoration: "none", '&:visited':{color: redColor}}} href="tel:425-258-6256">425.258.6245</a></Typography>
               <Typography  className={classes.footerTitle}><strong>EMAIL</strong></Typography>
               <Typography  className={classes.footerItem}><a href="mailto:pam@trilliumink.net" style={{color: redColor, textDecoration: "none"}}>pam@trilliumink.net</a></Typography>
             </Grid>
@@ -107,20 +106,11 @@ function Footer(props) {
         <Grid item xs={12} sm={12} md={6}>
           <Grid container spacing={24}>
             <Grid item xs={6} className={classes.businessHoursContainer}>
-              <Typography  className={classes.footerTitle} align="left"><strong>BUSINESS HOURS</strong></Typography>
-              <Grid container spacing={24}>
-                <Grid item xs={4}>
-                  <Typography  className={classes.weekday}>Tues - Fri</Typography>
-                </Grid>
-                <Grid item xs={8}>
-                  <Typography  className={classes.footerItem}>9:30AM-5:30PM</Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography  >
-                    We give special consideration regarding appointments outside of these hours for our clients who are traveling.
-                  </Typography>
-                </Grid>
-              </Grid>
+              <Typography  className={classes.footerTitle} ><strong>BUSINESS HOURS</strong></Typography>
+              <Typography  className={classes.footerTitle} ><span style={{paddingRight: '6%'}}>Tue-Fri</span>9:30AM-5:30PM</Typography>
+              <Typography  >
+                We give special consideration regarding appointments outside of these hours for our clients who are traveling.
+              </Typography>
             </Grid> 
             <Grid item xs={6} className={classes.socialsContainer}>
                 <a href="https://www.facebook.com/trilliumink/"><img alt="facebook" className={classes.socials} src={Facebook} /></a>

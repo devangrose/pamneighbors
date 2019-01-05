@@ -9,13 +9,17 @@ import pam from '../../assets/pam-headshot.jpg';
 import ran from '../../assets/ran.jpg';
 import colleen from '../../assets/colleen.jpg';
 
+import redColor from '../../color.js';
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing.unit * 5,
+    paddingTop: '3%',
   },
   text: {
-    marginBottom: '4rem'
+    marginBottom: '4rem',
+    color: redColor
   }
 });
 

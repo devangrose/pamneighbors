@@ -9,6 +9,7 @@ import image10 from './women-hair-loss/women-hair-loss10.JPG';
 import image11 from './women-hair-loss/women-hair-loss11.JPG';
 import image12 from './women-hair-loss/women-hair-loss12.JPG';
 import image13 from './women-hair-loss/women-hair-loss13.JPG';
+import image14 from './women-hair-loss/women-hair-loss14.JPG';
 
 export default [
   { 'img': image1,
@@ -30,19 +31,22 @@ export default [
     'label': "Women's Hair Loss",
     'link':'/service/women/hair-loss-treatment'},
   { 'img': image9,
-    'label': "Scalp Scars",
+    'label': "Women's Hair Loss",
     'link':'/service/women/hair-loss-treatment'},
   { 'img': image10,
-    'label': "Scalp Scars",
+    'label': "Women's Hair Losss",
     'link':'/service/women/hair-loss-treatment'},
   { 'img': image11,
-    'label': "Scalp Scars",
+    'label': "Women's Hair Losss",
     'link':'/service/women/hair-loss-treatment'},
   { 'img': image12,
-    'label': "Scalp Scars",
+    'label': "Women's Hair Losss",
     'link':'/service/women/hair-loss-treatment'},
   { 'img': image13,
-    'label': "Scalp Scars",
+    'label': "Women's Hair Losss",
+    'link':'/service/women/hair-loss-treatment'},
+  { 'img': image13,
+    'label': "Women's Hair Losss",
     'link':'/service/women/hair-loss-treatment'},
 ];
 

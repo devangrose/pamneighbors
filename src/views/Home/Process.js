@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Carousel from 'Components/Carousel.js';
 
 import ProcessCard from './ProcessCard.js';
+import redColor from '../../color.js';
 
 const styles = theme => ({
   root: {
@@ -13,9 +14,11 @@ const styles = theme => ({
     background: '#e0e0e0',
     textAlign: 'center',
     marginBottom: '20px',
+    paddingTop: '3%',
   },
   text: {
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing.unit * 3,
+    color: redColor
   }
 });
 
@@ -23,8 +26,8 @@ function Process(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root} style={{padding: "0 3%"}}>
-      <Typography className={classes.text} component="h2" variant="display1" align="center" gutterBottom>
+    <div className={classes.root} style={{padding: "0 5%"}}>
+      <Typography className={classes.text} component="h2" variant="display2" align="center" gutterBottom>
         The Scalp Micropigmentation Process
       </Typography>
           <div style={{paddingBottom: '25px'}}>
