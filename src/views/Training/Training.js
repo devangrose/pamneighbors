@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Typography, withStyles, Grid } from '@material-ui/core';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import HeroImage from 'Components/HeroImage.js';
 import { Link } from 'react-router-dom';
@@ -8,9 +9,9 @@ import Video from '../Home/Video.js';
 import hero from '../../assets/trainingbanner.JPG';
 import redColor from 'color.js';
 
-import school1 from 'assets/school1.jpg';
-import school2 from 'assets/school2.jpg';
-import school3 from 'assets/school3.jpg';
+import school1 from 'assets/school1.jpeg';
+import school2 from 'assets/school2.jpeg';
+import school3 from 'assets/school3.jpeg';
 import school4 from 'assets/school4.jpg';
 import school5 from 'assets/school5.jpg';
 import school6 from 'assets/school6.jpg';
@@ -26,6 +27,9 @@ const styles = {
   },
   img: {
     width: '100%',
+  },
+  imgCenter: {
+    marginTop: '35%',
   },
   bold: {
     fontWeight: 'bold',
@@ -81,13 +85,13 @@ class Training extends Component {
           <br/>
           <Grid container spacing={24}>
             <Grid item lg={4} md={12}>
-              <img alt="school" className={classes.img} src={school1}/>
+              <img alt="school" className={classnames(classes.img)} src={school2}/>
             </Grid>
             <Grid item lg={4} md={12}>
-              <img alt="school" className={classes.img} src={school2}/>
+              <img alt="school" className={classnames(classes.img, classes.imgCenter)} src={school1}/>
             </Grid>
             <Grid item lg={4} md={12}>
-              <img alt="school" className={classes.img} src={school3}/>
+              <img alt="school" className={classnames(classes.img)} style={{marginTop: '15%'}} src={school3}/>
             </Grid>
           </Grid>
           <br/>
