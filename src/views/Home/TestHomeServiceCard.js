@@ -25,13 +25,13 @@ function HomeServiceCard(props) {
             <img
               style={{maxWidth: '100%', maxHeight:'100%'}}
               className={classes.imgCardTop}
-              src={props.img}
-              alt={props.label}
+              src={props.service.img}
+              alt={props.service.label}
             />
           </div>
           <CardBody style={{height: '20%'}}>
             <Typography variant="h6" align="center">
-              {props.label}
+              {props.service.label}
             </Typography>
           </CardBody>
         </Card>

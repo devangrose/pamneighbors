@@ -6,7 +6,6 @@ import Technicians from './Technicians.js';
 import Carousel from "../../Components/Carousel.js";
 import { withWidth } from '@material-ui/core';
 import Video from './Video.js';
-import ProcessCard from './ProcessCard.js';
 import HomeServiceCard from './TestHomeServiceCard.js';
 
 import services from 'assets/AllImages.js';

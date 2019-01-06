@@ -12,6 +12,7 @@ const styles = {
   root: {
     margin: 'auto',
     height: '50vh',
+    marginBottom: '2%',
   }
 };
 
