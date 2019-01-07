@@ -32,7 +32,7 @@ function ProcessCard(props) {
             />
           </div>
           <CardBody >
-            <Typography variant="h6">
+            <Typography variant="h6" align="center">
               {props.label}
             </Typography>
           </CardBody>

@@ -112,14 +112,14 @@ function Footer(props) {
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
           <Grid container spacing={24}>
-            <Grid item xs={6} className={classes.businessHoursContainer}>
+            <Grid item xs={12} md={6} className={classes.businessHoursContainer}>
               <Typography  className={classes.footerTitle} ><strong>BUSINESS HOURS</strong></Typography>
               <Typography  className={classes.footerTitle} ><span style={{paddingRight: '6%'}}>Tue-Fri</span>9:30AM-5:30PM</Typography>
               <Typography  >
                 We give special consideration regarding appointments outside of these hours for our clients who are traveling.
               </Typography>
             </Grid> 
-            <Grid item xs={6} className={classes.socialsContainer}>
+            <Grid item xs={12} md={6} className={classes.socialsContainer}>
                 <a href="https://www.facebook.com/trilliumink/"><img alt="facebook" className={classes.socials} src={Facebook} /></a>
                 <a href="https://www.instagram.com/scalpmicropigmentationseattle/?hl=en"><img alt="instagram" className={classes.socials} src={Insta} /></a>
                 <a href="https://www.youtube.com/channel/UCQpWLBQbz3rbY1aQQbW_vMg"><img alt="youtube" className={classes.socials} src={Youtube} /></a>
