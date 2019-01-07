@@ -55,7 +55,4 @@ export default [
   { 'img': image16,
     'label': "Men's Hair Loss",
     'link': '/service/men/hair-loss-treatment'},
-  { 'img': image17,
-    'label': "Men's Hair Loss",
-    'link': '/service/men/hair-loss-treatment'},
 ];

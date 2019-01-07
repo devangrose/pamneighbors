@@ -25,7 +25,7 @@ function ProcessCard(props) {
         <Card className={classes.root} style={{ width: "16rem", margin: 'auto',paddingTop: '2.5%'}}>
           <div style={{width: '100%', height: '80%'}}>
             <img
-              style={{ width: "auto", maxWidth: '95%', maxHeight: '80%', margin: 'auto'}}
+              style={{ width: "auto", maxWidth: '95%', maxHeight: '90%', margin: 'auto'}}
               className={classes.imgCardTop}
               src={props.img}
               alt={props.label}

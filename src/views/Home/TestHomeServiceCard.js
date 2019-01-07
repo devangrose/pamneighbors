@@ -24,14 +24,14 @@ function HomeServiceCard(props) {
         <Card className={classes.root} style={{ width: "16rem", margin: 'auto',paddingTop: '2.5%'}}>
           <div style={{width: '100%', height: '80%'}}>
             <img
-              style={{maxWidth: '100%', maxHeight:'100%'}}
+              style={{maxWidth: '100%', maxHeight:'100%', margin: 'auto'}}
               className={classes.imgCardTop}
               src={props.service.img}
               alt={props.service.label}
             />
           </div>
-          <CardBody style={{height: '20%'}}>
-            <Typography variant="h6" align="center">
+          <CardBody>
+            <Typography variant="h6" align="center" style={{marginTop: '-4%'}}>
               {props.service.label}
             </Typography>
           </CardBody>

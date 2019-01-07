@@ -93,14 +93,15 @@ function Footer(props) {
       <Grid container spacing={24}>
         <Grid item xs={12} sm={12} md={6}>
           <Grid container spacing={24}>
-            <Grid item xs={6} s={6} className={classes.logoWrapper}>
-              <img alt="logo" className={classes.logo} src={Logo}/>
+            <Grid item xs={12} md={5} className={classes.logoWrapper} style={{textAlign: 'center', margin: '0 3%'}}>
+              <img alt="logo" className={classes.logo} style={{margin: 'auto'}} src={Logo}/>
             </Grid>
             <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
               <Typography  className={classes.footerTitle}><strong>OUR LOCATION</strong></Typography>
               <Typography  className={classes.footerItem}>3418 Broadway</Typography>
               <Typography  className={classes.footerItem}>Everett, WA 98201</Typography>
-              <a rel="noopener noreferrer" href="https://www.google.com/maps/place/Trillium+Ink/@47.971999,-122.2038394,17z/data=!3m1!4b1!4m5!3m4!1s0x549aaa98189b4f1b:0x3525e7727143a351!8m2!3d47.971999!4d-122.2016507" className={classes.footerLinks} target="_blank">Click here for map</a>
+              <Typography  className={classes.footerItem} style={{color: 'blue'}}><a  href="https://www.google.com/maps/place/Trillium+Ink/@47.971999,-122.2038394,17z/data=!3m1!4b1!4m5!3m4!1s0x549aaa98189b4f1b:0x3525e7727143a351!8m2!3d47.971999!4d-122.2016507" style={{color: 'inherit'}} target="_blank">Click here for map</a>
+</Typography>
             </Grid>
             <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
               <Typography  className={classes.footerTitle}><strong>PHONE</strong></Typography>

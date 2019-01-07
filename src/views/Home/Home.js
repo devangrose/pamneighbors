@@ -7,6 +7,7 @@ import Carousel from "../../Components/Carousel.js";
 import HomeServiceCard from 'views/Home/TestHomeServiceCard';
 import { withWidth } from '@material-ui/core';
 import Video from './Video.js';
+import ProcessCard from './ProcessCard.js';
 
 import services from 'assets/AllImages.js';
 
@@ -24,7 +25,7 @@ class Home extends Component {
     return (
       <div> 
         <Video source="https://player.vimeo.com/video/308634287" homeVideo/>        
-        <Carousel header="Our Services" slides={services.map((service, index) => {return (<HomeServiceCard key={index} service={service}/>)})}/>
+        <Carousel header="Our Services" slides={services.map((service, index) => {return (<ProcessCard key={index} service={service} img={service.img} label={service.label}/>)})}/>
         <Process steps={steps} width={this.props.width}/>
         <MidBanner />
         <Technicians backgroundColor='#e0e0e0' header='Meet Our Certified Technicians'/>
