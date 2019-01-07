@@ -61,7 +61,8 @@ const styles = theme => ({
   },
   logo: { width: "100%",
     height: "auto",
-    marginLeft: "1rem"
+    marginLeft: "1rem",
+    margin: 'auto',
   },
   footerLinksContainer: {
     marginTop : "1rem",
@@ -77,7 +78,8 @@ const styles = theme => ({
     color: redColor
   },
   businessHoursContainer: {
-    paddingLeft: "2rem!important"
+    paddingLeft: "2rem!important",
+    margin: 'auto',
   }
 });
 
