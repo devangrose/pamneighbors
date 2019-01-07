@@ -42,7 +42,7 @@ class SectionCarousel extends React.Component {
   render() {
     const { classes } = this.props;
     var settings = {
-      infinite: true,
+      infinite: false,
       dots: false,
       arrows: false,
       speed: 500,

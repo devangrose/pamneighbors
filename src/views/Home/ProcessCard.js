@@ -13,6 +13,7 @@ const styles = {
     margin: 'auto',
     height: '50vh',
     marginBottom: '2%',
+    overflow: 'wrap',
   }
 };
 
@@ -30,7 +31,7 @@ function ProcessCard(props) {
               alt={props.label}
             />
           </div>
-          <CardBody style={{height: '20%'}}>
+          <CardBody >
             <Typography variant="h6">
               {props.label}
             </Typography>
