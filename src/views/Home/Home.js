@@ -4,9 +4,9 @@ import MidBanner from './MidBanner.js';
 import Process from './Process.js';
 import Technicians from './Technicians.js';
 import Carousel from "../../Components/Carousel.js";
+import HomeServiceCard from 'views/Home/TestHomeServiceCard';
 import { withWidth } from '@material-ui/core';
 import Video from './Video.js';
-import HomeServiceCard from './TestHomeServiceCard.js';
 
 import services from 'assets/AllImages.js';
 
@@ -24,7 +24,7 @@ class Home extends Component {
     return (
       <div> 
         <Video source="https://player.vimeo.com/video/308634287" homeVideo/>        
-        <Carousel header="Our Services" slides={services.map((service, index) => {return (<HomeServiceCard key={index} label={service.label} img={service.img}/>)})}/>
+        <Carousel header="Our Services" slides={services.map((service, index) => {return (<HomeServiceCard key={index} service={service}/>)})}/>
         <Process steps={steps} width={this.props.width}/>
         <MidBanner />
         <Technicians backgroundColor='#e0e0e0' header='Meet Our Certified Technicians'/>
