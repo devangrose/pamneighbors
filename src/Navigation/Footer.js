@@ -43,6 +43,9 @@ const styles = theme => ({
     lineHeight: "1rem",
     whiteSpace: "nowrap",
     margin: "0",
+    '&:visited':{
+      color: 'blue',
+    }
   },
   weekday: {
     textOverflow: "ellipsis",
@@ -72,10 +75,9 @@ const styles = theme => ({
       fontStyle: "italic"
     },
     '&:visited':{
-      color: redColor,
+      color: "blue",
     },
     textDecoration: "none",
-    color: redColor
   },
   businessHoursContainer: {
     paddingLeft: "2rem!important",
@@ -98,13 +100,13 @@ function Footer(props) {
               <Typography  className={classes.footerTitle}><strong>OUR LOCATION</strong></Typography>
               <Typography  className={classes.footerItem}>3418 Broadway</Typography>
               <Typography  className={classes.footerItem}>Everett, WA 98201</Typography>
-              <a rel="noopener noreferrer" href="https://www.google.com/maps/place/Trillium+Ink/@47.971999,-122.2038394,17z/data=!3m1!4b1!4m5!3m4!1s0x549aaa98189b4f1b:0x3525e7727143a351!8m2!3d47.971999!4d-122.2016507" className={classes.footerLinks} target="_blank"><strong>Click here for map</strong></a>
+              <a rel="noopener noreferrer" href="https://www.google.com/maps/place/Trillium+Ink/@47.971999,-122.2038394,17z/data=!3m1!4b1!4m5!3m4!1s0x549aaa98189b4f1b:0x3525e7727143a351!8m2!3d47.971999!4d-122.2016507" className={classes.footerLinks} target="_blank">Click here for map</a>
             </Grid>
             <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
               <Typography  className={classes.footerTitle}><strong>PHONE</strong></Typography>
-              <Typography  className={classes.footerItem}><a rel="noopener noreferrer" style={{color: redColor, textDecoration: "none", '&:visited':{color: redColor}}} href="tel:425-258-6256">425.258.6245</a></Typography>
+              <Typography  className={classes.footerItem}><a rel="noopener noreferrer" style={{textDecoration: "none",'&:visited':{color: 'blue'}}} href="tel:425-258-6256">425.258.6245</a></Typography>
               <Typography  className={classes.footerTitle}><strong>EMAIL</strong></Typography>
-              <Typography  className={classes.footerItem}><a href="mailto:pam@trilliumink.net" style={{color: redColor, textDecoration: "none"}}>pam@trilliumink.net</a></Typography>
+              <Typography  className={classes.footerItem}><a href="mailto:pam@trilliumink.net" style={{textDecoration: "none",'&:visited':{color: 'blue'}}}>pam@trilliumink.net</a></Typography>
             </Grid>
           </Grid>
         </Grid>
