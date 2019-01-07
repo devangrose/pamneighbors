@@ -4,7 +4,7 @@ import BlogRow from './BlogRow.js';
 import HeroImage from '../../Components/HeroImage.js';
 
 import blogs from '../../assets/blog.js';
-import hero from '../../assets/banner-smp.jpg';
+import hero from '../../assets/blogbanner.jpg';
 
 const styles = {
   grid: {

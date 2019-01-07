@@ -47,7 +47,7 @@ class Transformations extends Component {
           <Panel images={womenHairLoss} title="Hair Loss" link="/service/women/hair-loss-treatment"/>
           <Panel images={womenAlopecia} title="Alopecia" link="/service/women/alopecia"/>
           <Panel images={eyebrows} title="Eyebrows" link="/service/women/eyebrows"/>
-          <Panel images={eyebrows3d} title="3d-Eyebrows" link="/service/women/3d-eyebrows"/>
+          <Panel images={eyebrows3d} title="3D Eyebrows" link="/service/women/3d-eyebrows"/>
           <Panel images={eyeliner} title="Eyeliner" link="/service/women/eyeliner"/>
           <Panel images={lips} title="Lips" link="/service/women/lips"/>
         </div>

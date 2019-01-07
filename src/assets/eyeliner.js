@@ -9,6 +9,9 @@ import image8 from './eyeliner/eyeliner8.JPG';
 import image9 from './eyeliner/eyeliner9.JPG';
 
 export default [
+  { 'img': image7,
+    'label': 'Eyeliner',
+    'link': '/service/women/eyeliner'},
   { 'img': image4,
     'label': 'Eyeliner',
     'link': '/service/women/eyeliner'},
@@ -25,9 +28,6 @@ export default [
     'label': 'Eyeliner',
     'link': '/service/women/eyeliner'},
   { 'img': image3,
-    'label': 'Eyeliner',
-    'link': '/service/women/eyeliner'},
-  { 'img': image7,
     'label': 'Eyeliner',
     'link': '/service/women/eyeliner'},
   { 'img': image8,

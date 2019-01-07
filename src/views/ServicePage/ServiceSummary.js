@@ -7,6 +7,8 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
+import redColor from 'color.js'
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -25,7 +27,7 @@ function Transformations(props) {
     <div className={classes.root}>
       <Grid container spacing={40}>
         <Grid item xs={12} md={12} style={{textAlign: "center"}}>
-          <Typography variant="h3"  gutterBottom>
+          <Typography variant="h3" style={{color: redColor}}  gutterBottom>
               {props.name}
             </Typography>
         </Grid>

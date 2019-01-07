@@ -55,7 +55,7 @@ class HeroImage extends Component {
               >
                 {
                   ['lg','xl'].includes(this.props.width) ?
-                <Typography className={classes.titleText} style={{color: color}} variant={['lg','xl'].includes(this.props.width) ? "h3" : 'h5'} align="right">{this.props.overlay.replace('-_','-').replace('_',' ')}</Typography>
+                <Typography className={classes.titleText} style={{color: color}} variant={['lg','xl'].includes(this.props.width) ? "h3" : 'h5'} align="right">{this.props.overlay.replace('-_','').replace('_',' ')}</Typography>
                   :
                     this.props.overlay.split('_').map(text => {
                       text = text.replace('-','');

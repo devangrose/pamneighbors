@@ -59,7 +59,7 @@ class CardLink extends Component {
               style={styles.image}
             />
            <CardContent>
-              <Typography variant="body1" style={{fontWeight: "bold"}}>
+             <Typography variant="body1" align="center" style={{fontWeight: "bold"}}>
                 {this.props.name}
               </Typography>
            </CardContent>

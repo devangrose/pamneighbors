@@ -45,7 +45,7 @@ export default [
   { 'img': image13,
     'label': "Women's Hair Losss",
     'link':'/service/women/hair-loss-treatment'},
-  { 'img': image13,
+  { 'img': image14,
     'label': "Women's Hair Losss",
     'link':'/service/women/hair-loss-treatment'},
 ];

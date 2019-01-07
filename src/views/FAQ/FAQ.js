@@ -6,7 +6,7 @@ import QA from './QA.js';
 import HeroImage from '../../Components/HeroImage';
 import { Paper } from '@material-ui/core';
 
-import headerPhoto from "../../assets/slider-item-2-1.jpg"
+import headerPhoto from "../../assets/faqbanner.JPG";
 
 const styles = theme => ({
   root: {

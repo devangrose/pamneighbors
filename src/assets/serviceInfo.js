@@ -45,7 +45,7 @@ const services = [
     'firstParagraph': () => {
       return(
         <div>
-          <Typography variant="h4">
+          <Typography variant="h4" style={{color: redColor}}>
             Hair Loss Treatment for Alopecia
           </Typography>
           <Typography variant="h5">
@@ -65,7 +65,7 @@ const services = [
             SMP offers an advanced, cutting edge solution for people who struggle with alopecia!
           </Typography>
           <hr style={{width: "60%", marginBottom: "40px", marginTop: "40px"}}/>
-          <Video source="https://player.vimeo.com/video/309161739?title=0&byline=0&portrait=0" homeVideo/>
+          <Video source="https://player.vimeo.com/video/309221450?title=0&byline=0&portrait=0" homeVideo/>
           <Typography variant="h5" style={{textAlign: "center", margin: "5%", marginBottom:"30px"}}>
             For women and women who suffer hair loss from Alopecia, Traction Alopecia, chemotherapy, or radiation, SMP offers a cutting edge, natural looking alternative. For men, SMP can produce a natural buzz cut or edged up look. For women, SMP can simulate hair follicles beneath thinning hair, resulting in fuller looking hair with a far less patchy appearance. SMP can also be used as to bridge the time period of regrowth for chemotherapy or radiation patients.
           </Typography>
@@ -86,7 +86,7 @@ const services = [
     'firstParagraph': () => {
       return (
         <div>
-          <Typography variant="h4">
+          <Typography variant="h4" style={{color: redColor}}>
             Scalp Micropigmentation For Women
           </Typography>
           <br />
@@ -506,7 +506,7 @@ const services = [
     'banner':microneedlingBanner,
     'img': ( <img alt='microneedling' src={rejuvapen} style={{width: "100%", height: "auto"}}/>),
     'gender':'woman',
-    'category': 'Micro-_Needling',
+    'category': 'Micro-_needling',
     'name': 'Introduction to Microneedling',
     'images':[],
     'firstParagraph': () => {
@@ -567,7 +567,7 @@ const services = [
               <br />
               <br />
               <Typography variant="h5">
-                <strong>All Natural:</strong> Micro Needling stimulates the body’s own ability to heal without injection, incisions or chemical assistance.  Although some skin may have additional benefit from the use of minerals, vitamins or oils that  promote healthy skin. 
+                <strong>All Natural:</strong> Microneedling stimulates the body’s own ability to heal without injection, incisions or chemical assistance.  Although some skin may have additional benefit from the use of minerals, vitamins or oils that  promote healthy skin. 
               </Typography>
               <br />
               <br />

@@ -48,7 +48,7 @@ Scalp scars, transplant donor scars, and special cases such as traction alopecia
 Trillium Ink Studios have tiered pricing.  We base these prices on years of experience.  Regardless of the technician you choose, we deliver the best possible results for each and every client.
           </Typography>
           <Typography variant="h5" paragraph="true">
-Call today for your consultation!   <a rel="noopener noreferrer"className={classes.a} href="tel:425-238-1222">425-238-1222</a>
+Call today for your consultation!   <a rel="noopener noreferrer"className={classes.a} href="tel:425-238-1222">425.238.1222</a>
           </Typography>
         
         </Paper>

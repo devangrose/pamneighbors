@@ -32,7 +32,7 @@ function Panel(props) {
       </ExpansionPanelSummary>
       <ExpansionPanelDetails style={{ height: '100%' }}>
         <Carousel slides={props.images.map(image => 
-          <CardLink image={image.img} name={props.title} link={props.link}/>
+          <CardLink image={image.img} name={image.label} link={props.link}/>
         )}/>
       </ExpansionPanelDetails>
     </ExpansionPanel>
