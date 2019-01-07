@@ -12,6 +12,7 @@ import testimonial3 from '../../assets/Testimonial.3.jpeg';
 
 import before from '../../assets/beforepic.png';
 import after from '../../assets/afterpic.jpg';
+import redColor from 'color.js';
 
 const styles = theme => ({
   root: {
@@ -31,6 +32,10 @@ const styles = theme => ({
     width: '75%',
     height: 'auto',
     margin: '10% auto',
+  },
+  title: {
+    paddingTop: '2.5%',
+    color: redColor
   }
 });
 
@@ -39,7 +44,7 @@ function Testimonial(props) {
 
   const slides = [
     <div>
-      <div style={{margin: '30% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
+      <div style={{margin: '25% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
           <Video source="https://player.vimeo.com/video/309221450?title=0&byline=0&portrait=0"/>
       </div>
     </div>
@@ -49,7 +54,7 @@ function Testimonial(props) {
     </div>
     ,
     <div>
-      <div style={{margin: '30% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
+      <div style={{margin: '25% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
           <Video source="https://player.vimeo.com/video/309161355?title=0&byline=0&portrait=0"/>
       </div>
     </div>
@@ -59,7 +64,7 @@ function Testimonial(props) {
     </div>
     ,
     <div>
-      <div style={{margin: '30% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
+      <div style={{margin: '25% auto 0 auto',padding: '15% 0', backgroundColor: 'black'}}>
         <Video source="https://player.vimeo.com/video/309160464?title=0&byline=0&portrait=0"/>
       </div>
     </div>
@@ -77,6 +82,9 @@ function Testimonial(props) {
 
   return (
     <div className={classes.root} style={{background: props.backgroundColor}}>
+      <Typography variant="h4" component="h4" align="center" className={classes.title}>
+        Check out what some of our clients have to say!
+      </Typography>
       <Carousel slides={slides} fullWidth/>
     </div>
   );

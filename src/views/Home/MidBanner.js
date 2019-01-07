@@ -13,7 +13,6 @@ const styles = theme => ({
   },
   paper: {
     background: '#e0e0e0',
-    height: "100%"
   }
 });
 

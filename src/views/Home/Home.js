@@ -10,11 +10,11 @@ import Video from './Video.js';
 
 import services from 'assets/AllImages.js';
 
-import step1 from '../../assets/steps/first_pass.JPG';
-import step2 from '../../assets/steps/second pass.JPG';
+import step1 from '../../assets/steps/consultation.JPG';
+import step2 from '../../assets/steps/first_pass.JPG';
 import step3 from '../../assets/steps/third pass.jpg';
-import step4 from '../../assets/steps/Pam - working pic.jpg';
-import step5 from '../../assets/steps/Pam - close up male.jpg';
+import step4 from '../../assets/steps/second pass.JPG';
+import step5 from '../../assets/steps/touch_ups.jpeg';
 
 
 class Home extends Component {

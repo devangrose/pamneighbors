@@ -10,10 +10,9 @@ import emailjs from 'emailjs-com';
 
 const styles = theme => ({
   container: {
-    display: 'flex',
-    flexDirection: 'column',
     alignItems: 'center',
-    padding: '3rem'
+    padding: '3rem',
+    marginTop: '20%',
   },
   formControl: {
     margin: theme.spacing.unit,
