@@ -15,6 +15,11 @@ import school3 from 'assets/school3.jpeg';
 import school4 from 'assets/school4.jpg';
 import school5 from 'assets/school5.jpg';
 import school6 from 'assets/school6.jpg';
+import school7 from '../../assets/working student pic.jpg';
+import school8 from '../../assets/student pic.2.jpg';
+import school9 from '../../assets/intro page pic.1.JPG';
+import school10 from '../../assets/intro page pic.3.JPG';
+
 
 const styles = {
   header: {
@@ -91,7 +96,7 @@ class Training extends Component {
               <img alt="school" className={classnames(classes.img, classes.imgCenter)} src={school1}/>
             </Grid>
             <Grid item lg={4} md={12}>
-              <img alt="school" className={classnames(classes.img)} style={{marginTop: '15%'}} src={school3}/>
+              <img alt="school" className={classnames(classes.img)} src={school3}/>
             </Grid>
           </Grid>
           <br/>
@@ -125,6 +130,20 @@ class Training extends Component {
             Students learn basic application skills through video instruction, then practice drills and send their work to us via pics/text/email.  We guide them and perfect their skills through systematic practice drills until they have demonstrated a sufficient level of ability, at which time they advance to the next level of drills.  There are study modules to be completed and quizzes to measure progress.  80% competency is required to pass the quizzes. Students also do some outside study and papers are required in the areas listed.
           </Typography>
           <br/>
+          <Grid container spacing={24}>
+            <Grid item sm={12} md={3}>
+              <img src={school7} className={classes.img}/> 
+            </Grid>
+            <Grid item sm={12} md={3}>
+              <img src={school9} className={classes.img}/> 
+            </Grid>
+            <Grid item sm={12} md={3}>
+              <img src={school10} className={classes.img}/> 
+            </Grid>
+            <Grid item sm={12} md={3}>
+              <img src={school8} className={classes.img}/> 
+            </Grid>
+          </Grid>
           <br/>
           <Typography variant="h5">
             At the hands-on class, students work closely with instructors at a ratio of not more than 4 students to 1 instructor.  Forty hours of hands-on time makes this an intense course.  We provide an average of 6 live models per class.  We want students to be exposed to as many real-life cases, skin types, hair types, balding patterns and special situations as possible so that they are confident when starting to do procedures on their own.
@@ -151,17 +170,7 @@ class Training extends Component {
           </Typography>
           <br/>
           <br/>
-          <Grid container spacing={24} >
-            <Grid item lg={4} md={12}>
-              <img alt="school" className={classes.img} src={school4}/>
-            </Grid>
-            <Grid item lg={4} md={12}>
-              <img alt="school" className={classes.img} src={school5}/>
-            </Grid>
-            <Grid item lg={4} md={12}>
-              <img alt="school" className={classes.img} src={school6}/>
-            </Grid>
-          </Grid>
+          <Video homeVideo source="https://player.vimeo.com/video/309564962?title=0&byline=0&portrait=0" />
           <br/>
           <br/>
           <Typography variant="h4" className={classes.header}>
