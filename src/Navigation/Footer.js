@@ -61,7 +61,7 @@ const styles = theme => ({
   },
   logo: { width: "100%",
     height: "auto",
-    marginLeft: "1rem",
+    marginLeft: "2rem",
     margin: 'auto',
   },
   footerLinksContainer: {
@@ -117,7 +117,7 @@ function Footer(props) {
                 We give special consideration regarding appointments outside of these hours for our clients who are traveling.
               </Typography>
             </Grid> 
-            <Grid item xs={12} className={classes.socialsContainer}>
+            <Grid item xs={6} className={classes.socialsContainer}>
                 <a href="https://www.facebook.com/trilliumink/"><img alt="facebook" className={classes.socials} src={Facebook} /></a>
                 <a href="https://www.instagram.com/scalpmicropigmentationseattle/?hl=en"><img alt="instagram" className={classes.socials} src={Insta} /></a>
                 <a href="https://www.youtube.com/channel/UCQpWLBQbz3rbY1aQQbW_vMg"><img alt="youtube" className={classes.socials} src={Youtube} /></a>
