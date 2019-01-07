@@ -44,7 +44,7 @@ const styles = theme => ({
     whiteSpace: "nowrap",
     margin: "0",
     '&:visited':{
-      color: 'blue',
+      color: "blue",
     }
   },
   weekday: {
@@ -104,9 +104,9 @@ function Footer(props) {
             </Grid>
             <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
               <Typography  className={classes.footerTitle}><strong>PHONE</strong></Typography>
-              <Typography  className={classes.footerItem}><a rel="noopener noreferrer" style={{textDecoration: "none",'&:visited':{color: 'blue'}}} href="tel:425-258-6256">425.258.6245</a></Typography>
+              <Typography  className={classes.footerItem} style={{color: 'blue'}}><a rel="noopener noreferrer" style={{textDecoration: "none",color: 'inherit'}} href="tel:425-258-6256">425.258.6245</a></Typography>
               <Typography  className={classes.footerTitle}><strong>EMAIL</strong></Typography>
-              <Typography  className={classes.footerItem}><a href="mailto:pam@trilliumink.net" style={{textDecoration: "none",'&:visited':{color: 'blue'}}}>pam@trilliumink.net</a></Typography>
+              <Typography  className={classes.footerItem} style={{color: 'blue'}}><a href="mailto:pam@trilliumink.net" style={{textDecoration: "none",color: 'inherit'}}>pam@trilliumink.net</a></Typography>
             </Grid>
           </Grid>
         </Grid>
