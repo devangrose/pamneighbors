@@ -121,7 +121,7 @@ function Footer(props) {
               </Typography>
             </Grid> 
             <Grid item xs={12} md={6} className={classes.socialsContainer}>
-                <a href="https://www.facebook.com/trilliumink/"><img alt="facebook" className={classes.socials} src={Facebook} /></a>
+                <a href="https://www.facebook.com/pamneighborsSMPSeattle/"><img alt="facebook" className={classes.socials} src={Facebook} /></a>
                 <a href="https://www.instagram.com/scalpmicropigmentationseattle/?hl=en"><img alt="instagram" className={classes.socials} src={Insta} /></a>
                 <a href="https://www.youtube.com/channel/UCQpWLBQbz3rbY1aQQbW_vMg"><img alt="youtube" className={classes.socials} src={Youtube} /></a>
             </Grid>

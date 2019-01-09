@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
+import { Typography, withWidth } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 
@@ -11,7 +11,6 @@ import CardBody from "components/Card/CardBody.jsx";
 const styles = {
   root: {
     margin: 'auto',
-    height: '50vh',
     marginBottom: '2%',
     overflow: 'wrap',
   }
@@ -22,7 +21,7 @@ function ProcessCard(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-        <Card className={classes.root} style={{ width: "16rem", margin: 'auto',paddingTop: '2.5%'}}>
+        <Card className={classes.root} style={{ width: "16rem", margin: 'auto',height: ['lg','xl'].includes(props.width) ? '50vh' : '30vh', paddingTop: '2.5%'}}>
           <div style={{width: '100%', height: '80%'}}>
             <img
               style={{ width: "auto", maxWidth: '95%', maxHeight: '90%', margin: 'auto'}}
@@ -46,4 +45,4 @@ ProcessCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProcessCard);
+export default withStyles(styles)(withWidth()(ProcessCard));

@@ -1,12 +1,5 @@
 import mensHairLoss from './mens-hairloss.js';
-import mensAlopecia from './mens-alopecia.js';
-import transplant from './mens-transplant.js';
 import womensHairLoss from './women-hairloss.js';
-import womensAlopecia from './women-alopecia.js';
-import eyebrows from './eyebrows.js';
-import threeDEyebrows from './3deyebrows.js';
-import eyeliner from './eyeliner.js';
-import lips from './lips.js';
 
 let toExport = [];
 
@@ -18,7 +11,7 @@ function shuffle(a) {
     return a;
 }
 
-toExport = toExport.concat(mensHairLoss, mensAlopecia, transplant, womensHairLoss, womensAlopecia, eyebrows, threeDEyebrows, eyeliner, lips);
+toExport = toExport.concat(mensHairLoss, womensHairLoss);
 
 toExport = shuffle(toExport);
 
