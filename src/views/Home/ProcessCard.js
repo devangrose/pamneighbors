@@ -21,7 +21,7 @@ function ProcessCard(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-        <Card className={classes.root} style={{ width: "16rem", margin: 'auto',height: ['lg','xl'].includes(props.width) ? '50vh' : '30vh', paddingTop: '2.5%'}}>
+        <Card className={classes.root} style={{ width: "16rem", margin: 'auto',height: ['lg','xl'].includes(props.width) ? '50vh' : '50vh', paddingTop: '2.5%'}}>
           <div style={{width: '100%', height: '80%'}}>
             <img
               style={{ width: "auto", maxWidth: '95%', maxHeight: '90%', margin: 'auto'}}
