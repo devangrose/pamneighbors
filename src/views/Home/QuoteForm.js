@@ -23,7 +23,13 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 1,
     marginLeft: '25%',
     width: "50%",
-  }
+  },
+  success: {
+    color: 'green',
+  },
+  error: {
+    color: 'red', 
+  },
 });
 
 class QuoteForm extends React.Component {
@@ -31,7 +37,9 @@ class QuoteForm extends React.Component {
     name: '',
     phone: '',
     email: '',
-    message: ''
+    message: '',
+    success: 'none',
+    error: 'none',
   };
 
   componentDidMount() {
@@ -48,6 +56,10 @@ class QuoteForm extends React.Component {
     window.emailjs.send("mailgun_test", "pam", {"senderEmail":this.state.email,"senderName":this.state.name,"senderPhone":this.state.phone,"senderMessage":this.state.message,"ejs_dashboard__test_template":true})
       .then(response => {
         console.log(response);
+        this.setState({ success: 'block' });
+      })
+      .catch(response => {
+        this.setState({ error: 'block' });
       });
   } 
 
@@ -62,6 +74,12 @@ class QuoteForm extends React.Component {
         </Typography>
         <Typography className={classes.text} component="h2" variant="headline" align="center" gutterBottom>
           Contact us today!
+        </Typography>
+        <Typography className={classes.success} style={{display: this.state.success}} component="h2" variant="headline" align="left" gutterBottom>
+          Message sent successfully 
+        </Typography>
+        <Typography className={classes.error} style={{display: this.state.error}} component="h2" variant="headline" align="left" gutterBottom>
+          An error has occured
         </Typography>
         <FormControl className={classes.formControl} variant="filled">
           <InputLabel htmlFor="component-filled1">Name</InputLabel>
