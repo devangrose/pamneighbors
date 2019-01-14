@@ -29,6 +29,8 @@ class ContactUs extends Component {
       age: '',
       multiline: 'Controlled',
       currency: 'EUR',
+      success: 'none',
+      error: 'none',
     };
   }
 
@@ -48,9 +50,11 @@ class ContactUs extends Component {
     window.emailjs.sendForm(service_id,template_id,document.getElementById('formId')
     )
       .then(response => {
+        this.setState({ success: 'block' });
         console.log(response);
       })
       .catch(response => {
+        this.setState({ error: 'block' });
         console.log(response);
       })
   }
@@ -63,6 +67,12 @@ class ContactUs extends Component {
             <div style={{padding: "25px", backgroundColor: "#e0e0e0"}}>
             <Typography variant="h3">
               Send Us A Message!
+            </Typography>
+            <Typography className={classes.success} style={{display: this.state.success}} component="h2" variant="headline" align="left" gutterBottom>
+              Message sent successfully 
+            </Typography>
+            <Typography className={classes.error} style={{display: this.state.error}} component="h2" variant="headline" align="left" gutterBottom>
+              An error has occured
             </Typography>
             <form id="formId"noValidate autoComplete="off" style={{width: "100%"}} onSubmit={this.handleSubmit}>
               <TextField
