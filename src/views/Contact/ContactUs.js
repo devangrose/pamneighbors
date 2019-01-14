@@ -18,7 +18,13 @@ const styles = theme => ({
   },
   text: {
     marginBottom: '4rem'
-  }
+  },
+  success: {
+    color: 'green',
+  },
+  error: {
+    color: 'red',
+  },
 });
 
 class ContactUs extends Component {
@@ -59,6 +65,7 @@ class ContactUs extends Component {
       })
   }
   render(){
+    const { classes } = this.props;
     return (
       <div style={{marginTop: "50px"}} >
         <Grid container spacing={40} style={{margin: "auto", maxWidth: "80%"}}>
