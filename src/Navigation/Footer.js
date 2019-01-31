@@ -40,11 +40,16 @@ const styles = theme => ({
     } 
   },
   footerItem: {
+    display: 'block',
+    color: 'blue',
     lineHeight: "1rem",
     whiteSpace: "nowrap",
-    margin: "0",
+    textAlign: 'left',
     '&:visited':{
       color: "blue",
+    },
+    '&:hover':{
+      textDecoration: 'underline',
     }
   },
   weekday: {
@@ -96,17 +101,26 @@ function Footer(props) {
             <Grid item xs={12} md={5} className={classes.logoWrapper} style={{textAlign: 'center', margin: '0 3%'}}>
               <img alt="logo" className={classes.logo} style={{margin: 'auto'}} src={Logo}/>
             </Grid>
-            <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
-              <Typography  className={classes.footerTitle}><strong>OUR LOCATION</strong></Typography>
-              <Typography  className={classes.footerItem}>3418 Broadway</Typography>
-              <Typography  className={classes.footerItem}>Everett, WA 98201</Typography>
-              <Typography  className={classes.footerItem} style={{color: 'blue'}}><a  href="https://www.google.com/maps/place/Trillium+Ink/@47.971999,-122.2038394,17z/data=!3m1!4b1!4m5!3m4!1s0x549aaa98189b4f1b:0x3525e7727143a351!8m2!3d47.971999!4d-122.2016507" style={{color: 'inherit'}} target="_blank">Click here for map</a>
-</Typography>
+            <Grid item xs={12} md={3} style={{paddingLeft: "2rem", marginRight: '2%'}}>
+              <div style={{paddingBottom: '1%'}}>
+                <Typography  className={classes.footerTitle} style={{textAlign: 'left'}}><strong>OUR LOCATIONS</strong></Typography>
+                <a  href="https://www.google.com/maps/place/Trillium+Ink/@47.971999,-122.2038394,17z/data=!3m1!4b1!4m5!3m4!1s0x549aaa98189b4f1b:0x3525e7727143a351!8m2!3d47.971999!4d-122.2016507" style={{color: 'blue'}}target="_blank">
+                  <Typography  className={classes.footerItem}>3418 Broadway</Typography>
+                  <Typography  className={classes.footerItem} paragraph >Everett, WA 98201</Typography>
+                </a>
+              </div>
+              <div>
+                <a  href="https://www.google.com/maps/place/7100+SW+Hampton+St+%23103,+Tigard,+OR+97223/@45.4273284,-122.7529504,17z/data=!3m1!4b1!4m5!3m4!1s0x54950cd1a9a9d4a9:0xda1a131e1c08f524!8m2!3d45.4273284!4d-122.7507617" style={{color: 'blue'}}target="_blank">
+                  <Typography  className={classes.footerItem}>7100 SW Hampton St #103</Typography>
+                  <Typography  className={classes.footerItem}>Tigard, OR 97223</Typography>
+                </a>
+              </div>
             </Grid>
             <Grid item xs={12} md={3} style={{paddingLeft: "2rem"}}>
-              <Typography  className={classes.footerTitle}><strong>PHONE</strong></Typography>
-              <Typography  className={classes.footerItem} style={{color: 'blue'}}><a rel="noopener noreferrer" style={{textDecoration: "none",color: 'inherit'}} href="tel:425-258-6256">425.258.6245</a></Typography>
-              <Typography  className={classes.footerTitle}><strong>EMAIL</strong></Typography>
+              <Typography  className={classes.footerTitle} style={{textAlign: 'left'}}><strong>PHONE</strong></Typography>
+              <Typography  className={classes.footerItem} style={{color: 'blue'}}><a rel="noopener noreferrer" style={{textDecoration: "none",color: 'inherit'}} href="tel:425-258-6256"><span style={{color: 'black'}}>WA</span> 425.258.6245</a></Typography>
+              <Typography  className={classes.footerItem} style={{color: 'blue'}}><a rel="noopener noreferrer" style={{textDecoration: "none",color: 'inherit'}} href="tel:503-395-8734"><span style={{color: 'black'}}>OR</span> 503.395.8734</a></Typography>
+              <Typography  className={classes.footerTitle} style={{textAlign: 'left'}}><strong>EMAIL</strong></Typography>
               <Typography  className={classes.footerItem} style={{color: 'blue'}}><a href="mailto:pam@trilliumink.net" style={{textDecoration: "none",color: 'inherit'}}>pam@trilliumink.net</a></Typography>
             </Grid>
           </Grid>

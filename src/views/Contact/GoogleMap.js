@@ -30,7 +30,7 @@ class GoogleMap extends Component {
       <GoogleMapReact
         bootstrapURLKeys={{key: process.env.REACT_APP_GOOGLE_BOOKS_API_KEY}}
         defaultCenter={position}
-        defaultZoom={16}
+        defaultZoom={12}
         onGoogleApiLoaded={({map, maps}) => this.renderMarkers(map, maps)}
         yesIWantToUseGoogleMapApiInternals={true}
       >

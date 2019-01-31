@@ -10,7 +10,6 @@ class Contact extends Component {
     return (
       <div>
         <ContactRow header="Get in Touch"/>
-        <GoogleMap/>
         <ContactUs/>
       </div>
     )
