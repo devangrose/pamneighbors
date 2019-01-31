@@ -48,14 +48,14 @@ class App extends Component {
     super(props);
     this.headerRef = React.createRef();
     this.state = {
-      modal: true,
+      modal: false,
     }
   }
 
   componentDidMount(){
     this.checkPopup();
   }
-  handleClickOpen =() => {
+  handleOpen =() => {
     this.setState({ modal: true});
   }
   handleClose = ()=> {
@@ -81,6 +81,7 @@ class App extends Component {
       let Datetwo = new Date();
       window.localStorage.setItem('date', Datetwo.getTime());
       console.log("Set", window.localStorage.getItem('date'));
+      setTimeout(this.handleOpen,1000);
     }
 
   }
