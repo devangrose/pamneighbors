@@ -37,6 +37,17 @@ import redColor from './color.js';
 
 import modalStyle from "assets/jss/material-kit-pro-react/modalStyle.jsx";
 
+// Google Analytics
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+   gtmId: 'GTM-000000',
+   auth: '6sBOnZx1hqPcO01xPOytLK',
+   preview: 'env-2'
+}
+
+TagManager.initialize(tagManagerArgs)
+
 
 function Transition(props) {
   return <Slide direction="down" {...props} />;
