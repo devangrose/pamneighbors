@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Paper } from '@material-ui/core';
+import { makeMetaTags, pricingTags } from '../../meta-tags.js';
 
 import headerPhoto from '../../assets/pricingbanner.jpg';
 import HeroImage from '../../Components/HeroImage';
@@ -27,6 +28,7 @@ function Pricing(props) {
     const { classes } = props;
     return (
       <div>
+        { makeMetaTags(pricingTags) }
         <HeroImage source={ headerPhoto } overlay="Pricing" gender="woman"/>
         <Paper style={{ margin: "0px",  padding: "5%", paddingTop: "3%", background: "linear-gradient(#e0e0e0, #CECECE)" }} >
           <Typography variant="h4" align="center" paragraph="true" style={{color: redColor}}>
