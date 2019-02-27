@@ -27,6 +27,7 @@
     "react-ga": "^2.5.7",
     "react-google-maps": "9.4.5",
     "react-gtm-module": "^2.0.4",
+    "react-helmet": "^5.2.0",
     "react-image-gallery": "0.8.11",
     "react-player": "^1.8.0",
     "react-router-dom": "^4.3.1",

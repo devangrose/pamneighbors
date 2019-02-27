@@ -3,6 +3,7 @@ import HeroImage from '../../Components/HeroImage.js';
 import Profile from './Profile.js';
 import { Typography } from '@material-ui/core';
 import scrollToComponent from 'react-scroll-to-component';
+import { makeMetaTags, teamTags } from '../../meta-tags.js';
 
 import womanBanner from '../../assets/banner-lips.jpg';
 
@@ -17,6 +18,7 @@ const teamInfo = [
     subheading: "Certified Permanent Cosmetics / Scalp Artist and Educator",
     description: (
       <div>
+        { makeMetaTags(teamTags) }
         <Typography variant="h5">
           Has 25+ years in the permanent cosmetics field. She uses her years of artistry in tattoo art, skin needling, camouflaging, her work with plastic surgeons and SMP’s most advanced micro pigmentation techniques to provide the best possible experience for her clients.
         </Typography>
