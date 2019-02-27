@@ -1,10 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export const googleTagId = 'TBA';
-export const googleAnalyticsId = 'TBA';
+export const googleTagId = 'GTM-K3VLBCK';
+export const googleAnalyticsId = 'UA-58654811-1';
 
-export const homeTags = [];
+//----------------- SETH --------------//
+//       Here is an example tag object //
+//
+//       { name: "charset", content: "utf-8" } //
+//
+//       I've put a test meta in the home page 
+//       so you can see what I need
+
+export const homeTags = [ 
+  { name: "charset", content: "utf-8" }, 
+  { name: "Devan", content: "Grose" },
+];
 export const contactTags = [];
 export const transformationsTags = [];
 export const faqTags = [];
