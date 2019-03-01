@@ -13,7 +13,7 @@ import Button from "components/CustomButtons/Button.jsx";
 // core components
 import Footer from './Navigation/Footer.js';
 import { Route } from 'react-router-dom';
-import { Router } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Home from './views/Home/Home.js';
 import Service from './views/ServicePage/Service.js';
 import Contact from './views/Contact/Contact.js';
@@ -25,6 +25,7 @@ import ScrollToTop from './Components/ScrollToTop.js';
 import Training from './views/Training/Training.js';
 import Washington from './views/Training/Washington.js';
 import Blog from './views/Blog/Blog.js';
+import Analytics from 'react-router-ga';
 
 import "assets/scss/material-kit-pro-react.css?v=1.2.0";
 import services from './assets/serviceInfo.js';
@@ -36,21 +37,19 @@ import redColor from './color.js';
 
 import modalStyle from "assets/jss/material-kit-pro-react/modalStyle.jsx";
 import { withRouter } from "react-router";
+import { googleTagId } from 'meta-tags.js';
+import { googleAnalyticsId } from 'meta-tags.js';
 
 // Google Analytics
 import TagManager from 'react-gtm-module'
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
-ReactGA.initialize('UA-000000-01');
-
 
 const tagManagerArgs = {
-   gtmId: 'GTM-000000',
+   gtmId: {googleTagId},
    auth: '6sBOnZx1hqPcO01xPOytLK',
    preview: 'env-2'
-}
-
-const history = createBrowserHistory();
+};
 
 TagManager.initialize(tagManagerArgs)
 
@@ -70,9 +69,6 @@ class App extends Component {
 
   componentDidMount(){
     this.checkPopup();
-    const unlisten = history.listen((location, action) => {
-      ReactGA.pageview(window.location);
-    });
   }
 
   handleOpen =() => {
@@ -107,69 +103,71 @@ class App extends Component {
     window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
     const { classes } = this.props;
     return (
-      <Router history={history}>
-        <ScrollToTop>
-          <div>
-            <Dialog
-              classes={{
-                root: classes.modalRoot,
-                paper: classes.modal
-              }}
-              open={this.state.modal}
-              TransitionComponent={Transition}
-              keepMounted
-              onClose={this.handleClose}
-              aria-labelledby="classic-modal-slide-title"
-              aria-describedby="classic-modal-slide-description"
-            >
-              <DialogTitle
-                id="classic-modal-slide-title"
-                disableTypography
-                className={classes.modalHeader}
+      <Router>
+        <Analytics id={googleAnalyticsId}>
+          <ScrollToTop>
+            <div>
+              <Dialog
+                classes={{
+                  root: classes.modalRoot,
+                  paper: classes.modal
+                }}
+                open={this.state.modal}
+                TransitionComponent={Transition}
+                keepMounted
+                onClose={this.handleClose}
+                aria-labelledby="classic-modal-slide-title"
+                aria-describedby="classic-modal-slide-description"
               >
-                <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Opening March 2019 In Oregon!</Typography>
-              </DialogTitle>
-              <DialogContent
-                id="classic-modal-slide-description"
-                className={classes.modalBody}
-              >
-                <Typography  variant="p" component="p" paragraph>
-                  Email us <a href="mailto:pam@trilliumink.net" style={{textDecoration: "none", '&:visited':{color: 'blue', margin: '1%'}}}><Typography variant="p" component="p" style={{color: 'blue', display: 'inline'}}>here</Typography></a> to receive an invitation to our grand opening and upcoming specials.
-                </Typography>
-                <Typography  variant="p" component="p">If you can't wait, <a href="tel:425-258-6256" style={{textDecoration: "none", '&:visited':{color: 'blue'}}}><Typography variant="p" component="p" style={{color: 'blue', display: 'inline'}}>call</Typography></a> our Everett, WA office and schedule a consultation today.</Typography>
-              </DialogContent>
-              <DialogActions className={classes.modalFooter}>
-                <Button
-                  onClick={() => this.handleClose("liveDemo")}
-                  color="secondary"
+                <DialogTitle
+                  id="classic-modal-slide-title"
+                  disableTypography
+                  className={classes.modalHeader}
                 >
-                  Close
-                </Button>
-              </DialogActions>
-            </Dialog>
+                  <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Opening March 2019 In Oregon!</Typography>
+                </DialogTitle>
+                <DialogContent
+                  id="classic-modal-slide-description"
+                  className={classes.modalBody}
+                >
+                  <Typography  variant="p" component="p" paragraph>
+                    Email us <a href="mailto:pam@trilliumink.net" style={{textDecoration: "none", '&:visited':{color: 'blue', margin: '1%'}}}><Typography variant="p" component="p" style={{color: 'blue', display: 'inline'}}>here</Typography></a> to receive an invitation to our grand opening and upcoming specials.
+                  </Typography>
+                  <Typography  variant="p" component="p">If you can't wait, <a href="tel:425-258-6256" style={{textDecoration: "none", '&:visited':{color: 'blue'}}}><Typography variant="p" component="p" style={{color: 'blue', display: 'inline'}}>call</Typography></a> our Everett, WA office and schedule a consultation today.</Typography>
+                </DialogContent>
+                <DialogActions className={classes.modalFooter}>
+                  <Button
+                    onClick={() => this.handleClose("liveDemo")}
+                    color="secondary"
+                  >
+                    Close
+                  </Button>
+                </DialogActions>
+              </Dialog>
 
-            <Header
-              color="white"
-              brand={<img alt="logo" src={Logo} style={{maxWidth: "80%"}}/>}
-              rightLinks={<HeaderLinks />}
-              ref={this.headerRef}
-            />
-              <Route exact path="/" component={Home}/>
-              { services.map((service, index) => (
-                <Route key={index} path={"/service/" + service.url} component={() => (<Service banner={service.banner} dark={service.dark} firstParagraph={service.firstParagraph()} secondParagraph={service.secondParagraph()} category={service.category} steps={service.steps} name={service.name} img={service.img} gender={service.gender} images={service.images}/>)}/>
-              ))}
-              <Route path="/contact" component={Contact}/>
-              <Route path="/transformations" component={Transformations}/>
-              <Route path="/faq" component={FAQ}/>
-              <Route exact path="/team/:member" component={Team}/>
-              <Route exact path="/team" component={Team}/>
-              <Route path="/pricing" component={Pricing}/>
-              <Route exact path="/training" component={Training}/>
-              <Route exact path="/training/washington" component={Washington}/>
-              <Route exact path="/blog" component={Blog}/>
-            <Footer />
-          </div>
-        </ScrollToTop>
+              <Header
+                color="white"
+                brand={<img alt="logo" src={Logo} style={{maxWidth: "80%"}}/>}
+                rightLinks={<HeaderLinks />}
+                ref={this.headerRef}
+              />
+                <Route exact path="/" component={Home}/>
+                { services.map((service, index) => (
+                  <Route key={index} path={"/service/" + service.url} component={() => (<Service banner={service.banner} dark={service.dark} firstParagraph={service.firstParagraph()} secondParagraph={service.secondParagraph()} category={service.category} steps={service.steps} name={service.name} img={service.img} gender={service.gender} images={service.images}/>)}/>
+                ))}
+                <Route path="/contact" component={Contact}/>
+                <Route path="/transformations" component={Transformations}/>
+                <Route path="/faq" component={FAQ}/>
+                <Route exact path="/team/:member" component={Team}/>
+                <Route exact path="/team" component={Team}/>
+                <Route path="/pricing" component={Pricing}/>
+                <Route exact path="/training" component={Training}/>
+                <Route exact path="/training/washington" component={Washington}/>
+                <Route exact path="/blog" component={Blog}/>
+              <Footer />
+            </div>
+          </ScrollToTop>
+        </Analytics>
       </Router>
     );
   }
