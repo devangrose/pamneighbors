@@ -124,7 +124,7 @@ class App extends Component {
                   disableTypography
                   className={classes.modalHeader}
                 >
-                  <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Opening March 2019 In Oregon!</Typography>
+                  <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Opening April 2019 In Oregon!</Typography>
                 </DialogTitle>
                 <DialogContent
                   id="classic-modal-slide-description"
