@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import QA from './QA.js';
 import HeroImage from '../../Components/HeroImage';
 import { Paper } from '@material-ui/core';
+import { makeMetaTags, faqTags } from '../../meta-tags.js';
 
 import headerPhoto from "../../assets/faqbanner.JPG";
 
@@ -22,6 +23,7 @@ const styles = theme => ({
 function FAQ(props) {
   return (
     <div>
+      { makeMetaTags(faqTags) }
       <HeroImage source={ headerPhoto } overlay="Frequently Asked Questions" gender="woman"/>
       <Paper style={{ margin: "0px", paddingTop: "0px", padding: "5%", background: "linear-gradient(#e0e0e0, #CECECE)" }} >
         <Grid container spacing={24}>

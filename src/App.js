@@ -12,9 +12,8 @@ import Close from "@material-ui/icons/Close";
 import Button from "components/CustomButtons/Button.jsx";
 // core components
 import Footer from './Navigation/Footer.js';
-import { BrowserRouter as Router, 
-       Route
-      } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { Router } from 'react-router';
 import Home from './views/Home/Home.js';
 import Service from './views/ServicePage/Service.js';
 import Contact from './views/Contact/Contact.js';
@@ -36,7 +35,24 @@ import Logo from './assets/Logo.png';
 import redColor from './color.js';
 
 import modalStyle from "assets/jss/material-kit-pro-react/modalStyle.jsx";
+import { withRouter } from "react-router";
 
+// Google Analytics
+import TagManager from 'react-gtm-module'
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
+ReactGA.initialize('UA-000000-01');
+
+
+const tagManagerArgs = {
+   gtmId: 'GTM-000000',
+   auth: '6sBOnZx1hqPcO01xPOytLK',
+   preview: 'env-2'
+}
+
+const history = createBrowserHistory();
+
+TagManager.initialize(tagManagerArgs)
 
 function Transition(props) {
   return <Slide direction="down" {...props} />;
@@ -54,10 +70,15 @@ class App extends Component {
 
   componentDidMount(){
     this.checkPopup();
+    const unlisten = history.listen((location, action) => {
+      ReactGA.pageview(window.location);
+    });
   }
+
   handleOpen =() => {
     this.setState({ modal: true});
   }
+
   handleClose = ()=> {
     this.setState({modal: false});
   }
@@ -65,14 +86,11 @@ class App extends Component {
   checkPopup = () => {
     let date = window.localStorage.getItem('date');
     let timestamp = date;
-    console.log(timestamp);
     if (date) {
       date = new Date();
-      console.log(date.getTime());
       var timeDiff = Math.abs(timestamp - date.getTime());
       timeDiff /= 60000;
-      if( timeDiff > 60) {
-        console.log('show popup!');
+      if( timeDiff > 60 ) {
         setTimeout(this.handleOpen,1000);
         window.localStorage.setItem('date', date.getTime());
       }
@@ -80,16 +98,16 @@ class App extends Component {
     else {
       let Datetwo = new Date();
       window.localStorage.setItem('date', Datetwo.getTime());
-      console.log("Set", window.localStorage.getItem('date'));
       setTimeout(this.handleOpen,1000);
     }
 
   }
+
   render() {
     window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
     const { classes } = this.props;
     return (
-      <Router>
+      <Router history={history}>
         <ScrollToTop>
           <div>
             <Dialog

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core';
 import Panel from './Panel.js';
+import { makeMetaTags, transformationsTags } from '../../meta-tags.js';
 
 import HeroImage from '../../Components/HeroImage.js';
 import redColor from '../../color.js';
@@ -33,6 +34,7 @@ class Transformations extends Component {
   render(){
     return (
       <div>
+        { makeMetaTags(transformationsTags) }
         <HeroImage source={hero} overlay="Client Transformations" gender="woman"/>
         <div style={{margin: "5%", paddingTop: "50px"}}> 
           <Typography variant="display2" style={{color: redColor}}>

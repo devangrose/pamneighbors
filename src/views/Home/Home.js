@@ -17,6 +17,7 @@ import step3 from '../../assets/steps/third pass.jpg';
 import step4 from '../../assets/steps/second pass.JPG';
 import step5 from '../../assets/steps/touch_ups.jpeg';
 
+import { makeMetaTags, homeTags } from '../../meta-tags.js';
 
 class Home extends Component {
 
@@ -24,6 +25,7 @@ class Home extends Component {
   render(){
     return (
       <div> 
+        { makeMetaTags(homeTags) }
         <Video source="https://player.vimeo.com/video/308634287" homeVideo/>        
         <Carousel header="Our SMP Services" slides={services.map((service, index) => {return (<ProcessCard key={index} service={service} img={service.img} label={service.label}/>)})}/>
         <Process steps={steps} width={this.props.width}/>

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import HeroImage from 'Components/HeroImage.js';
 import { Link } from 'react-router-dom';
 import Video from '../Home/Video.js';
+import { makeMetaTags, trainingTags } from '../../meta-tags.js';
 
 import hero from '../../assets/trainingbanner.JPG';
 import redColor from 'color.js';
@@ -53,6 +54,7 @@ class Training extends Component {
     const { classes } = this.props;
     return (
       <div>
+        { makeMetaTags(trainingTags) }
         <HeroImage source={hero} dark={true} overlay="Training_Opportunities" gender="man"/>
         <div className={classes.root}>
           <Typography variant="h4" className={classes.header}>
