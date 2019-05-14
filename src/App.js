@@ -71,7 +71,7 @@ class App extends Component {
       console.log(date.getTime());
       var timeDiff = Math.abs(timestamp - date.getTime());
       timeDiff /= 60000;
-      if( timeDiff > 60 ) {
+      if( timeDiff > 60) {
         console.log('show popup!');
         setTimeout(this.handleOpen,1000);
         window.localStorage.setItem('date', date.getTime());
@@ -109,16 +109,21 @@ class App extends Component {
                 disableTypography
                 className={classes.modalHeader}
               >
-                <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Opening February 2019 In Oregon!</Typography>
+                <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Now an approved Tattoo School in the State of Oregon!</Typography>
               </DialogTitle>
               <DialogContent
                 id="classic-modal-slide-description"
                 className={classes.modalBody}
               >
-                <Typography  variant="p" component="p" paragraph>
-                  Email us <a href="mailto:pam@trilliumink.net" style={{textDecoration: "none", '&:visited':{color: 'blue', margin: '1%'}}}><Typography variant="p" component="p" style={{color: 'blue', display: 'inline'}}>here</Typography></a> to receive an invitation to our grand opening and upcoming specials.
+                <Typography  variant="h7" component="h7" paragraph align="center">
+                  With an emphasis on 
                 </Typography>
-                <Typography  variant="p" component="p">If you can't wait, <a href="tel:425-258-6256" style={{textDecoration: "none", '&:visited':{color: 'blue'}}}><Typography variant="p" component="p" style={{color: 'blue', display: 'inline'}}>call</Typography></a> our Everett, WA office and schedule a consultation today.</Typography>
+                <Typography  variant="h7" component="h7" paragraph align="center">
+                  permanent cosmetics and scalp micropigmentation.
+                </Typography>
+                <Typography  variant="h7" component="h7" paragraph align="center">
+                  Class registration begins <span style={{color: redColor}}>June 2019.</span>
+                </Typography>
               </DialogContent>
               <DialogActions className={classes.modalFooter}>
                 <Button
