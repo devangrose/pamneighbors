@@ -104,7 +104,6 @@ class App extends Component {
     const { classes } = this.props;
     return (
       <Router>
-<<<<<<< HEAD
         <Analytics id={googleAnalyticsId}>
           <ScrollToTop>
             <div>
@@ -124,26 +123,7 @@ class App extends Component {
                   id="classic-modal-slide-title"
                   disableTypography
                   className={classes.modalHeader}
-=======
-        <ScrollToTop>
-          <div>
-            <Dialog
-              classes={{
-                root: classes.modalRoot,
-                paper: classes.modal
-              }}
-              open={this.state.modal}
-              TransitionComponent={Transition}
-              keepMounted
-              onClose={this.handleClose}
-              aria-labelledby="classic-modal-slide-title"
-              aria-describedby="classic-modal-slide-description"
-            >
-              <DialogTitle
-                id="classic-modal-slide-title"
-                disableTypography
-                className={classes.modalHeader}
-              >
+                >
                 <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Now an approved Tattoo School in the State of Oregon!</Typography>
               </DialogTitle>
               <DialogContent
@@ -164,23 +144,6 @@ class App extends Component {
                 <Button
                   onClick={() => this.handleClose("liveDemo")}
                   color="secondary"
->>>>>>> 2b6f7e1ac156fa59805c07dd98fb83e84e235f40
-                >
-                  <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Opening April 2019 In Oregon!</Typography>
-                </DialogTitle>
-                <DialogContent
-                  id="classic-modal-slide-description"
-                  className={classes.modalBody}
-                >
-                  <Typography  variant="p" component="p" paragraph>
-                    Email us <a href="mailto:pam@trilliumink.net" style={{textDecoration: "none", '&:visited':{color: 'blue', margin: '1%'}}}><Typography variant="p" component="p" style={{color: 'blue', display: 'inline'}}>here</Typography></a> to receive an invitation to our grand opening and upcoming specials.
-                  </Typography>
-                  <Typography  variant="p" component="p">If you can't wait, <a href="tel:425-258-6256" style={{textDecoration: "none", '&:visited':{color: 'blue'}}}><Typography variant="p" component="p" style={{color: 'blue', display: 'inline'}}>call</Typography></a> our Everett, WA office and schedule a consultation today.</Typography>
-                </DialogContent>
-                <DialogActions className={classes.modalFooter}>
-                  <Button
-                    onClick={() => this.handleClose("liveDemo")}
-                    color="secondary"
                   >
                     Close
                   </Button>
