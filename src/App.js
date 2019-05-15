@@ -86,7 +86,7 @@ class App extends Component {
       date = new Date();
       var timeDiff = Math.abs(timestamp - date.getTime());
       timeDiff /= 60000;
-      if( timeDiff > 60 ) {
+      if( timeDiff > 60) {
         setTimeout(this.handleOpen,1000);
         window.localStorage.setItem('date', date.getTime());
       }
@@ -104,6 +104,7 @@ class App extends Component {
     const { classes } = this.props;
     return (
       <Router>
+<<<<<<< HEAD
         <Analytics id={googleAnalyticsId}>
           <ScrollToTop>
             <div>
@@ -123,6 +124,47 @@ class App extends Component {
                   id="classic-modal-slide-title"
                   disableTypography
                   className={classes.modalHeader}
+=======
+        <ScrollToTop>
+          <div>
+            <Dialog
+              classes={{
+                root: classes.modalRoot,
+                paper: classes.modal
+              }}
+              open={this.state.modal}
+              TransitionComponent={Transition}
+              keepMounted
+              onClose={this.handleClose}
+              aria-labelledby="classic-modal-slide-title"
+              aria-describedby="classic-modal-slide-description"
+            >
+              <DialogTitle
+                id="classic-modal-slide-title"
+                disableTypography
+                className={classes.modalHeader}
+              >
+                <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Now an approved Tattoo School in the State of Oregon!</Typography>
+              </DialogTitle>
+              <DialogContent
+                id="classic-modal-slide-description"
+                className={classes.modalBody}
+              >
+                <Typography  variant="h7" component="h7" paragraph align="center">
+                  With an emphasis on 
+                </Typography>
+                <Typography  variant="h7" component="h7" paragraph align="center">
+                  permanent cosmetics and scalp micropigmentation.
+                </Typography>
+                <Typography  variant="h7" component="h7" paragraph align="center">
+                  Class registration begins <span style={{color: redColor}}>June 2019.</span>
+                </Typography>
+              </DialogContent>
+              <DialogActions className={classes.modalFooter}>
+                <Button
+                  onClick={() => this.handleClose("liveDemo")}
+                  color="secondary"
+>>>>>>> 2b6f7e1ac156fa59805c07dd98fb83e84e235f40
                 >
                   <Typography className={classes.modalTitle} variant="h6" component="h6" style={{textTransform: 'uppercase', textAlign: 'center', color: redColor}}>Opening April 2019 In Oregon!</Typography>
                 </DialogTitle>
