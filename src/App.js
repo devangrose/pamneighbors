@@ -37,21 +37,13 @@ import redColor from './color.js';
 
 import modalStyle from "assets/jss/material-kit-pro-react/modalStyle.jsx";
 import { withRouter } from "react-router";
-import { googleTagId } from 'meta-tags.js';
 import { googleAnalyticsId } from 'meta-tags.js';
 
 // Google Analytics
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
-const tagManagerArgs = {
-   gtmId: {googleTagId},
-   auth: '6sBOnZx1hqPcO01xPOytLK',
-   preview: 'env-2'
-};
-
-TagManager.initialize(tagManagerArgs)
 
 function Transition(props) {
   return <Slide direction="down" {...props} />;
