@@ -129,13 +129,19 @@ function HeaderLinks({ ...props }) {
               href="https://inkbypam.clickfunnels.com/student-training"
             >
               Scalp Academy Training Orientation
-            </a>
+            </a>,
+            <Link 
+              to = "/oregonacademy"
+              className={classes.navLink}
+            >
+              Oregon Tattoo Academy
+            </Link>
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/contact" className={classes.navLink}>
-          <Button2 variant="contained">
+          <Link to="/contact" className={classes.navLink}>
+            <Button2 variant="contained">
             Contact Us
           </Button2>
         </Link>

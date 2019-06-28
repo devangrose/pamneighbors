@@ -25,6 +25,7 @@ import ScrollToTop from './Components/ScrollToTop.js';
 import Training from './views/Training/Training.js';
 import Washington from './views/Training/Washington.js';
 import Blog from './views/Blog/Blog.js';
+import OregonAcademy from "./views/OregonAcademy/OregonAcademy.js";
 import Analytics from 'react-router-ga';
 
 import "assets/scss/material-kit-pro-react.css?v=1.2.0";
@@ -161,6 +162,7 @@ class App extends Component {
                 <Route exact path="/training" component={Training}/>
                 <Route exact path="/training/washington" component={Washington}/>
                 <Route exact path="/blog" component={Blog}/>
+                <Route exact path="/oregonacademy" component={OregonAcademy}/>
               <Footer />
             </div>
           </ScrollToTop>
